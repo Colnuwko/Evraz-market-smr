@@ -5,7 +5,11 @@
   "projects": {
     "evraz-market-smr": {
       "projectType": "application",
-      "schematics": {},
+      "schematics": {
+          "@schematics/angular:component": {
+          "skipTests": true
+        }
+      },
       "root": "",
       "sourceRoot": "src",
       "prefix": "app",
@@ -96,5 +100,8 @@
         }
       }
     }
+  },
+  "cli": {
+    "analytics": "3b00354d-48b0-45c2-9a7d-cd8caf2f2808"
   }
 }

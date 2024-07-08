@@ -8,6 +8,7 @@ import {
   RouterOutlet,
 } from '@angular/router';
 import { StatusBarComponent } from './Shared/Modules/status-bar/status-bar.component';
+import {HeadBarComponent} from "./Shared/Modules/head-bar/head-bar.component";
 
 @Component({
   selector: 'app-root',
@@ -20,6 +21,7 @@ import { StatusBarComponent } from './Shared/Modules/status-bar/status-bar.compo
     RouterLinkActive,
     RouterModule,
     StatusBarComponent,
+    HeadBarComponent,
   ],
   templateUrl: './app.component.html',
   styleUrl: './app.component.css',
