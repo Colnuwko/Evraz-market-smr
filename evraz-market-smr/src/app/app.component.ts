@@ -8,6 +8,7 @@ import {
   RouterOutlet,
 } from '@angular/router';
 import { StatusBarComponent } from './Shared/Modules/status-bar/status-bar.component';
+import { CategoryService } from './Shared/Services/category.service';
 
 @Component({
   selector: 'app-root',
@@ -23,6 +24,7 @@ import { StatusBarComponent } from './Shared/Modules/status-bar/status-bar.compo
   ],
   templateUrl: './app.component.html',
   styleUrl: './app.component.css',
+  providers: [CategoryService]
 })
 export class AppComponent {
   title = 'freshHouse';

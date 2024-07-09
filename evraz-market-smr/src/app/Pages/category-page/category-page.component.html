@@ -1,1 +1,2 @@
-<p>category-page works!</p>
+<div>{{category?.title}}</div>
+<div *ngForOf="let item of category?.subCategories">{{item.title}}</div>

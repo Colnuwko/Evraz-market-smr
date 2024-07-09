@@ -5,6 +5,6 @@ import { SubCategoryPageComponent } from './Pages/sub-category-page/sub-category
 
 export const routes: Routes = [
   { path: '', component: HomePageComponent },
-  { path: ':category', component: CategoryPageComponent },
-  { path: ':category/:subCategory', component: SubCategoryPageComponent },
+  { path: 'category/:categoryId', component: CategoryPageComponent },
+  { path: 'category/:categoryId/subCategory/:subCategoryId', component: CategoryPageComponent },
 ];
