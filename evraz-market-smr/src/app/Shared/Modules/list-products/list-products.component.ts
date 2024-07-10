@@ -1,8 +1,8 @@
 import { Component } from '@angular/core';
-import { CategoryInt, SubCategoryDetail } from '../../Interfaces/category';
+import { Category, CategoryInt, SubCategoryDetail } from '../../Interfaces/category';
 import { ActivatedRoute } from '@angular/router';
 import { CategoryService } from '../../Services/category.service';
-import { Armatura, Product, ProfilePipe } from '../../Interfaces/producct';
+import { Armatura, Product, ProfilePipe, Proflist } from '../../Interfaces/producct';
 import { NgFor, NgIf } from '@angular/common';
 import { Router } from '@angular/router';
 
@@ -48,12 +48,16 @@ export class ListProductsComponent {
   }
 
   isArmatura(product: Product): product is Armatura {
-    return (product as Armatura).diameter !== undefined;
+    return (product as Armatura).category === Category.ARMATURA;
   }
 
   isProfilePipe(product: Product): product is ProfilePipe {
-    return (product as ProfilePipe).width !== undefined;
+    return (product as ProfilePipe).category === Category.TRUBY;
   }
+  isProflist(product: Product): product is Proflist {
+    return (product as Proflist).category === Category.PROFLIST;
+  }
+
 
   navigateToSubCategory(detail: SubCategoryDetail, product: Product): void {
     this.router.navigate(['/category/', this.category?.category, 'subCategory', detail.subCategory, product.id]);
