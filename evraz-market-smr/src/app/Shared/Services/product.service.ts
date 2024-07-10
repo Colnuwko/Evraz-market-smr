@@ -10,7 +10,7 @@ import { Category, CategoryInt } from '../Interfaces/category';
 export class ProductService {
 
   private jsonUrl = 'assets/data.json';
-  private json = 'assets/test.json'; // путь к вашему JSON-файлу
+
 
   constructor(private http: HttpClient) { }
 
@@ -35,15 +35,18 @@ export class ProductService {
     );
   }
 
-  // filterByProduct(category: string, subCategory: string, productId: number): Observable<Product | undefined> {
-
-  //   return this.http.get<Product[]>(this.json).pipe(
-  //     map(products => products.find(product => {
-  //       product.category === category && product.subCategory === subCategory && product.id === productId
-  //       return undefined;
-  //     }
-
-  //     ))
-  //   );
-  // }
+  getProductsByCategoryAndSubCategory(category: string, subCategory: string): Observable<Product[]> {
+    return this.http.get<CategoryInt[]>(this.jsonUrl).pipe(
+      map(categories => {
+        const selectedCategory = categories.find(cat => cat.category === category);
+        if (selectedCategory) {
+          const selectedSubCategory = selectedCategory.subCategories.find(sub => sub.subCategory === subCategory);
+          if (selectedSubCategory) {
+            return selectedSubCategory.products;
+          }
+        }
+        return [];
+      })
+    );
+  }
 }

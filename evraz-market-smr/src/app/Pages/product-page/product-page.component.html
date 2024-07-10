@@ -1,3 +1,12 @@
 <div class="px-72 xl:px-20 md:px-10 lg:px-20">
+    <div class="flex gap-4 text-superGrey text-sm">
+        <div (click)="goToHome()">Главная</div>
+        <div (click)="navigateToCategory(category?.category || '')">{{ category?.title }}</div>
+        <div *ngIf="subCategories.length"
+            (click)="navigateToSubCategory(category?.category || '',subCategories[0].subCategory)">
+            {{subCategories[0].title}}</div>
+        <div>{{product?.name}}</div>
+    </div>
+
     <app-product-view></app-product-view>
 </div>
