@@ -15,7 +15,7 @@ import { CategoryService } from '../../Services/category.service';
 })
 export class MainGoodsComponent {
   categories!: CategoryInt[];
-  ids: number[] = [1, 2];
+  ids: number[] = [1, 2, 3];
 
   constructor(
     private dataService: CategoryService

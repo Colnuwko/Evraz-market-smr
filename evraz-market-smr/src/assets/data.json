@@ -111,5 +111,49 @@
       }
     ],
     "title": "Трубный прокат"
+  },
+  {
+    "id": 3,
+    "img": "assets/truba.jpg",
+    "category": "proflist",
+    "subCategories": [
+      {
+        "subCategory": "metallocherepica",
+        "price": 800,
+        "title": "Металлочерепица",
+        "products": [
+          {
+            "id": 1,
+            "name": "Металлочерепица монтеррей полиэстер 0,5 мм",
+            "price": 800,
+            "img": "assets/products/armatura.webp",
+            "category": "proflist",
+            "subCategory": "metallocherepica",
+            "width": 1100,
+            "thickness": 0.5,
+            "color": 7024
+          }
+        ]
+      },
+      {
+        "subCategory": "profnastil",
+        "price": 600,
+        "title": "Профнастил",
+        "products": [
+          {
+            "id": 1,
+            "name": "Профнастил кровельный Р-20К (0,5 мм)",
+            "price": 800,
+            "img": "assets/products/armatura.webp",
+            "category": "proflist",
+            "subCategory": "profnastil",
+            "width": 1100,
+            "thickness": 0.5,
+            "color": 7024
+          }
+        ]
+      }
+    ],
+    "title": "Кровельные материалы"
   }
 ]
