@@ -1,0 +1,16 @@
+<div class="container normal-header block mx-auto content-center" style="max-width: 1320px; height: 80px">
+  <div class="w-full h-full">
+    <div class="flex flex-row w-full h-full">
+      <div class="flex-auto content-center"><img src="assets/brjyrf.png"></div>
+      <div class="flex-auto content-center"><app-catalog></app-catalog></div>
+      <div class="flex-auto content-center">Поиск</div>
+      <div class="flex-auto content-center">Вход</div>
+      <div class="flex-auto content-center">
+        <button class="flex flex-col items-center gap-1" [routerLink]="routePath">
+          <img [src]="imageSrc" alt="Button Image" />
+          <span class="text-silver">{{ buttonText }}</span>
+        </button>
+      </div>
+    </div>
+  </div>
+</div>

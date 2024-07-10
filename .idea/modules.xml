@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/.idea/Evraz-market-smr.iml" filepath="$PROJECT_DIR$/.idea/Evraz-market-smr.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/evraz-market-smr.iml" filepath="$PROJECT_DIR$/.idea/evraz-market-smr.iml" />
     </modules>
   </component>
 </project>
