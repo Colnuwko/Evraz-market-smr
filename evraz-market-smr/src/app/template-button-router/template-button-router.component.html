@@ -1,1 +1,6 @@
-<p>template-button-router works!</p>
+<button class="flex flex-col items-center gap-1 w-full" [routerLink]="routePath">
+  <div class="flex flex-row justify-around ">
+    <img [src]="imageSrc" class="size-{{sizeimg}} m-2" alt="Button Image" />
+    <span class="text-silver m-2">{{ buttonText }}</span>
+  </div>
+</button>

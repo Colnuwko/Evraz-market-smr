@@ -7,7 +7,7 @@
     </div>
 
     <div *ngIf="expandedCategories.has(category.id)  " class="text-sl p-2">
-        <div class="mx-2 mb-2 hover:text-orange hover:border-dashed hover:border hover:border-orange-500" *ngFor="let subCategory of category.subCategories"
+        <div class="mx-2 mb-2 hover:text-orange " *ngFor="let subCategory of category.subCategories"
             (click)="navigateToSubCategory(category.category, subCategory.subCategory)">{{subCategory.title}}</div>
     </div>
 </div>
