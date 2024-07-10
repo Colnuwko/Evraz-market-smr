@@ -1,13 +1,21 @@
 <div class="container normal-header block mx-auto content-center" style="max-width: 1320px; height: 80px">
   <div class="w-full h-full">
-    <div class="flex flex-row w-full h-full">
-      <div class="flex-auto content-center">
-        <div class="text-4xl font-semibold">FRESH HOUSE</div>
-      </div>
-      <div class="flex-auto content-center"><app-catalog></app-catalog></div>
-      <div class="flex-auto content-center">Поиск</div>
-      <div class="flex-auto content-center">Вход</div>
-      <div class="flex-auto content-center">Корзина
+    <div class="flex flex-row  w-full h-full">
+      <div class="flex-none content-center mr-4"  routerLink=""><p class="text-4xl font-semibold">FRESH HOUSE</p></div>
+      <div class="flex-none content-center mx-4"><app-catalog></app-catalog></div>
+      <div class="flex-auto content-center mx-4"><form class="rounded-md border border-green flex justify-between p-2" #myForm="ngForm"
+            (ngSubmit)="submitForm(myForm)">
+            <input class="mx-2 focus:outline-none" type="text" name="textInput" ngModel placeholder="Найти товар"
+                required />
+            <button type="submit" class="mx-2">
+                <img src="assets/search.png" />
+            </button>
+        </form></div>
+      <div class="flex-none content-center mx-4"><app-template-button-router [imageSrc]="'assets/person.svg'" [buttonText]="'Вход'"
+                                    [sizeimg]="'7'" [routePath]="'/bassket'"></app-template-button-router></div>
+      <div class="flex-none content-center ml-4">
+        <app-template-button-router [imageSrc]="'assets/cart.svg'" [buttonText]="'Корзина'"
+                                    [sizeimg]="'7'" [routePath]="'/basket'"></app-template-button-router>
       </div>
     </div>
   </div>
