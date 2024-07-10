@@ -9,6 +9,7 @@ import {
 } from '../../Interfaces/category';
 import { NgFor } from '@angular/common';
 import { Router } from '@angular/router';
+import { NavigateService } from '../../Services/navigate.service';
 
 @Component({
   selector: 'app-card-product',
@@ -18,14 +19,14 @@ import { Router } from '@angular/router';
   styleUrl: './card-product.component.css',
 })
 export class CardProductComponent {
-  @Input() card!:CategoryInt;
+  @Input() card!: CategoryInt;
 
-  constructor(private router: Router) {}
+  constructor(private navigate: NavigateService) { }
 
-  navigateToCategory(): void {
-    this.router.navigate(['/category/', this.card.category]);
+  navigateToCategory(category: string): void {
+    this.navigate.navigateToCategory(category);
   }
-  navigateToSubCategory(detail: SubCategoryDetail): void {
-    this.router.navigate(['/category/', this.card.category,'subCategory', detail.subCategory]);
+  navigateToSubCategory(category: string, subCategory: string): void {
+    this.navigate.navigateToSubCategory(category, subCategory)
   }
 }

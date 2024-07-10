@@ -15,16 +15,16 @@ import { CategoryService } from '../../Services/category.service';
 })
 export class MainGoodsComponent {
   categories!: CategoryInt[];
-  ids: number[] = [1,2];
+  ids: number[] = [1, 2];
 
   constructor(
     private dataService: CategoryService
-  ) {}
+  ) { }
 
   ngOnInit(): void {
     this.dataService.getCategoriesByIds(this.ids).subscribe(categories => {
       this.categories = categories;
     }
-  )
+    )
   }
 }

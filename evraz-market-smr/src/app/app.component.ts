@@ -9,6 +9,8 @@ import {
 } from '@angular/router';
 import { StatusBarComponent } from './Shared/Modules/status-bar/status-bar.component';
 import { CategoryService } from './Shared/Services/category.service';
+import { ProductService } from './Shared/Services/product.service';
+import { NavigateService } from './Shared/Services/navigate.service';
 
 @Component({
   selector: 'app-root',
@@ -24,7 +26,7 @@ import { CategoryService } from './Shared/Services/category.service';
   ],
   templateUrl: './app.component.html',
   styleUrl: './app.component.css',
-  providers: [CategoryService]
+  providers: [CategoryService, ProductService, NavigateService]
 })
 export class AppComponent {
   title = 'freshHouse';

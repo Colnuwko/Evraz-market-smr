@@ -1,0 +1,33 @@
+<div *ngIf="category">
+    <table class="table-auto min-w-full bg-white ">
+        <thead>
+            <tr class="border-y  text-superGrey">
+                <th class="text-left px-2 py-4">Наименование</th>
+                <th class="text-left px-2 py-4">Склад</th>
+                <th class="text-left px-2 py-4">Наличие</th>
+                <th class="text-left px-2 py-4">Цена</th>
+            </tr>
+        </thead>
+        <tbody *ngFor="let subCategory of subCategories">
+            <tr *ngFor="let product of subCategory.products" class="border-b  border-superGrey ">
+                <th class="font-medium py-4 text-left px-2 " (click)="navigateToSubCategory(subCategory, product)">
+                    <div class="underline decoration-orange underline-offset-4">{{product.name }}</div>
+                    <ng-container *ngIf="isArmatura(product)">
+                        <p class="text-sm">Длина (L), мм: {{ product.length }}</p>
+                    </ng-container>
+                </th>
+                <th class="font-medium py-4 text-left px-2">г. Самара</th>
+                <th class="font-medium py-4 text-left px-2">В наличии</th>
+                <th class="font-medium py-4 text-left px-2">{{ product.price }}&#8381;/м</th>
+                <!-- <ng-container *ngIf="isArmatura(product)">
+                    <p>Diameter: {{ product.diameter }}</p>
+                </ng-container>
+                <ng-container *ngIf="isProfilePipe(product)">
+                    <p>Width: {{ product.width }}</p>
+                    <p>Height: {{ product.height }}</p>
+                    <p>Thickness: {{ product.thickness }}</p>
+                </ng-container> -->
+            </tr>
+        </tbody>
+    </table>
+</div>

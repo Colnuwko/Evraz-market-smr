@@ -7,17 +7,17 @@ import { CategoryInt } from '../Interfaces/category';
   providedIn: 'root'
 })
 export class CategoryService {
-  private dataUrl = 'assets/data.json'; // Путь к вашему JSON-файлу
+  private dataUrl = 'assets/data.json';
 
-  constructor(private http: HttpClient) {}
+  constructor(private http: HttpClient) { }
 
   getCategories(): Observable<CategoryInt[]> {
     return this.http.get<CategoryInt[]>(this.dataUrl);
   }
 
-  getCategoryById(id: string): Observable<CategoryInt> {
+  getCategoryById(id: string): Observable<CategoryInt | undefined> {
     return this.http.get<CategoryInt[]>(this.dataUrl).pipe(
-      map(categories => categories.find(category => category.category === id)!)
+      map(categories => categories.find(category => category.category === id))
     );
   }
 
