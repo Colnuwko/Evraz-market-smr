@@ -1,32 +1,34 @@
 import { Component } from '@angular/core';
-import { CategoryInt, SubCategoryDetail } from '../../Shared/Interfaces/category';
+import { CategoryInt, SubCategoryDetail } from '../../Interfaces/category';
 import { ActivatedRoute } from '@angular/router';
-import { CategoryService } from '../../Shared/Services/category.service';
-import { CommonModule, NgForOf, NgIf } from '@angular/common';
-import { Armatura, Product, ProfilePipe } from '../../Shared/Interfaces/producct';
-import { ListProductsComponent } from '../../Shared/Modules/list-products/list-products.component';
-import { ListCategoriesComponent } from '../../Shared/Modules/list-categories/list-categories.component';
+import { CategoryService } from '../../Services/category.service';
+import { Armatura, Product, ProfilePipe } from '../../Interfaces/producct';
+import { NgFor, NgIf } from '@angular/common';
+import { Router } from '@angular/router';
 
 @Component({
-  selector: 'app-category-page',
+  selector: 'app-list-products',
   standalone: true,
-  imports: [ListProductsComponent, ListCategoriesComponent, NgIf, CommonModule],
-  templateUrl: './category-page.component.html',
-  styleUrl: './category-page.component.css'
+  imports: [NgFor, NgIf],
+  templateUrl: './list-products.component.html',
+  styleUrl: './list-products.component.css'
 })
-export class CategoryPageComponent {
+export class ListProductsComponent {
   category: CategoryInt | undefined;
   subCategories: SubCategoryDetail[] = [];
+
+
   constructor(
     private route: ActivatedRoute,
     private dataService: CategoryService,
-
+    private router: Router
   ) { }
 
   ngOnInit(): void {
     this.route.paramMap.subscribe(params => {
       const categoryId = params.get('categoryId')!;
       const subCategoryId = params.get('subCategoryId');
+
       if (subCategoryId) {
         this.dataService.getSubCategoryById(categoryId, subCategoryId).subscribe(category => {
           if (category) {
@@ -45,4 +47,15 @@ export class CategoryPageComponent {
     });
   }
 
+  isArmatura(product: Product): product is Armatura {
+    return (product as Armatura).diameter !== undefined;
+  }
+
+  isProfilePipe(product: Product): product is ProfilePipe {
+    return (product as ProfilePipe).width !== undefined;
+  }
+
+  navigateToSubCategory(detail: SubCategoryDetail, product: Product): void {
+    this.router.navigate(['/category/', this.category?.category, 'subCategory', detail.subCategory, product.id]);
+  }
 }

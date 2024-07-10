@@ -1,3 +1,5 @@
+import { Product } from "./producct";
+
 export interface CategoryInt {
   id: number;
   img: string;
@@ -10,6 +12,7 @@ export interface SubCategoryDetail {
   subCategory: SubCategory;
   price: number;
   title: SubCategoryR;
+  products: Product[];
 }
 
 export const categoryTitles: { [key: string]: string } = {
@@ -34,6 +37,7 @@ export enum SubCategory {
   KATANKA = 'katanka',
   PROVOLKA = 'provolka',
   LIST_GORKAT = 'list_gorkat',
+  TRUBA_PROFILNAYA = "truba_profilnaya"
 }
 
 export const subCategoryTitles: { [key: string]: string } = {
@@ -58,4 +62,7 @@ export enum SubCategoryR {
   KATANKA = 'Катанка',
   PROVOLKA = 'Проволка',
   LIST_GORKAT = 'Лист горячекатанный',
+  TRUBA_PROFILNAYA = "Труба профильная"
 }
+
+
