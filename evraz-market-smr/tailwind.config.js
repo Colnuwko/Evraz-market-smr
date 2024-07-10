@@ -15,7 +15,7 @@ module.exports = {
       green: "#5EC401",
       red: "#FC0E0E",
       orange: "#ED7817",
-      backgr: "#faf9f7"
+      backgr: "#ffffff"
     },
     screens: {
       sm: { min: "640px", max: "767px" },
