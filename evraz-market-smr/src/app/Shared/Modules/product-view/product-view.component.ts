@@ -1,8 +1,8 @@
 import { Component } from '@angular/core';
 import { Armatura, Product, ProfilePipe, Proflist } from '../../Interfaces/producct';
 import { ProductService } from '../../Services/product.service';
-import { ActivatedRoute } from '@angular/router';
-import { Category } from '../../Interfaces/category';
+import { ActivatedRoute, Router } from '@angular/router';
+import { Category, SubCategoryDetail } from '../../Interfaces/category';
 import { NgFor, NgIf } from '@angular/common';
 import { CategoryService } from '../../Services/category.service';
 
@@ -16,8 +16,10 @@ import { CategoryService } from '../../Services/category.service';
 export class ProductViewComponent {
   product: Product | undefined;
   products: Product[] = [];
-
-  constructor(private productService: ProductService, private route: ActivatedRoute) { }
+  widths: number[] = [];
+  thicknesses: number[] = [];
+  heights: number[] = [];
+  constructor(private productService: ProductService, private route: ActivatedRoute, private router: Router) { }
 
   ngOnInit(): void {
     this.route.paramMap.subscribe(params => {
@@ -26,10 +28,20 @@ export class ProductViewComponent {
       const productId = Number(params.get('productId'));
       this.productService.findProduct(categoryId, subCategoryId, productId).subscribe(product => {
         this.product = product;
+        if (categoryId === Category.TRUBY) {
+          this.productService.getProfilePipeProductsByHeight(categoryId, subCategoryId, (this.product as ProfilePipe)?.height).subscribe(data => {
+            this.widths = data.widths;
+            this.thicknesses = data.thicknesses;
+          });
+          this.productService.getUniqueHeightsByCategoryAndSubCategory(categoryId, subCategoryId).subscribe(heights => {
+            this.heights = heights;
+          });
+        }
       });
       this.productService.getProductsByCategoryAndSubCategory(categoryId, subCategoryId).subscribe(product => {
         this.products = product;
       });
+
     });
 
   }
@@ -48,5 +60,19 @@ export class ProductViewComponent {
 
   check(product: Product): boolean {
     return product.name === this.product?.name;
+  }
+
+  checkH(product: number): boolean {
+    return product === (this.product as ProfilePipe)?.height;
+  }
+  checkW(product: number): boolean {
+    return product === (this.product as ProfilePipe)?.width;
+  }
+  checkT(product: number): boolean {
+    return product === (this.product as ProfilePipe)?.thickness;
+  }
+
+  navigateToProduct(product: Product): void {
+    this.router.navigate(['/category/', product.category, 'subCategory', product.subCategory, product.id]);
   }
 }

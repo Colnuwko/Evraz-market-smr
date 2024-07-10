@@ -3,9 +3,9 @@
         <thead>
             <tr class="border-b  text-superGrey">
                 <th class="text-left px-2 py-4 text-orange">Наименование</th>
-                <th class="text-left px-2 py-4 text-orange">Склад</th>
-                <th class="text-left px-2 py-4 text-orange">Наличие</th>
-                <th class="text-left px-2 py-4 text-orange">Цена</th>
+                <th class="text-center px-2 py-4 text-orange">Склад</th>
+                <th class="text-center px-2 py-4 text-orange">Наличие</th>
+                <th class="text-center px-2 py-4 text-orange">Цена</th>
             </tr>
         </thead>
         <tbody *ngFor="let subCategory of subCategories">
@@ -24,17 +24,17 @@
                     </ng-container>
                     <ng-container *ngIf="isProflist(product)">
                         <p class="text-sm">Ширина (B), мм: {{ product.width }}</p>
-                        <p class="text-sm">Толщина стенки (S), мм: {{ product.thickness }}</p>
+                        <p class="text-sm">Толщина металла (S), мм: {{ product.thickness }}</p>
                     </ng-container>
                 </th>
-                <th class="font-medium py-4 text-left px-2">г. Самара</th>
-                <th class="font-medium py-4 text-left px-2">
-                    <div class="flex gap-2 items-center">
+                <th class="font-medium py-4 text-center px-2">г. Самара</th>
+                <th class="font-medium py-4 text-center px-2">
+                    <div class="flex gap-2 items-center justify-center">
                         <img src="assets/check.svg" class="h-4" />
                         <div>В наличии</div>
                     </div>
                 </th>
-                <th class="font-medium py-4 text-left px-2">{{ product.price }}&#8381;/м</th>
+                <th class="font-medium py-4 text-center px-2">{{ product.price }}&#8381;/м</th>
                 <!-- <ng-container *ngIf="isArmatura(product)">
                     <p>Diameter: {{ product.diameter }}</p>
                 </ng-container>

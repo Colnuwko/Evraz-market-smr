@@ -3,9 +3,9 @@
     {{ card.title }}
   </div>
   <img [src]="card.img" (click)="navigateToCategory(card.category)" />
-  <div *ngFor="let detail of card.subCategories" class="flex justify-between px-6"
+  <div *ngFor="let detail of card.subCategories" class="flex justify-between px-6  "
     (click)="navigateToSubCategory(card.category ,detail.subCategory)">
-    <div class="font-medium">{{ detail.title }}:</div>
+    <div class="font-medium hover:underline underline-offset-4 decoration-orange">{{ detail.title }}:</div>
     <div class="font-semibold">от {{ detail.price }}&#8381;/м</div>
   </div>
 

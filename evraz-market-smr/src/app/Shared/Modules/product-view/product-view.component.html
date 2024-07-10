@@ -1,27 +1,46 @@
 <div *ngIf="product">
 
     <div class="text-4xl font-semibold py-10"> {{product.name}}</div>
-    <div class="flex gap-10">
+    <div class="flex gap-10 ">
         <div class="basis-1/5">
             <img [src]="product.img" />
         </div>
-        <div class="basis-2/5">
+        <div class="basis-2/5 ">
             <ng-container *ngIf="isArmaturaProducts(products)">
-                <div>Диаметр (L), мм</div>
-                <div class="flex gap-4 py-4">
-                    <div *ngFor="let product of products" class=" border-2 p-2 w-20 text-center"
-                        [class.border-orange]="check(product)">
+                <div>Диаметр (D), мм</div>
+                <div class="flex gap-2 py-4 flex-wrap">
+                    <div *ngFor="let product of products" class=" border-2 p-1 w-20 text-center"
+                        [class.border-orange]="check(product)" (click)="navigateToProduct(product)">
                         {{product.diameter}}
                     </div>
                 </div>
-
             </ng-container>
             <ng-container *ngIf="isArmatura(product)">
                 <p class="text-sm">Длина (L), мм: {{ product.length }}</p>
             </ng-container>
+            <ng-container *ngIf="isProfilePipe(product)">
+                <div>Высота (A), мм</div>
+                <div class="flex gap-2 py-4 flex-wrap">
+                    <div *ngFor="let height of heights" class=" border-2 p-1 w-20 text-center"
+                        [class.border-orange]="checkH(height)">
+                        {{height}}
+                    </div>
+                </div>
+                <div>Ширина (B), мм</div>
+                <div class="flex gap-2 py-4 flex-wrap">
+                    <div *ngFor="let width of widths" class=" border-2 p-1 w-20 text-center"
+                        [class.border-orange]="checkW(width)">{{ width }}</div>
+                </div>
+                <div>Толщина (S), мм</div>
+                <div class="flex gap-2 py-4 flex-wrap">
+                    <div *ngFor="let thickness of thicknesses" class=" border-2 p-1 w-20 text-center"
+                        [class.border-orange]="checkT(thickness)">{{ thickness }}
+                    </div>
+                </div>
+            </ng-container>
 
         </div>
-        <div class="basis-2/5">
+        <div class="basis-2/5 flex-1">
             <div>{{product.price}}</div>
         </div>
 
