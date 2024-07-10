@@ -28,7 +28,12 @@
                     </ng-container>
                 </th>
                 <th class="font-medium py-4 text-left px-2">г. Самара</th>
-                <th class="font-medium py-4 text-left px-2">В наличии</th>
+                <th class="font-medium py-4 text-left px-2">
+                    <div class="flex gap-2 items-center">
+                        <img src="assets/check.svg" class="h-4" />
+                        <div>В наличии</div>
+                    </div>
+                </th>
                 <th class="font-medium py-4 text-left px-2">{{ product.price }}&#8381;/м</th>
                 <!-- <ng-container *ngIf="isArmatura(product)">
                     <p>Diameter: {{ product.diameter }}</p>

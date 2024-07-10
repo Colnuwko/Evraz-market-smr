@@ -6,6 +6,7 @@ import { CommonModule, NgForOf, NgIf } from '@angular/common';
 import { Armatura, Product, ProfilePipe } from '../../Shared/Interfaces/producct';
 import { ListProductsComponent } from '../../Shared/Modules/list-products/list-products.component';
 import { ListCategoriesComponent } from '../../Shared/Modules/list-categories/list-categories.component';
+import { NavigateService } from '../../Shared/Services/navigate.service';
 
 @Component({
   selector: 'app-category-page',
@@ -20,7 +21,7 @@ export class CategoryPageComponent {
   constructor(
     private route: ActivatedRoute,
     private dataService: CategoryService,
-
+    private navigate: NavigateService
   ) { }
 
   ngOnInit(): void {
@@ -43,6 +44,15 @@ export class CategoryPageComponent {
         });
       }
     });
+  }
+  navigateToCategory(category: string): void {
+    this.navigate.navigateToCategory(category);
+  }
+  navigateToSubCategory(category: string, subCategory: string): void {
+    this.navigate.navigateToSubCategory(category, subCategory);
+  }
+  goToHome() {
+    this.navigate.goToHome();
   }
 
 }

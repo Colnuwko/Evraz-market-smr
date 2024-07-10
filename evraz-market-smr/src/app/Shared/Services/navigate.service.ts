@@ -14,4 +14,7 @@ export class NavigateService {
   navigateToSubCategory(category: string, subCategory: string): void {
     this.router.navigate(['/category/', category, 'subCategory', subCategory]);
   }
+  goToHome() {
+    this.router.navigate(['/']);
+  }
 }
