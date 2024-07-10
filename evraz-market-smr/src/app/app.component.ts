@@ -12,6 +12,7 @@ import {HeadBarComponent} from "./Shared/Modules/head-bar/head-bar.component";
 import { CategoryService } from './Shared/Services/category.service';
 import { ProductService } from './Shared/Services/product.service';
 import { NavigateService } from './Shared/Services/navigate.service';
+import {FooterComponent} from "./Shared/Modules/footer/footer.component";
 
 
 @Component({
@@ -26,6 +27,7 @@ import { NavigateService } from './Shared/Services/navigate.service';
     RouterModule,
     StatusBarComponent,
     HeadBarComponent,
+    FooterComponent,
   ],
   templateUrl: './app.component.html',
   styleUrl: './app.component.css',
