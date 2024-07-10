@@ -1,15 +1,15 @@
 <div *ngIf="category">
-    <table class="table-auto min-w-full bg-white ">
+    <table class="table-auto min-w-full bg-backgr border-solid border border-orange ">
         <thead>
-            <tr class="border-y  text-superGrey">
-                <th class="text-left px-2 py-4">Наименование</th>
-                <th class="text-left px-2 py-4">Склад</th>
-                <th class="text-left px-2 py-4">Наличие</th>
-                <th class="text-left px-2 py-4">Цена</th>
+            <tr class="border-b  text-superGrey">
+                <th class="text-left px-2 py-4 text-orange">Наименование</th>
+                <th class="text-left px-2 py-4 text-orange">Склад</th>
+                <th class="text-left px-2 py-4 text-orange">Наличие</th>
+                <th class="text-left px-2 py-4 text-orange">Цена</th>
             </tr>
         </thead>
         <tbody *ngFor="let subCategory of subCategories">
-            <tr *ngFor="let product of subCategory.products" class="border-b  border-superGrey ">
+            <tr *ngFor="let product of subCategory.products" class="border-t  border-superGrey ">
                 <th class="font-medium py-4 text-left px-2 " (click)="navigateToSubCategory(subCategory, product)">
                     <div class="underline decoration-orange underline-offset-4">{{product.name }}</div>
                     <ng-container *ngIf="isArmatura(product)">
