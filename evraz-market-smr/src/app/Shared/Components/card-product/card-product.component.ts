@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, Input } from '@angular/core';
 import {
   Category,
   CategoryInt,
@@ -9,6 +9,7 @@ import {
 } from '../../Interfaces/category';
 import { NgFor } from '@angular/common';
 import { Router } from '@angular/router';
+import { NavigateService } from '../../Services/navigate.service';
 
 @Component({
   selector: 'app-card-product',
@@ -18,31 +19,14 @@ import { Router } from '@angular/router';
   styleUrl: './card-product.component.css',
 })
 export class CardProductComponent {
-  card: CategoryInt = {
-    id: 1,
-    img: 'assets/armatura.jpg',
-    category: Category.ARMATURA,
-    subCategories: [
-      {
-        subCategory: SubCategory.ARMATURA_GLADKAYA,
-        price: 100,
-        title: SubCategoryR.ARMATURA_GLADKAYA,
-      },
-      {
-        subCategory: SubCategory.ARMATURA_RIFLENAYA,
-        price: 120,
-        title: SubCategoryR.ARMATURA_RIFLENAYA,
-      },
-    ],
-    title: CategoryR.ARMATURA,
-  };
+  @Input() card!: CategoryInt;
 
-  constructor(private router: Router) {}
+  constructor(private navigate: NavigateService) { }
 
-  navigateToCategory(): void {
-    this.router.navigate(['/', this.card.category]);
+  navigateToCategory(category: string): void {
+    this.navigate.navigateToCategory(category);
   }
-  navigateToSubCategory(detail: SubCategoryDetail): void {
-    this.router.navigate(['/', this.card.category, detail.subCategory]);
+  navigateToSubCategory(category: string, subCategory: string): void {
+    this.navigate.navigateToSubCategory(category, subCategory)
   }
 }

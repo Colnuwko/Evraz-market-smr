@@ -1,3 +1,5 @@
+import { Product } from "./producct";
+
 export interface CategoryInt {
   id: number;
   img: string;
@@ -10,15 +12,10 @@ export interface SubCategoryDetail {
   subCategory: SubCategory;
   price: number;
   title: SubCategoryR;
+  products: Product[];
 }
 
-export const categoryTitles: { [key: string]: string } = {
-  armatura: 'Арматурный прокат',
-  listy: 'Листовой прокат',
-  metiznaya_produktsiya: 'Метизная продукция',
-  truby: 'Трубный прокат',
-  fasonnyy_prokat: 'Фасонный прокат',
-};
+
 
 export enum Category {
   ARMATURA = 'armatura',
@@ -26,6 +23,7 @@ export enum Category {
   MITIZ = 'metiznaya_produktsiya',
   TRUBY = 'truby',
   PROKAT = 'fasonnyy_prokat',
+  PROFLIST = 'proflist'
 }
 
 export enum SubCategory {
@@ -34,15 +32,11 @@ export enum SubCategory {
   KATANKA = 'katanka',
   PROVOLKA = 'provolka',
   LIST_GORKAT = 'list_gorkat',
+  TRUBA_PROFILNAYA = "truba_profilnaya",
+  METALLOCHEREPICA = "metallocherepica",
+  PROFNASTIL = 'profnastil'
 }
 
-export const subCategoryTitles: { [key: string]: string } = {
-  armatura_gladkaya: 'Арматура гладкая',
-  armatura_riflenaya: 'Арматура рифленая',
-  katanka: 'Катанка',
-  provolka: 'Проволка',
-  list_gorkat: 'Лист горячекатанный',
-};
 
 export enum CategoryR {
   ARMATURA = 'Арматурный прокат',
@@ -50,6 +44,7 @@ export enum CategoryR {
   MITIZ = 'Метизная продукция',
   TRUBY = 'Трубный прокат',
   PROKAT = 'Фасонный прокат',
+  PROFLIST = 'Кровельные материалы'
 }
 
 export enum SubCategoryR {
@@ -58,4 +53,9 @@ export enum SubCategoryR {
   KATANKA = 'Катанка',
   PROVOLKA = 'Проволка',
   LIST_GORKAT = 'Лист горячекатанный',
+  TRUBA_PROFILNAYA = "Труба профильная",
+  METALLOCHEREPICA = "Металлочерепица",
+  PROFNASTIL = 'Профнастил'
 }
+
+

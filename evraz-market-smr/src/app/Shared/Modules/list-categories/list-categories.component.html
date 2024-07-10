@@ -1,0 +1,13 @@
+<div *ngFor="let category of categories">
+    <div (click)="toggleCategory(category.id)" [class.text-orange]="expandedCategories.has(category.id)"
+        class="text-base font-semibold p-2">
+
+        {{category.title}}
+
+    </div>
+
+    <div *ngIf="expandedCategories.has(category.id)  " class="text-sm p-2">
+        <div *ngFor="let subCategory of category.subCategories"
+            (click)="navigateToSubCategory(category.category, subCategory.subCategory)">{{subCategory.title}}</div>
+    </div>
+</div>
