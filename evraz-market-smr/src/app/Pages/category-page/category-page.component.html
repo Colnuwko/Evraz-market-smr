@@ -1,4 +1,4 @@
-<div class="px-72 xl:px-20 md:px-10 lg:px-20">
+<div class="px-72 xl:px-20 md:px-10 lg:px-20 pb-10">
 
     <div class="flex gap-4 text-superGrey text-sm">
         <div (click)="goToHome()">Главная</div>
@@ -8,8 +8,8 @@
             {{subCategories[0].title}}</div>
     </div>
 
-    <div *ngIf="!subCategories.length" class="text-2xl font-semibold my-10 text-orange">{{ category?.title }}</div>
-    <div *ngIf="subCategories.length" class="text-2xl font-semibold my-10 text-orange">{{ subCategories[0].title}}</div>
+    <div *ngIf="!subCategories.length" class="text-4xl font-semibold my-8 text-orange">{{ category?.title }}</div>
+    <div *ngIf="subCategories.length" class="text-4xl font-semibold my-8 text-orange">{{ subCategories[0].title}}</div>
 
     <div class="flex gap-10">
         <app-list-categories class="basis-1/4"></app-list-categories>

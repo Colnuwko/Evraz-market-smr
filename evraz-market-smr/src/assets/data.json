@@ -11,23 +11,83 @@
         "products": [
           {
             "id": 1,
-            "name": "Арматура гладкая 12 А240 ГОСТ 34028-2016",
-            "img": "assets/products/armatura.webp",
+            "name": "Арматура гладкая 6 А240 ГОСТ 34028-2016",
+            "img": "assets/products/armatura_gladkaya.webp",
             "price": 70,
+            "length": 6000,
+            "category": "armatura",
+            "subCategory": "armatura_gladkaya",
+            "diameter": 6
+          },
+          {
+            "id": 2,
+            "name": "Арматура гладкая 8 А240С ГОСТ 34028-2016",
+            "price": 60,
+            "img": "assets/products/armatura_gladkaya.webp",
+            "length": 6000,
+            "category": "armatura",
+            "subCategory": "armatura_gladkaya",
+            "diameter": 8
+          },
+          {
+            "id": 3,
+            "name": "Арматура гладкая 10 А240С ГОСТ 34028-2016",
+            "price": 60,
+            "img": "assets/products/armatura_gladkaya.webp",
+            "length": 6000,
+            "category": "armatura",
+            "subCategory": "armatura_gladkaya",
+            "diameter": 10
+          },
+          {
+            "id": 4,
+            "name": "Арматура гладкая 12 А240С ГОСТ 34028-2016",
+            "price": 60,
+            "img": "assets/products/armatura_gladkaya.webp",
             "length": 6000,
             "category": "armatura",
             "subCategory": "armatura_gladkaya",
             "diameter": 12
           },
           {
-            "id": 2,
-            "name": "Арматура гладкая 6 А240С ГОСТ 34028-2016",
+            "id": 5,
+            "name": "Арматура гладкая 14 А240С ГОСТ 34028-2016",
             "price": 60,
-            "img": "assets/products/armatura.webp",
+            "img": "assets/products/armatura_gladkaya.webp",
             "length": 6000,
             "category": "armatura",
             "subCategory": "armatura_gladkaya",
-            "diameter": 6
+            "diameter": 14
+          },
+          {
+            "id": 6,
+            "name": "Арматура гладкая 16 А240С ГОСТ 34028-2016",
+            "price": 60,
+            "img": "assets/products/armatura_gladkaya.webp",
+            "length": 6000,
+            "category": "armatura",
+            "subCategory": "armatura_gladkaya",
+            "diameter": 16
+          },
+          {
+            "id": 7,
+            "name": "Арматура гладкая 18 А240С ГОСТ 34028-2016",
+            "price": 60,
+            "img": "assets/products/armatura_gladkaya.webp",
+            "length": 6000,
+            "category": "armatura",
+            "subCategory": "armatura_gladkaya",
+            "diameter": 18
+          },
+          {
+            "id": 8,
+            "name": "Арматура гладкая 20 А240С ГОСТ 34028-2016",
+            "price": 60,
+            "img": "assets/products/armatura_gladkaya.webp",
+            "length": 6000,
+            "category": "armatura",
+            "subCategory": "armatura_gladkaya",
+            "diameter": 20
           }
         ]
       },
@@ -38,13 +98,13 @@
         "products": [
           {
             "id": 1,
-            "name": "Арматура рифленая 10 (2ф) А500С Ст3сп ГОСТ 34028-2016",
+            "name": "Арматура рифленая 6 (2ф) А500С Ст3сп ГОСТ 34028-2016",
             "price": 100,
             "img": "assets/products/armatura.webp",
             "length": 6000,
             "category": "armatura",
             "subCategory": "armatura_riflenaya",
-            "diameter": 10
+            "diameter": 6
           },
           {
             "id": 2,
@@ -55,6 +115,96 @@
             "category": "armatura",
             "subCategory": "armatura_riflenaya",
             "diameter": 8
+          },
+          {
+            "id": 3,
+            "name": "Арматура рифленая 10 (2ф) А500С ГОСТ 34028-2016",
+            "price": 100,
+            "img": "assets/products/armatura.webp",
+            "length": 6000,
+            "category": "armatura",
+            "subCategory": "armatura_riflenaya",
+            "diameter": 10
+          },
+          {
+            "id": 4,
+            "name": "Арматура рифленая 12 (2ф) А500С ГОСТ 34028-2016",
+            "price": 100,
+            "img": "assets/products/armatura.webp",
+            "length": 6000,
+            "category": "armatura",
+            "subCategory": "armatura_riflenaya",
+            "diameter": 12
+          },
+          {
+            "id": 5,
+            "name": "Арматура рифленая 14 (2ф) А500С ГОСТ 34028-2016",
+            "price": 100,
+            "img": "assets/products/armatura.webp",
+            "length": 6000,
+            "category": "armatura",
+            "subCategory": "armatura_riflenaya",
+            "diameter": 14
+          },
+          {
+            "id": 6,
+            "name": "Арматура рифленая 16(2ф) А500С ГОСТ 34028-2016",
+            "price": 100,
+            "img": "assets/products/armatura.webp",
+            "length": 6000,
+            "category": "armatura",
+            "subCategory": "armatura_riflenaya",
+            "diameter": 16
+          },
+          {
+            "id": 7,
+            "name": "Арматура рифленая 18 (2ф) А500С ГОСТ 34028-2016",
+            "price": 100,
+            "img": "assets/products/armatura.webp",
+            "length": 6000,
+            "category": "armatura",
+            "subCategory": "armatura_riflenaya",
+            "diameter": 18
+          },
+          {
+            "id": 8,
+            "name": "Арматура рифленая 20 (2ф) А500С ГОСТ 34028-2016",
+            "price": 100,
+            "img": "assets/products/armatura.webp",
+            "length": 6000,
+            "category": "armatura",
+            "subCategory": "armatura_riflenaya",
+            "diameter": 20
+          },
+          {
+            "id": 9,
+            "name": "Арматура рифленая 22 (2ф) А500С ГОСТ 34028-2016",
+            "price": 100,
+            "img": "assets/products/armatura.webp",
+            "length": 6000,
+            "category": "armatura",
+            "subCategory": "armatura_riflenaya",
+            "diameter": 22
+          },
+          {
+            "id": 10,
+            "name": "Арматура рифленая 28 (2ф) А500С ГОСТ 34028-2016",
+            "price": 100,
+            "img": "assets/products/armatura.webp",
+            "length": 6000,
+            "category": "armatura",
+            "subCategory": "armatura_riflenaya",
+            "diameter": 28
+          },
+          {
+            "id": 11,
+            "name": "Арматура рифленая 32 (2ф) А500С ГОСТ 34028-2016",
+            "price": 100,
+            "img": "assets/products/armatura.webp",
+            "length": 6000,
+            "category": "armatura",
+            "subCategory": "armatura_riflenaya",
+            "diameter": 32
           }
         ]
       }
@@ -73,39 +223,255 @@
         "products": [
           {
             "id": 1,
-            "name": "Труба профильная 40х20х2 Ст3пс ТУ 24.20.14-001-00244676-2018",
-            "price": 150,
-            "img": "assets/products/armatura.webp",
+            "name": "Труба профильная 15х15х1,5 Ст3пс ГОСТ 13663-86",
+            "price": 76,
+            "img": "assets/products/profil.webp",
             "length": 6000,
             "category": "truby",
             "subCategory": "truba_profilnaya",
-            "width": 40,
+            "width": 15,
+            "height": 15,
+            "thickness": 1.5
+          },
+          {
+            "id": 2,
+            "name": "Труба профильная 20х20х1,5 Ст3пс ГОСТ 13663-86",
+            "price": 86,
+            "img": "assets/products/profil.webp",
+            "length": 6000,
+            "category": "truby",
+            "subCategory": "truba_profilnaya",
+            "width": 20,
+            "height": 20,
+            "thickness": 1.5
+          },
+          {
+            "id": 3,
+            "name": "Труба профильная 20х20х2 08пс ГОСТ 13663-86",
+            "price": 150,
+            "img": "assets/products/profil.webp",
+            "length": 6000,
+            "category": "truby",
+            "subCategory": "truba_profilnaya",
+            "width": 20,
             "height": 20,
             "thickness": 2
           },
           {
-            "id": 2,
-            "name": "Труба профильная 150х150х4 Ст3пс ГОСТ 30245-2003",
+            "id": 4,
+            "name": "Труба профильная 25х25х1,5 08пс ГОСТ 13663-86",
             "price": 150,
-            "img": "assets/products/armatura.webp",
+            "img": "assets/products/profil.webp",
             "length": 6000,
             "category": "truby",
             "subCategory": "truba_profilnaya",
-            "width": 150,
-            "height": 150,
-            "thickness": 4
+            "width": 25,
+            "height": 25,
+            "thickness": 1.5
           },
           {
-            "id": 3,
-            "name": "Труба профильная 40х20х1,5 08пс ГОСТ 13663-86",
+            "id": 5,
+            "name": "Труба профильная 25х25х2 08пс ГОСТ 13663-86",
             "price": 150,
-            "img": "assets/products/armatura.webp",
+            "img": "assets/products/profil.webp",
+            "length": 6000,
+            "category": "truby",
+            "subCategory": "truba_profilnaya",
+            "width": 25,
+            "height": 25,
+            "thickness": 2
+          },
+          {
+            "id": 6,
+            "name": "Труба профильная 30х30х2 08пс ГОСТ 13663-86",
+            "price": 150,
+            "img": "assets/products/profil.webp",
+            "length": 6000,
+            "category": "truby",
+            "subCategory": "truba_profilnaya",
+            "width": 30,
+            "height": 30,
+            "thickness": 2
+          },
+          {
+            "id": 7,
+            "name": "Труба профильная 20х40х1,5 08пс ГОСТ 13663-86",
+            "price": 150,
+            "img": "assets/products/profil.webp",
+            "length": 6000,
+            "category": "truby",
+            "subCategory": "truba_profilnaya",
+            "width": 20,
+            "height": 40,
+            "thickness": 1.5
+          },
+          {
+            "id": 8,
+            "name": "Труба профильная 20х40х2 08пс ГОСТ 13663-86",
+            "price": 150,
+            "img": "assets/products/profil.webp",
+            "length": 6000,
+            "category": "truby",
+            "subCategory": "truba_profilnaya",
+            "width": 20,
+            "height": 40,
+            "thickness": 2
+          },
+          {
+            "id": 9,
+            "name": "Труба профильная 20х40х3 08пс ГОСТ 13663-86",
+            "price": 150,
+            "img": "assets/products/profil.webp",
+            "length": 6000,
+            "category": "truby",
+            "subCategory": "truba_profilnaya",
+            "width": 20,
+            "height": 40,
+            "thickness": 3
+          },
+          {
+            "id": 10,
+            "name": "Труба профильная 40х40х1,5 08пс ГОСТ 13663-86",
+            "price": 150,
+            "img": "assets/products/profil.webp",
             "length": 6000,
             "category": "truby",
             "subCategory": "truba_profilnaya",
             "width": 40,
-            "height": 20,
+            "height": 40,
             "thickness": 1.5
+          },
+          {
+            "id": 11,
+            "name": "Труба профильная 40х40х2 08пс ГОСТ 13663-86",
+            "price": 150,
+            "img": "assets/products/profil.webp",
+            "length": 6000,
+            "category": "truby",
+            "subCategory": "truba_profilnaya",
+            "width": 40,
+            "height": 40,
+            "thickness": 2
+          },
+          {
+            "id": 12,
+            "name": "Труба профильная 40х40х3 08пс ГОСТ 13663-86",
+            "price": 150,
+            "img": "assets/products/profil.webp",
+            "length": 6000,
+            "category": "truby",
+            "subCategory": "truba_profilnaya",
+            "width": 40,
+            "height": 40,
+            "thickness": 3
+          },
+          {
+            "id": 13,
+            "name": "Труба профильная 50х50х2 08пс ГОСТ 13663-86",
+            "price": 150,
+            "img": "assets/products/profil.webp",
+            "length": 6000,
+            "category": "truby",
+            "subCategory": "truba_profilnaya",
+            "width": 50,
+            "height": 50,
+            "thickness": 2
+          },
+          {
+            "id": 14,
+            "name": "Труба профильная 50х50х3 08пс ГОСТ 13663-86",
+            "price": 150,
+            "img": "assets/products/profil.webp",
+            "length": 6000,
+            "category": "truby",
+            "subCategory": "truba_profilnaya",
+            "width": 50,
+            "height": 50,
+            "thickness": 3
+          },
+          {
+            "id": 15,
+            "name": "Труба профильная 50х50х4 08пс ГОСТ 13663-86",
+            "price": 150,
+            "img": "assets/products/profil.webp",
+            "length": 6000,
+            "category": "truby",
+            "subCategory": "truba_profilnaya",
+            "width": 50,
+            "height": 50,
+            "thickness": 4
+          },
+          {
+            "id": 16,
+            "name": "Труба профильная 60х60х2 08пс ГОСТ 13663-86",
+            "price": 150,
+            "img": "assets/products/profil.webp",
+            "length": 6000,
+            "category": "truby",
+            "subCategory": "truba_profilnaya",
+            "width": 60,
+            "height": 60,
+            "thickness": 2
+          },
+          {
+            "id": 17,
+            "name": "Труба профильная 60х60х3 08пс ГОСТ 13663-86",
+            "price": 150,
+            "img": "assets/products/profil.webp",
+            "length": 6000,
+            "category": "truby",
+            "subCategory": "truba_profilnaya",
+            "width": 60,
+            "height": 60,
+            "thickness": 3
+          },
+          {
+            "id": 18,
+            "name": "Труба профильная 60х60х4 08пс ГОСТ 13663-86",
+            "price": 150,
+            "img": "assets/products/profil.webp",
+            "length": 6000,
+            "category": "truby",
+            "subCategory": "truba_profilnaya",
+            "width": 60,
+            "height": 60,
+            "thickness": 4
+          },
+          {
+            "id": 19,
+            "name": "Труба профильная 60х30х2 08пс ГОСТ 13663-86",
+            "price": 150,
+            "img": "assets/products/profil.webp",
+            "length": 6000,
+            "category": "truby",
+            "subCategory": "truba_profilnaya",
+            "width": 60,
+            "height": 30,
+            "thickness": 2
+          },
+          {
+            "id": 20,
+            "name": "Труба профильная 60х30х3 08пс ГОСТ 13663-86",
+            "price": 150,
+            "img": "assets/products/profil.webp",
+            "length": 6000,
+            "category": "truby",
+            "subCategory": "truba_profilnaya",
+            "width": 60,
+            "height": 30,
+            "thickness": 3
+          },
+          {
+            "id": 21,
+            "name": "Труба профильная 80х80х3 08пс ГОСТ 13663-86",
+            "price": 150,
+            "img": "assets/products/profil.webp",
+            "length": 6000,
+            "category": "truby",
+            "subCategory": "truba_profilnaya",
+            "width": 80,
+            "height": 80,
+            "thickness": 3
           }
         ]
       }
