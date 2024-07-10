@@ -38,7 +38,7 @@ export class CategoryPageComponent {
         this.dataService.getCategoryById(categoryId).subscribe(category => {
           if (category) {
             this.category = category;
-            this.subCategories = category.subCategories;
+
           }
         });
       }
