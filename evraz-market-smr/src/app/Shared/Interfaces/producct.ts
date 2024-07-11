@@ -26,4 +26,5 @@ export interface Proflist extends Product {
   width: number;
   thickness: number;
   color: number;
+  imgColor: string;
 }

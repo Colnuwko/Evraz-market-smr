@@ -492,12 +492,13 @@
             "id": 1,
             "name": "Металлочерепица монтеррей полиэстер 0,5 мм",
             "price": 800,
-            "img": "assets/products/armatura.webp",
+            "img": "assets/proflist.jpg",
             "category": "proflist",
             "subCategory": "metallocherepica",
             "width": 1100,
             "thickness": 0.5,
-            "color": 7024
+            "color": 7024,
+            "imgColor": "assets/7024.png"
           }
         ]
       },
@@ -508,14 +509,51 @@
         "products": [
           {
             "id": 1,
-            "name": "Профнастил кровельный Р-20К (0,5 мм)",
+            "name": "Профнастил кровельный Р-20К (0,5 мм) RAL7024",
             "price": 800,
-            "img": "assets/products/armatura.webp",
+            "img": "assets/proflist.jpg",
             "category": "proflist",
             "subCategory": "profnastil",
             "width": 1100,
             "thickness": 0.5,
-            "color": 7024
+            "color": 7024,
+            "imgColor": "assets/7024.png"
+          },
+          {
+            "id": 2,
+            "name": "Профнастил кровельный Р-20К (0,5 мм) RAL8064",
+            "price": 800,
+            "img": "assets/proflist.jpg",
+            "category": "proflist",
+            "subCategory": "profnastil",
+            "width": 1100,
+            "thickness": 0.5,
+            "color": 8064,
+            "imgColor": "assets/7024.png"
+          },
+          {
+            "id": 3,
+            "name": "Профнастил кровельный Р-20К (0,5 мм) RAL3072",
+            "price": 800,
+            "img": "assets/proflist.jpg",
+            "category": "proflist",
+            "subCategory": "profnastil",
+            "width": 1100,
+            "thickness": 0.5,
+            "color": 3072,
+            "imgColor": "assets/7024.png"
+          },
+          {
+            "id": 4,
+            "name": "Профнастил кровельный Р-20К (0,5 мм) RAL9090",
+            "price": 800,
+            "img": "assets/proflist.jpg",
+            "category": "proflist",
+            "subCategory": "profnastil",
+            "width": 1100,
+            "thickness": 0.5,
+            "color": 9090,
+            "imgColor": "assets/7024.png"
           }
         ]
       }

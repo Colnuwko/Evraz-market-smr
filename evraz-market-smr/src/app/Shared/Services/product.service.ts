@@ -1,6 +1,6 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
-import { map, Observable } from 'rxjs';
+import { BehaviorSubject, map, Observable } from 'rxjs';
 import { Product, ProfilePipe } from '../Interfaces/producct';
 import { Category, CategoryInt } from '../Interfaces/category';
 
@@ -8,6 +8,7 @@ import { Category, CategoryInt } from '../Interfaces/category';
   providedIn: 'root'
 })
 export class ProductService {
+
 
   private jsonUrl = 'assets/data.json';
 
@@ -96,4 +97,38 @@ export class ProductService {
       })
     );
   }
+
+  getProfilePipeByHeight(categoryId: string, subCategoryId: string, height: number): Observable<ProfilePipe> {
+    return this.http.get<any>(this.jsonUrl).pipe(
+      map(data => this.extractProducts(data).find(product => product.category === categoryId && product.subCategory === subCategoryId && (product as ProfilePipe).height === height) as ProfilePipe)
+    );
+  }
+
+  getProfilePipeByWidth(categoryId: string, subCategoryId: string, height: number, width: number): Observable<ProfilePipe> {
+    return this.http.get<any>(this.jsonUrl).pipe(
+      map(data => this.extractProducts(data).find(product => product.category === categoryId && product.subCategory === subCategoryId && (product as ProfilePipe).height === height && (product as ProfilePipe).width === width) as ProfilePipe)
+    );
+  }
+
+  getProfilePipeByThickness(categoryId: string, subCategoryId: string, height: number, width: number, thickness: number): Observable<ProfilePipe> {
+    return this.http.get<any>(this.jsonUrl).pipe(
+      map(data => this.extractProducts(data).find(product => product.category === categoryId && product.subCategory === subCategoryId && (product as ProfilePipe).height === height && (product as ProfilePipe).width === width && (product as ProfilePipe).thickness === thickness) as ProfilePipe)
+    );
+  }
+
+  private extractProducts(data: any): Product[] {
+    const products: Product[] = [];
+    data.forEach((category: any) => {
+      category.subCategories.forEach((subCategory: any) => {
+        subCategory.products.forEach((product: Product) => {
+          products.push(product);
+        });
+      });
+    });
+    return products;
+  }
+
+
+
+
 }
