@@ -1,0 +1,50 @@
+[
+{
+"id": "1",
+"name_user": "Иван Иванов",
+"feed_text": "Отличный продукт! Очень доволен покуп dzjfkvnb zdjkm,nv zdojlbn vdkjcxmnfdmxivom,nds olkxvjnodfjm.",
+"image": "bamboo-watch.jpg",
+  "price": 1242,
+"stars": 5
+},
+{
+"id": "2",
+"name_user": "Мария Смирнова",
+"feed_text": "Хорошее качество, но доставка немного задержалась.",
+"image": "bamboo-watch.jpg",
+  "price": 1242,
+"stars": 4
+},
+{
+"id": "3",
+"name_user": "Алексей Петров",
+"feed_text": "Средний товар, ожидал большего.",
+"image": "bamboo-watch.jpg",
+  "price": 1242,
+"stars": 3
+},
+{
+"id": "4",
+"name_user": "Ольга Кузнецова",
+"feed_text": "Очень плохое качество, не рекомендую.",
+"image": "bamboo-watch.jpg",
+  "price": 1242,
+"stars": 1
+},
+{
+"id": "5",
+"name_user": "Дмитрий Соколов",
+"feed_text": "Неплохой товар за свои деньги.",
+"image": "bamboo-watch.jpg",
+  "price": 1242,
+"stars": 4
+},
+{
+"id": "6",
+"name_user": "Екатерина Васильева",
+"feed_text": "Всё понравилось, буду заказывать ещё.",
+"image": "bamboo-watch.jpg",
+  "price": 1242,
+"stars": 5
+}
+]
