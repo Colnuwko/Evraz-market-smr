@@ -1,0 +1,36 @@
+<div class="card px-72 md:px-10 lg:px-20 xl:px-20 p-6 ">
+    <p-carousel
+        [value]="products"
+        [numVisible]="2"
+        [numScroll]="1"
+        [circular]="true"
+        [responsiveOptions]="responsiveOptions">
+            <ng-template let-product pTemplate="item" >
+
+                <div class="shadow-lg  rounded-md m-4 h-56 py-4 border border-grey ">
+                    <div class="flex flex-col h-full">
+                      <div class="flex flex-row justify-between mx-4">
+                        <div class="text-xl"><p class="text-lg font-bold">Покупатель:</p> {{product.name_user}}</div>
+
+                        <div class="flex flex-row justify-around mx-20">
+                          <img src="assets/star_l86whpazsq6h.svg">
+                          <img src="assets/star_l86whpazsq6h.svg">
+                          <img src="assets/star_l86whpazsq6h.svg">
+                          <img src="assets/star_l86whpazsq6h.svg">
+                          <img src="assets/star_l86whpazsq6h.svg">
+                          <p class="content-center mx-1">{{product.stars}}</p>
+                        </div>
+
+                      </div>
+                      <div class="mx-4">
+                        <p class="text-lg font-bold">Отзыв:</p>
+                        <p>{{product.feed_text}}</p>
+                      </div>
+                      <div class="mx-4 font-semibold text-xl items-end">
+                        <p> Сумма покупки {{ '₽ ' + product.price }}</p>
+                      </div>
+                   </div>
+                </div>
+            </ng-template>
+    </p-carousel>
+</div>
