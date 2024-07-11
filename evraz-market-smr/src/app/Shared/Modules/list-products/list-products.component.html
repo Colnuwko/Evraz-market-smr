@@ -25,6 +25,7 @@
                     <ng-container *ngIf="isProflist(product)">
                         <p class="text-sm">Ширина (B), мм: {{ product.width }}</p>
                         <p class="text-sm">Толщина металла (S), мм: {{ product.thickness }}</p>
+                        <p class="text-sm">Цвет RAL: {{ product.color }}</p>
                     </ng-container>
                 </th>
                 <th class="font-medium py-4 text-center px-2">г. Самара</th>
@@ -35,14 +36,7 @@
                     </div>
                 </th>
                 <th class="font-medium py-4 text-center px-2">{{ product.price }}&#8381;/м</th>
-                <!-- <ng-container *ngIf="isArmatura(product)">
-                    <p>Diameter: {{ product.diameter }}</p>
-                </ng-container>
-                <ng-container *ngIf="isProfilePipe(product)">
-                    <p>Width: {{ product.width }}</p>
-                    <p>Height: {{ product.height }}</p>
-                    <p>Thickness: {{ product.thickness }}</p>
-                </ng-container> -->
+
             </tr>
         </tbody>
     </table>
