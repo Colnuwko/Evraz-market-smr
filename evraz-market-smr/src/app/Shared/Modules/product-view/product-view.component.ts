@@ -1,8 +1,8 @@
 import { Component } from '@angular/core';
-import { Armatura, Product, ProfilePipe, Proflist } from '../../Interfaces/producct';
+import { Armatura, Balka, Product, ProfilePipe, Proflist, Shveller, Ugolok } from '../../Interfaces/producct';
 import { ProductService } from '../../Services/product.service';
 import { ActivatedRoute, Router } from '@angular/router';
-import { Category, SubCategoryDetail } from '../../Interfaces/category';
+import { Category, SubCategory, SubCategoryDetail } from '../../Interfaces/category';
 import { NgFor, NgIf } from '@angular/common';
 import { CategoryService } from '../../Services/category.service';
 import { BasketService } from '../../Services/basket.service';
@@ -70,13 +70,30 @@ export class ProductViewComponent {
   isProfilePipe(product: Product): product is ProfilePipe {
     return (product as ProfilePipe).category === Category.TRUBY;
   }
-  isProflist(product: Product): product is Proflist {
-    return (product as Proflist).category === Category.PROFLIST;
+  isShveller(product: Product): product is Shveller {
+    return (product as Shveller).subCategory === SubCategory.SHVELLER;
   }
   isProflists(products: Product[]): products is Proflist[] {
 
     return products.length > 0 && products[0].category === Category.PROFLIST
   }
+  isShvellers(products: Product[]): products is Shveller[] {
+    return products.length > 0 && products[0].subCategory === SubCategory.SHVELLER
+  }
+  isBalkas(products: Product[]): products is Balka[] {
+    return products.length > 0 && products[0].subCategory === SubCategory.BALKA
+  }
+  isBalka(product: Product): product is Balka {
+    return (product as Balka).subCategory === SubCategory.BALKA;
+  }
+  isUgoloks(products: Product[]): products is Ugolok[] {
+    return products.length > 0 && products[0].subCategory === SubCategory.UGOLOK
+  }
+  isUgolok(product: Product): product is Ugolok {
+    return (product as Ugolok).subCategory === SubCategory.UGOLOK;
+  }
+
+
   ngOnDestroy(): void {
     if (this.lengthSubscription) {
       this.lengthSubscription.unsubscribe();

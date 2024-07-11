@@ -28,3 +28,19 @@ export interface Proflist extends Product {
   color: number;
   imgColor: string;
 }
+
+export interface Shveller extends Product {
+  height: number;
+  length: number;
+}
+
+export interface Balka extends Product {
+  type: number;
+  length: number;
+}
+
+export interface Ugolok extends Product {
+  width: number;
+  thickness: number;
+  length: number;
+}

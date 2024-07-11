@@ -16,7 +16,7 @@
                 </div>
             </ng-container>
             <ng-container *ngIf="isArmatura(product)">
-                <p class="text-sm ">Длина (L), мм: {{ product.length }}</p>
+                <p class="font-semibold">Длина (L), мм: {{ product.length }}</p>
             </ng-container>
             <ng-container *ngIf="isProfilePipe(product)">
                 <div class="font-semibold">Высота (A), мм</div>
@@ -41,19 +41,57 @@
                     </div>
                 </div>
             </ng-container>
+            <ng-container *ngIf="isProfilePipe(product)">
+                <p class="font-semibold">Длина (L), мм: {{ product.length }}</p>
+            </ng-container>
             <ng-container *ngIf="isProflists(products)">
                 <div class="flex gap-2  flex-wrap">
                     <div *ngFor="let product of products" [class.border-orange]="check(product)" class="border-2"
                         (click)="navigateToProduct(product)">
-
                         <img [src]="product.imgColor" class="h-20" />
                         <div class="text-center">RAL {{product.color}}</div>
-
-
                     </div>
                 </div>
             </ng-container>
+            <ng-container *ngIf="isShvellers(products)">
+                <div class="font-semibold">Высота (H), cм</div>
+                <div class="flex gap-2 py-4  flex-wrap">
+                    <div *ngFor="let product of products" [class.border-orange]="check(product)"
+                        class="border-2 p-1 w-20 text-center" (click)="navigateToProduct(product)">
+                        <div class="text-center">{{product.height}}</div>
+                    </div>
+                </div>
+            </ng-container>
+            <ng-container *ngIf="isShveller(product)">
+                <p class="font-semibold">Длина (L), мм: {{ product.length }}</p>
+            </ng-container>
+            <ng-container *ngIf="isBalkas(products)">
+                <div class="font-semibold">Высота (H), cм</div>
+                <div class="flex gap-2 py-4  flex-wrap">
+                    <div *ngFor="let product of products" [class.border-orange]="check(product)"
+                        class="border-2 p-1 w-20 text-center" (click)="navigateToProduct(product)">
+                        <div class="text-center">{{product.type}}</div>
+                    </div>
+                </div>
+            </ng-container>
+            <ng-container *ngIf="isBalka(product)">
+                <p class="text-sm ">Длина (L), мм: {{ product.length }}</p>
+            </ng-container>
+            <ng-container *ngIf="isUgoloks(products)">
+                <div class="font-semibold">Ширина полки (B), мм</div>
+                <div class="flex gap-2 py-4  flex-wrap">
+                    <div *ngFor="let product of products" [class.border-orange]="check(product)"
+                        class="border-2 p-1 w-20 text-center" (click)="navigateToProduct(product)">
+                        <div class="text-center">{{product.width}}</div>
+                    </div>
+                </div>
 
+
+            </ng-container>
+            <ng-container *ngIf="isUgolok(product)">
+                <div class="font-semibold">Толщина полки (t), мм: {{product.thickness}}</div>
+                <p class="font-semibold ">Длина (L), мм: {{ product.length }}</p>
+            </ng-container>
         </div>
         <div class="basis-2/5 flex-auto p-4 border-superGrey border rounded-2xl shadow-lg">
             <div class="flex gap-2 items-end">
@@ -62,17 +100,21 @@
             </div>
             <div class="py-2">
                 <div class=" text-lg">Количество, м</div>
-                <div class="flex items-center gap-4">
-                    <button (click)="decreaseLength()" class="px-4 py-2 border rounded">-</button>
+                <div class="flex items-center gap-4 py-4">
+                    <button (click)="decreaseLength()" class="px-4 border rounded border-superGrey shadow-lg">-</button>
                     <div class="text-xl">{{ lengthInMeters }} м</div>
-                    <button (click)="increaseLength()" class="px-4 py-2 border rounded">+</button>
+                    <button (click)="increaseLength()"
+                        class="px-4 border rounded  border-superGrey shadow-lg">+</button>
                 </div>
             </div>
 
             <div class="text-2xl font-semibold ">
                 Итоговая стоимость: {{ totalCost}}&#8381;
             </div>
-
+            <div class="flex items-center py-4 gap-2">
+                <img src="assets/check.svg" class="h-6" />
+                <div class="font-semibold">В наличии</div>
+            </div>
         </div>
 
 

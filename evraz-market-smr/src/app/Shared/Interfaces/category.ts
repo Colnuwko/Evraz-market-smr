@@ -32,9 +32,12 @@ export enum SubCategory {
   KATANKA = 'katanka',
   PROVOLKA = 'provolka',
   LIST_GORKAT = 'list_gorkat',
+  SHVELLER = 'shveller',
   TRUBA_PROFILNAYA = "truba_profilnaya",
   METALLOCHEREPICA = "metallocherepica",
-  PROFNASTIL = 'profnastil'
+  PROFNASTIL = 'profnastil',
+  BALKA = 'balka',
+  UGOLOK = 'ugolok'
 }
 
 
@@ -53,9 +56,12 @@ export enum SubCategoryR {
   KATANKA = 'Катанка',
   PROVOLKA = 'Проволка',
   LIST_GORKAT = 'Лист горячекатанный',
+  SHVELLER = 'Швеллер',
   TRUBA_PROFILNAYA = "Труба профильная",
   METALLOCHEREPICA = "Металлочерепица",
-  PROFNASTIL = 'Профнастил'
+  PROFNASTIL = 'Профнастил',
+  BALKA = 'Балка двутавровая',
+  UGOLOK = 'Уголок'
 }
 
 
