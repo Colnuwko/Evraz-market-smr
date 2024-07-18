@@ -3,6 +3,7 @@
     "id": 1,
     "img": "assets/armatura.jpg",
     "category": "armatura",
+    "iconimg": "assets/wire-gauze-svgrepo-com.svg",
     "subCategories": [
       {
         "subCategory": "armatura_gladkaya",
@@ -215,6 +216,7 @@
     "id": 2,
     "img": "assets/truba.jpg",
     "category": "truby",
+    "iconimg": "assets/pipes-svgrepo-com.svg",
     "subCategories": [
       {
         "subCategory": "truba_profilnaya",
@@ -482,6 +484,7 @@
     "id": 3,
     "img": "assets/truba.jpg",
     "category": "proflist",
+    "iconimg": "assets/roof-svgrepo-com.svg",
     "subCategories": [
       {
         "subCategory": "metallocherepica",
@@ -564,6 +567,7 @@
     "id": 4,
     "img": "assets/fason.jpg",
     "category": "fasonnyy_prokat",
+    "iconimg": "assets/i-beam-svgrepo-com.svg",
     "subCategories": [
       {
         "subCategory": "shveller",

@@ -6,6 +6,7 @@ export interface CategoryInt {
   category: Category;
   subCategories: SubCategoryDetail[];
   title: CategoryR;
+  iconimg: string;
 }
 
 export interface SubCategoryDetail {

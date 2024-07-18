@@ -1,0 +1,22 @@
+<div class="bg-grey p-16 shadow-2xl">
+  <h1 class="text-black text-semibold text-xl m-2 text-center">Выберите категорию</h1>
+  <div class="flex flex-row flex-wrap justify-between" >
+     <div *ngFor="let category of categories" class="pb-6 m-2">
+        <div (click)="toggleCategory(category.id)" [class.text-orange]="expandedCategories.has(category.id)"
+            class="text-xl font-semibold text-black ">
+          <div class="flex flex-row justify-around ">
+            <img [src]=category.iconimg class="size-6 m-2" alt="Button Image" />
+            <span class="text-silver m-2">{{category.title}}</span>
+          </div>
+        </div>
+        <div class="text-sl p-2">
+            <div class="mx-2 text-black hover:text-orange " *ngFor="let subCategory of category.subCategories"
+                (click)="navigateToSubCategory(category.category, subCategory.subCategory)" [mat-dialog-close]="true">{{subCategory.title}}</div>
+        </div>
+    </div>
+  </div>
+  <mat-dialog-actions align="end">
+    <button class="text-black rounded-md bg-orange border border-grey hover:border-black hover:bg-orangHover py-2 px-4" mat-dialog-close>Закрыть</button>
+  </mat-dialog-actions>
+</div>
+
