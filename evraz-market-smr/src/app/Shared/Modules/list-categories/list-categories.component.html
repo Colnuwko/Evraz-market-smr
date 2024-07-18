@@ -1,6 +1,6 @@
 <div *ngFor="let category of categories" class="pb-6">
     <div (click)="toggleCategory(category.id)" [class.text-orange]="expandedCategories.has(category.id)"
-        class="text-xl font-semibold ">
+        class="text-xl font-semibold hover:text-orangHover">
 
         {{category.title}}
 
