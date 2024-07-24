@@ -3,7 +3,7 @@
     "id": 1,
     "img": "assets/armatura.jpg",
     "category": "armatura",
-    "iconimg": "assets/wire-gauze-svgrepo-com.svg",
+    "iconimg": "assets/armatura.svg",
     "subCategories": [
       {
         "subCategory": "armatura_gladkaya",
