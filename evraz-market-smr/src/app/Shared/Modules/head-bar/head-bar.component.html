@@ -1,26 +1,31 @@
-<div class="px-72 md:px-10 lg:px-20 xl:px-20 p-6">
+<div class="px-72 md:px-10 lg:px-20 xl:px-20 p-4 fixed my-8 bg-grey w-full z-40">
   <div class="w-full h-full">
-    <div class="flex flex-row  w-full h-full">
+    <div class="flex flex-row justify-between  w-full h-full">
       <div class="flex-none content-center mr-4" routerLink="">
-        <p class="text-4xl font-semibold my-auto">FRESH HOUSE</p>
+        <div class="flex flex-row">
+          <img src="/assets/Building_icon-icons.com_52242.svg" class="size-15 mx-2">
+          <p class="text-4xl font-semibold mx-2 my-2">Меркурий</p>
+        </div>
       </div>
       <div class="flex-none content-center mx-4"><app-catalog></app-catalog></div>
-      <div class="flex-auto content-center mx-4">
-        <form class="rounded-md border border-green flex justify-between p-2" #myForm="ngForm"
-          (ngSubmit)="submitForm(myForm)">
-          <input class="mx-2 focus:outline-none" type="text" name="textInput" ngModel placeholder="Найти товар"
-            required />
-          <button type="submit" class="mx-2">
-            <img src="assets/search.png" />
-          </button>
-        </form>
-      </div>
-      <div class="flex-none content-center mx-4"><app-template-button-router [imageSrc]="'assets/person.svg'"
-          [buttonText]="'Вход'" [sizeimg]="'7'" [routePath]="'/bassket'"></app-template-button-router></div>
-      <div class="flex-none content-center ml-4">
-        <app-template-button-router [imageSrc]="'assets/cart.svg'" [buttonText]="'Корзина'" [sizeimg]="'7'"
-          [routePath]="'/basket'"></app-template-button-router>
-      </div>
+      <button class="mx-4" (click)="scroll('about')">
+        <div class="flex items-center bg-orange  rounded-md p-1.5 hover:bg-orangHover" >
+            <img src="assets/downarrow_abajo3_5820.png" class="size-5"/>
+            <div class="text-white mx-4">О компании</div>
+        </div>
+      </button>
+      <button class="mx-4" (click)="scroll('product')">
+        <div class="flex items-center bg-orange  rounded-md p-1.5 hover:bg-orangHover">
+            <img src="assets/communication_conversation_contact_call_phone_icon2_256523.png" class="size-4" />
+            <div class="text-white mx-4">Контакты</div>
+        </div>
+      </button>
+      <button class="mx-4 ">
+        <div class="flex items-center bg-orange  rounded-md p-1.5 hover:bg-orangHover">
+            <img src="assets/interface_clipboard_file_paper_document_office_writing_icon2_132983.png" class="size-5" />
+            <div class="text-white mx-4">Оставить заявку</div>
+        </div>
+      </button>
     </div>
   </div>
 </div>

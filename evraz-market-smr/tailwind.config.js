@@ -9,13 +9,13 @@ module.exports = {
     },
     colors: {
       black: "#000000",
-      grey: "#f3f2f2",
-      greyHover: "#e5e1e1",
+      grey: "#fffbf2",
+      greyHover: "#fcf5e8",
       superGrey: "#868786",
       white: "#ffffff",
       green: "#5EC401",
       red: "#FC0E0E",
-      orange: "#ED7817",
+      orange: "#ff9036  ",
       orangHover: "#f7862a",
       backgr: "#ffffff"
     },

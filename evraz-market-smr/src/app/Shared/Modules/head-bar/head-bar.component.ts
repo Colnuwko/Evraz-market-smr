@@ -17,4 +17,13 @@ export class HeadBarComponent {
   submitForm(myForm: NgForm) {
     alert("sfgsd")
   }
+
+  scroll(name: string ){
+    if(name == 'about') {
+      window.scrollTo(0, 1000);
+    }
+    else {
+      window.scrollTo(0, 1600)
+    }
+  }
 }
