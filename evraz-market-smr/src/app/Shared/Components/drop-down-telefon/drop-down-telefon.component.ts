@@ -9,9 +9,15 @@ import { Component } from '@angular/core';
   styleUrl: './drop-down-telefon.component.css'
 })
 export class DropDownTelefonComponent {
-  isDropdownOpen = false;
 
-  toggleDropdown(state: boolean): void {
-    this.isDropdownOpen = state;
-  }
+    CopyNumber(){
+      navigator.clipboard.writeText("8-800-555-3535")
+      alert("Номер телефона скопирован: 8-800-555-3535");
+    }
+
+
+    CopyMail(){
+      navigator.clipboard.writeText("metal.samara@mail.ru")
+      alert("Адрес почты скопирован: metal.samara@mail.ru");
+    }
 }
