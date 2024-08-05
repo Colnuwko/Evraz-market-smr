@@ -53,4 +53,5 @@ export class ProductPageComponent {
   goToHome() {
     this.navigate.goToHome();
   }
+
 }

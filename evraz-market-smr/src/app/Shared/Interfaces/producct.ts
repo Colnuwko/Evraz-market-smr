@@ -44,3 +44,22 @@ export interface Ugolok extends Product {
   thickness: number;
   length: number;
 }
+
+export interface Setka extends Product{
+  width: number;
+  length: number;
+  size: number;
+}
+export interface Dobory extends Product {
+  length: number;
+  thickness: number;
+  color: number;
+  imgColor: string;
+}
+
+export interface Samorezi extends Product {
+  length: number;
+  thickness: number;
+  color: number;
+  count: number;
+}

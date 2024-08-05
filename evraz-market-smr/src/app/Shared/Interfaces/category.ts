@@ -24,7 +24,8 @@ export enum Category {
   MITIZ = 'metiznaya_produktsiya',
   TRUBY = 'truby',
   PROKAT = 'fasonnyy_prokat',
-  PROFLIST = 'proflist'
+  PROFLIST = 'proflist',
+  SETKA = 'setka'
 }
 
 export enum SubCategory {
@@ -35,20 +36,29 @@ export enum SubCategory {
   LIST_GORKAT = 'list_gorkat',
   SHVELLER = 'shveller',
   TRUBA_PROFILNAYA = "truba_profilnaya",
+  TRUBA_ELECTROSVARNAYA = "truba_elecrosvarnaya",
+  TRUBA_BESSHOVNAYA = "truba_besshovnaya",
+  TRUBA_VGP = "truba_vgp",
+  TRUBA_TEMPO = "truba_tempo",
   METALLOCHEREPICA = "metallocherepica",
   PROFNASTIL = 'profnastil',
+  DOBORNIE_ELEMENTY = "dobornie_elementy",
+  SAMOREZI = 'samorezi',
   BALKA = 'balka',
-  UGOLOK = 'ugolok'
+  UGOLOK = 'ugolok',
+  SETKA_KLADOCHNAYA = 'setka_kladochnaya',
+
 }
 
 
-export enum CategoryR {
+export enum CategoryR{
   ARMATURA = 'Арматурный прокат',
   LISTY = 'Листовой прокат',
   MITIZ = 'Метизная продукция',
   TRUBY = 'Трубный прокат',
   PROKAT = 'Фасонный прокат',
-  PROFLIST = 'Кровельные материалы'
+  PROFLIST = 'Кровельные материалы',
+  SETKA = 'Cетки'
 }
 
 export enum SubCategoryR {
@@ -59,10 +69,17 @@ export enum SubCategoryR {
   LIST_GORKAT = 'Лист горячекатанный',
   SHVELLER = 'Швеллер',
   TRUBA_PROFILNAYA = "Труба профильная",
+  TRUBA_ELECTROSVARNAYA = "Труба электросварная",
+  TRUBA_BESSHOVNAYA = "Труба бесшовная",
+  TRUBA_VGP = "Труба ВГП",
+  TRUBA_TEMPO = "Труба ТЭМПО",
   METALLOCHEREPICA = "Металлочерепица",
   PROFNASTIL = 'Профнастил',
+  DOBORNIE_ELEMENTY = "Доборные элементы",
+  SAMOREZI = 'Саморезы',
   BALKA = 'Балка двутавровая',
-  UGOLOK = 'Уголок'
+  UGOLOK = 'Уголок',
+  SETKA_KLADOCHNAYA = 'Сетка кладочная'
 }
 
 

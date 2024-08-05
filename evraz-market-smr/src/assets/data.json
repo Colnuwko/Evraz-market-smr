@@ -559,6 +559,68 @@
             "imgColor": "assets/7024.png"
           }
         ]
+      },
+      {
+        "subCategory": "dobornie_elementy",
+        "price": 150,
+        "title": "Доборные элементы",
+        "products": [
+          {
+            "id": 1,
+            "name": "Планка карнизная 120х80 0,4 PE с пленкой RAL 7024 мокрый асфальт (2м)",
+            "price": 1284,
+            "img": "assets/proflist.jpg",
+            "category": "proflist",
+            "subCategory": "dobornie_elementy",
+            "length": 2,
+            "thickness": 0.4,
+            "color": 7024,
+            "imgColor": "assets/7024.png"
+          },
+          {
+            "id": 2,
+            "name": "Планка карнизная 120х80 0,4 PE с пленкой RAL 8017 шоколад (2м)",
+            "price": 1284,
+            "img": "assets/proflist.jpg",
+            "category": "proflist",
+            "subCategory": "dobornie_elementy",
+            "length": 1100,
+            "thickness": 0.4,
+            "color": 8017,
+            "imgColor": "assets/7024.png"
+          }
+        ]
+      },
+      {
+        "subCategory": "samorezy",
+        "price": 50,
+        "title": "Саморезы",
+        "products": [
+          {
+            "id": 1,
+            "name": "Саморез по металлу Daxmer 4,8х19 RAL 7024 (250) сверло №2",
+            "price":  800,
+            "img": "assets/proflist.jpg",
+            "category": "proflist",
+            "subCategory": "samorezi",
+            "length": 19,
+            "thickness": 4.8,
+            "color": 7024,
+           " count": 250
+          },
+          {
+            "id": 2,
+            "name": "Саморез по металлу Daxmer 4,8х25 RAL 7024 (250) сверло №2",
+            "price":  800,
+            "img": "assets/proflist.jpg",
+            "category": "proflist",
+            "subCategory": "samorezi",
+            "length": 25,
+            "thickness": 4.8,
+            "color": 7024,
+            " count": 250
+          }
+        ]
       }
     ],
     "title": "Кровельные материалы"
@@ -767,5 +829,43 @@
       }
     ],
     "title": "Фасонный прокат"
+  },
+  {
+    "id": 5,
+    "img": "assets/armatura.jpg",
+    "category": "setka",
+    "iconimg": "assets/armatura.svg",
+    "subCategories": [
+      {
+        "subCategory": "setka_kladochnaya",
+        "price": 400,
+        "title": "Сетка кладочная",
+        "products": [
+          {
+            "id": 1,
+            "name": "Сетка кладочная 4ВР-1 100х100 0,5х1,5м ТУ",
+            "price": 600,
+            "img": "assets/products/ugolok.webp",
+            "category": "setka",
+            "subCategory": "setka_kladochnaya",
+            "size": 100,
+            "width": 0.5,
+            "length": 1.5
+          },
+          {
+            "id": 2,
+            "name": "Сетка кладочная 4ВР-1 50х50 0,5х1,5м ТУ",
+            "price": 400,
+            "img": "assets/products/ugolok.webp",
+            "category": "setka",
+            "subCategory": "setka_kladochnaya",
+            "size": 50,
+            "width": 0.5,
+            "length": 1.5
+          }
+          ]
+          }
+        ],
+    "title": "Сетки"
   }
 ]
