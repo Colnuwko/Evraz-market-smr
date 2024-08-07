@@ -20,7 +20,7 @@ export class HeadBarComponent {
 
   scroll(name: string ){
     if(name == 'about') {
-      window.scrollTo(0, 1000);
+      window.scrollTo(0, 1850);
     }
     else {
       window.scrollTo(0, 1600)

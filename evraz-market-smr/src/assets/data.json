@@ -482,7 +482,7 @@
   },
   {
     "id": 3,
-    "img": "assets/truba.jpg",
+    "img": "assets/materialy-dlya-krovli.jpg",
     "category": "proflist",
     "iconimg": "assets/roof-svgrepo-com.svg",
     "subCategories": [
@@ -832,7 +832,7 @@
   },
   {
     "id": 5,
-    "img": "assets/armatura.jpg",
+    "img": "assets/setka.jpg",
     "category": "setka",
     "iconimg": "assets/armatura.svg",
     "subCategories": [
@@ -867,5 +867,43 @@
           }
         ],
     "title": "Сетки"
+  },
+  {
+    "id": 6,
+    "img": "assets/list_prokat.jpg",
+    "category": "listprokat",
+    "iconimg": "assets/armatura.svg",
+    "subCategories": [
+      {
+        "subCategory": "list_cher_met",
+        "price": 400,
+        "title": "Листовой прокат",
+        "products": [
+          {
+            "id": 1,
+            "name": "Сетка кладочная 4ВР-1 100х100 0,5х1,5м ТУ",
+            "price": 600,
+            "img": "assets/products/ugolok.webp",
+            "category": "listprokat",
+            "subCategory": "list_cher_met",
+            "size": 100,
+            "width": 0.5,
+            "length": 1.5
+          },
+          {
+            "id": 2,
+            "name": "Сетка кладочная 4ВР-1 50х50 0,5х1,5м ТУ",
+            "price": 400,
+            "img": "assets/products/ugolok.webp",
+            "category": "listprokat",
+            "subCategory": "list_cher_met",
+            "size": 50,
+            "width": 0.5,
+            "length": 1.5
+          }
+          ]
+          }
+        ],
+    "title": "Листовой прокат"
   }
 ]

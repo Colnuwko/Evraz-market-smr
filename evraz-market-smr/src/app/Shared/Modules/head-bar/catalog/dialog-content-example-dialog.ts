@@ -23,7 +23,9 @@ export class DialogContentExampleDialog {
     this.expandedCategories.add(id);
 
   }
-
+   navigateToCategory(category: string ): void {
+      this.navigate.navigateToCategory(category);
+    }
   navigateToSubCategory(category: string, subCategory: string): void {
     this.navigate.navigateToSubCategory(category, subCategory)
   }

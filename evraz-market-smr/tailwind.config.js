@@ -12,12 +12,14 @@ module.exports = {
       grey: "#fffbf2",
       greyHover: "#fcf5e8",
       superGrey: "#868786",
+      greyBg: "#868786",
       white: "#ffffff",
       green: "#5EC401",
       red: "#FC0E0E",
       orange: "#ff9036  ",
       orangHover: "#f7862a",
       backgr: "#ffffff"
+
     },
     screens: {
       sm: { min: "640px", max: "767px" },
