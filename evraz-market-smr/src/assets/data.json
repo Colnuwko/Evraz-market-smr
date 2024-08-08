@@ -834,7 +834,7 @@
     "id": 5,
     "img": "assets/setka.jpg",
     "category": "setka",
-    "iconimg": "assets/armatura.svg",
+    "iconimg": "assets/mesh_tvra1p76wkfg.svg",
     "subCategories": [
       {
         "subCategory": "setka_kladochnaya",
@@ -872,7 +872,7 @@
     "id": 6,
     "img": "assets/list_prokat.jpg",
     "category": "listprokat",
-    "iconimg": "assets/armatura.svg",
+    "iconimg": "assets/metal_sheets_30p2dzx39qws.svg",
     "subCategories": [
       {
         "subCategory": "list_cher_met",
