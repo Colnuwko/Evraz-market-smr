@@ -1,0 +1,25 @@
+<div class="bg-grey p-16 shadow-2xl">
+  <h1 class="text-4xl font-sans text-orange mb-4 text-center">Оставьте заявку</h1>
+  <div class="contact-form-wrapper d-flex justify-content-center">
+    <form (ngSubmit)="onSubmit()" class="contact-form">
+      <div class="text-center">
+        <p class="text-superGrey">Имя</p>
+        <input type="text" class="form-control rounded border-white mb-3 form-input w-64 p-2" [(ngModel)]="name" name="name" placeholder="Введите имя" required>
+      </div>
+      <div class="text-center">
+        <p class="text-superGrey">Обратная связь</p>
+        <input type="email" class="form-control rounded border-white mb-3 form-input w-64 p-2" [(ngModel)]="email" name="email" placeholder="Почта, Номер или Cсылка" required>
+      </div>
+      <div class="text-center">
+        <p class="text-superGrey">Задайте свой вопрос</p>
+        <textarea class="form-control rounded border-white mb-3 form-text-area m-2 p-2 min-h-28 max-h-96" [(ngModel)]="message" name="message" rows="5" cols="30" placeholder="Сообщение менеджеру" required></textarea>
+      </div>
+      <div class="submit-button-wrapper text-center">
+        <button class="text-black rounded-md bg-orange border border-grey hover:border-black hover:bg-orangHover py-2 px-4" type="submit">Send</button>
+      </div>
+    </form>
+  </div>
+  <mat-dialog-actions align="end">
+    <button class="text-black rounded-md bg-orange border border-grey hover:border-black hover:bg-orangHover py-2 px-4" mat-dialog-close>Закрыть</button>
+  </mat-dialog-actions>
+</div>

@@ -14,5 +14,6 @@ export class FooterComponent {
  constructor(private navigate: NavigateService) {}
   navigateToCategory(category: string, ): void {
     this.navigate.navigateToCategory(category);
+    window.scrollTo(0, 0);
   }
 }
