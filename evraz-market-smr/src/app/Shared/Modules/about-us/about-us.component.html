@@ -1,15 +1,22 @@
-<img src="assets/bggrey.jpg" class="absolute -z-50" style="height: 1200px;">
-<div class="px-72 xl:px-20 md:px-10 lg:px-20 pt-16 mb-36">
+<div class="px-72 xl:px-20 md:px-10 lg:px-20 pt-16">
   <div class="shadow-lg rounded-lg flex flex-col gap-8 p-4">
-  <div  class="text-5xl text-center text-orange font-sans">Главное о компании</div>
-  <div class="grid grid-cols-3 grid-rows-2 gap-4 h-screen ">
+  <div  class="text-4xl font-semibold text-center">Главное о компании</div>
+  <div class="grid grid-cols-3 grid-rows-2 gap-4 h-full ">
     <div class="relative bg-cover h-full col-span-2 rounded-lg" [ngStyle]="{'background-image': 'url(assets/about.jpg)'}">
       <div class="absolute p-4">
         <h1 class="text-2xl font-semibold text-white">Надежность поставок металлопроката</h1>
       </div>
     </div>
-    <div class="rounded-lg bg-grey p-4 text-2xl font-semibold">cacaca</div>
-    <div class="rounded-lg bg-grey p-4 text-2xl font-semibold">cacaca</div>
+    <div class="rounded-lg bg-greyHover p-4  font-semibold flex flex-col gap-4 text-lg">
+      <div class="border-b-2 border-orange pb-4 font-medium">Поставка чёрного и цветного металлопроката</div>
+      <div class="border-b-2 border-orange pb-4  font-medium">Производство профлиста, металлочерепицы и доборных элементов </div>
+      <div class="border-b-2 border-orange pb-4  font-medium">Полное снабжение строительных объектов</div>
+    </div>
+    <div class="rounded-lg bg-greyHover p-4  font-semibold flex flex-col gap-4 text-lg">
+      <div class="border-b-2 border-orange pb-4  font-medium">Предоставляем услуги по резке и обработке металла в соответствии с вашими спецификациями</div>
+      <div class="border-b-2 border-orange pb-4 font-medium">Поддерживаем большой ассортимент продукции на складе для обеспечения быстрой отгрузки и доставки по всей стране</div>
+      <div class="border-b-2 border-orange pb-4  font-medium">Наши специалисты всегда готовы помочь с выбором материалов и предоставлением технической информации</div>
+    </div>
     <div class="relative bg-cover h-full col-span-2 rounded-lg" [ngStyle]="{'background-image': 'url(assets/about-2.jpg)'}">
       <div class="absolute p-4">
         <h1 class="text-2xl font-semibold text-white">Профессиональный партнер в поставках продукции для строительных оъектов
