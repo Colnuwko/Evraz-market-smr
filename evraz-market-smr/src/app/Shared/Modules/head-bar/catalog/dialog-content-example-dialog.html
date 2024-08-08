@@ -2,8 +2,8 @@
   <h1 class="text-black text-semibold text-xl m-2 text-center">Выберите категорию</h1>
   <div class="flex flex-row flex-wrap justify-between" >
      <div *ngFor="let category of categories" class="pb-6 m-2">
-        <div (click)="toggleCategory(category.id)" [class.text-orange]="expandedCategories.has(category.id)"
-            class="text-xl font-semibold text-black ">
+        <div (click)="navigateToCategory(category.category)" [mat-dialog-close]="true"
+            class="text-xl font-semibold text-black hover:text-orange">
           <div class="flex flex-row justify-around ">
             <img [src]=category.iconimg class="size-6 m-2" alt="Button Image" />
             <span class="text-silver m-2">{{category.title}}</span>
