@@ -1,0 +1,43 @@
+[
+  {
+  "id": "1",
+  "name_supplier": "Мечел",
+  "image": "assets/suppliersIcons/мечел.webp"
+  },
+
+  {
+  "id": "2",
+  "name_supplier": "Северсталь",
+  "image": "assets/suppliersIcons/северсталь.png"
+  },
+
+  {
+  "id": "3",
+  "name_supplier": "Евраз",
+  "image": "assets/suppliersIcons/евраз.jpg"
+  },
+
+  {
+  "id": "4",
+  "name_supplier": "Тула сталь",
+  "image": "assets/suppliersIcons/туласталь.svg"
+  },
+
+  {
+  "id": "5",
+  "name_supplier": "Кровля",
+  "image": "assets/suppliersIcons/туласталь.svg"
+  },
+
+  {
+  "id": "6",
+  "name_supplier": "Техноникель",
+  "image": "assets/suppliersIcons/техноникель.jpg"
+  },
+
+  {
+  "id": "7",
+  "name_supplier": "Сатурн",
+  "image": "assets/suppliersIcons/сатурнсталь.png"
+  }
+]
