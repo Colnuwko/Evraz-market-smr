@@ -11,10 +11,11 @@ export class EmailService {
 
   constructor(private http: HttpClient) { }
 
-  sendEmail(name: string, email: string, message: string) {
+  sendEmail(name: string, number: string, email: string, message: string, ) {
 
     const data = {
       name: name,
+      number: number,
       email: email,
       message: message
     };

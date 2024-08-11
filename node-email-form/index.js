@@ -12,6 +12,7 @@ app.use(cors());
 app.post('/send-email', (req, res) => {
   const name = req.body.name;
   const email = req.body.email;
+  const number = req.body.number;
   const message = req.body.message;
 
   const transporter = nodemailer.createTransport({
@@ -26,12 +27,13 @@ app.post('/send-email', (req, res) => {
 
   const mailOptions = {
     from: 'Mail from <merkuri_metal_info@mail.ru>',
-    to: 'mercuriy63@bk.ru', // Replace with recipient email address
+    to: 'Vladislav290403@gmail.com', // Replace with recipient email address
     subject: 'New Contact Form Submission',
     text: `
-      Name: ${name}
-      Email: ${email}
-      Message: ${message}
+      Клиент: ${name} Оставил заявку
+      Номер телефона: ${number}
+      Почта киента: ${email}
+      Клиент оставил следующий коментарий: ${message}
     `
   };
 

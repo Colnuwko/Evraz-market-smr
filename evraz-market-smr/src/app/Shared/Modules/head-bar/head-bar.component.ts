@@ -29,10 +29,6 @@ export class HeadBarComponent {
     const dialogRef = this.dialog.open(ApplicationFormComponent, {
       width: '700px'
     });
-
-    dialogRef.afterClosed().subscribe(result => {
-      console.log(`Dialog result: ${result}`);
-    });
   }
 
   scroll(name: string ) {

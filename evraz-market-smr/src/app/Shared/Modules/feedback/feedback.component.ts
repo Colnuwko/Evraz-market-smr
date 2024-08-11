@@ -1,27 +1,28 @@
 import { Component, OnInit} from '@angular/core';
-import { Feed } from "../../Interfaces/feed";
+import {Supplier} from "../../Interfaces/supplier";
 import { CarouselModule } from 'primeng/carousel';
 import { ButtonModule } from 'primeng/button';
 import { TagModule } from 'primeng/tag';
 import {FeedbackService} from "../../Services/feedback.service";
+import {SupplierService} from "../../Services/supplier.service";
+
 @Component({
   selector: 'app-feedback',
   standalone: true,
   imports: [CarouselModule, ButtonModule, TagModule],
   templateUrl: './feedback.component.html',
   styleUrl: './feedback.component.css',
-  providers: [FeedbackService]
+  providers: [FeedbackService, SupplierService]
 })
 export class FeedbackComponent {
-    products!: Feed[];
-
+    suppliers!: Supplier[];
     responsiveOptions: any[] | undefined;
 
-    constructor(private productService: FeedbackService) {}
+    constructor(private supplierService: SupplierService) {}
 
     ngOnInit() {
-        this.productService.getProductsSmall().subscribe((products) => {
-            this.products = products;
+        this.supplierService.getallsuppliers().subscribe((suppliers) => {
+            this.suppliers = suppliers;
         });
         this.responsiveOptions = [
             {

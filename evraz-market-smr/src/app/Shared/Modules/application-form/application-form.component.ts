@@ -1,8 +1,11 @@
 import { Component } from '@angular/core';
 import {MatDialogActions, MatDialogClose} from "@angular/material/dialog";
 import {EmailService} from "../../Services/email.service";
-import {FormsModule} from "@angular/forms";
+import {FormBuilder, FormGroup, FormsModule, ReactiveFormsModule, Validators} from "@angular/forms";
 import {HttpClient, HttpClientModule} from "@angular/common/http";
+import {NgIf} from "@angular/common";
+import {MatDialog, MatDialogModule} from "@angular/material/dialog";
+import {CustomAlertComponent} from "../custom-alert/custom-alert.component";
 
 @Component({
   selector: 'app-application-form',
@@ -11,21 +14,39 @@ import {HttpClient, HttpClientModule} from "@angular/common/http";
     MatDialogActions,
     MatDialogClose,
     FormsModule,
-    HttpClientModule
+    HttpClientModule,
+    ReactiveFormsModule,
+    NgIf,
+    MatDialogModule
   ],
   providers: [EmailService],
   templateUrl: './application-form.component.html',
   styleUrl: './application-form.component.css'
 })
 export class ApplicationFormComponent {
-  protected name: string = "";
-  protected email: string = "";
-  protected message: string = "";
 
-  constructor(private emailService: EmailService) {}
+  // @ts-ignore
+  protected clientForm: FormGroup;
+  constructor(private emailService: EmailService, private fb: FormBuilder, public dialog: MatDialog) {
+     this._createForm();
+  }
+  private _createForm(){
+    this.clientForm = this.fb.group({
+      name: ['', [Validators.required]],
+      number: ['', [Validators.required]],
+      email: ['', []],
+      message: ['', [Validators.required]]
+    });
+  }
 
   onSubmit() {
-    this.emailService.sendEmail(this.name, this.email, this.message).subscribe();
+    // @ts-ignore
+    let response = this.emailService.sendEmail(this.clientForm.get('name')?.value, this.clientForm.get('number')?.value,
+      this.clientForm.get('email')?.value, this.clientForm.get('message')?.value);
+     const dialogRef = this.dialog.open(CustomAlertComponent, {
+      data: "Заявка успешно отправлена. Менеджер свяжится с вами в ближайшее время."
+    });
+
   }
 
 }
