@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
 import { CardProductComponent } from '../../Components/card-product/card-product.component';
-import { Category, CategoryInt, CategoryR, SubCategory, SubCategoryR } from '../../Interfaces/category';
+import { CategoryInt, CategoryR, SubCategoryR } from '../../Interfaces/category';
 import { NgFor } from '@angular/common';
 import { Armatura } from '../../Interfaces/producct';
 import { ActivatedRoute } from '@angular/router';

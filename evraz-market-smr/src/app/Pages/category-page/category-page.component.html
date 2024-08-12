@@ -1,14 +1,14 @@
-<div class="mt-48 px-72 xl:px-20 md:px-10 lg:px-20 pb-10">
+<div class="mt-48 px-72 xl:px-20 md:px-10 lg:px-20 pb-10" *ngIf="category">
 
     <div class="flex gap-4 text-superGrey text-sm">
         <div (click)="goToHome()">Главная</div>
-        <div (click)="navigateToCategory(category?.category || '')">{{ category?.title }}</div>
+        <div (click)="navigateToCategory(translit(category!.title) || '')">{{ category!.title }}</div>
         <div *ngIf="subCategories.length"
-            (click)="navigateToSubCategory(category?.category || '',subCategories[0].subCategory)">
+            (click)="navigateToSubCategory(translit(category!.title) || '',translit(subCategories[0].title))">
             {{subCategories[0].title}}</div>
     </div>
 
-    <div *ngIf="!subCategories.length" class="text-4xl font-semibold my-8 text-orange">{{ category?.title }}</div>
+    <div *ngIf="!subCategories.length" class="text-4xl font-semibold my-8 text-orange">{{ category!.title }}</div>
     <div *ngIf="subCategories.length" class="text-4xl font-semibold my-8 text-orange">{{ subCategories[0].title}}</div>
 
     <div class="flex gap-10">

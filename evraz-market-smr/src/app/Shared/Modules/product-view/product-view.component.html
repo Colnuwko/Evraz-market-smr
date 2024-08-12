@@ -5,8 +5,8 @@
         <div class="basis-1/5">
             <img [src]="product.img" />
         </div>
-        <div class="basis-2/5 ">
-            <ng-container *ngIf="isArmaturaProducts(products)">
+        <div class="basis-2/5 " *ngIf="products">
+            <ng-container *ngIf="products && isArmaturaProducts(products)">
                 <div class="font-semibold">Диаметр (D), мм</div>
                 <div class="flex gap-2 py-4 flex-wrap">
                     <div *ngFor="let product of products" class=" border-2 p-1 w-20 text-center"
@@ -92,6 +92,19 @@
                 <div class="font-semibold">Толщина полки (t), мм: {{product.thickness}}</div>
                 <p class="font-semibold ">Длина (L), мм: {{ product.length }}</p>
             </ng-container>
+            <ng-container *ngIf="isSquares(products)">
+              <div class="font-semibold">Толщина сечения (t), мм: </div>
+              <div class="flex gap-2 py-4 flex-wrap">
+                <div *ngFor="let product of products" class=" border-2 p-1 w-20 text-center"
+                     [class.border-orange]="check(product)" (click)="navigateToProduct(product)">
+                  {{product.width}}
+                </div>
+              </div>
+            </ng-container>
+          <ng-container *ngIf="isSquare(product)">
+            <p class="font-semibold ">Длина (L), мм: {{ product.length }}</p>
+          </ng-container>
+
         </div>
         <div class="basis-2/5 flex-auto p-4 border-superGrey border rounded-2xl shadow-lg">
             <div class="flex gap-2 items-end">

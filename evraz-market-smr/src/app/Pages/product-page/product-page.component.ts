@@ -16,9 +16,9 @@ import { ProductService } from '../../Shared/Services/product.service';
   styleUrl: './product-page.component.css'
 })
 export class ProductPageComponent {
-  category: CategoryInt | undefined;
+  category!: CategoryInt ;
   subCategories: SubCategoryDetail[] = [];
-  product: Product | undefined;
+  product!: Product ;
   constructor(
     private route: ActivatedRoute,
     private productService: ProductService,
@@ -32,13 +32,14 @@ export class ProductPageComponent {
       const subCategoryId = params.get('subCategoryId')!;
       const productId = Number(params.get('productId'));
       this.dataService.getSubCategoryById(categoryId, subCategoryId).subscribe(category => {
+
         if (category) {
           this.category = category;
           this.subCategories = category.subCategories;
         }
       });
       this.productService.findProduct(categoryId, subCategoryId, productId).subscribe(product => {
-        this.product = product;
+        this.product = product!;
       });
 
     });
@@ -52,6 +53,9 @@ export class ProductPageComponent {
   }
   goToHome() {
     this.navigate.goToHome();
+  }
+  translit(categoryName: string): string {
+    return this.dataService.transliterate(categoryName);
   }
 
 }

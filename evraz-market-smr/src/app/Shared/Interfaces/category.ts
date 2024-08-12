@@ -3,14 +3,12 @@ import { Product } from "./producct";
 export interface CategoryInt {
   id: number;
   img: string;
-  category: Category;
   subCategories: SubCategoryDetail[];
   title: CategoryR;
   iconimg: string;
 }
 
 export interface SubCategoryDetail {
-  subCategory: SubCategory;
   price: number;
   title: SubCategoryR;
   products: Product[];

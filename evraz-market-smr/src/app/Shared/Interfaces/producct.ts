@@ -1,13 +1,27 @@
-import { Category, SubCategory } from "./category";
+import {CategoryR, SubCategoryR} from "./category";
 
 export interface Product {
   id: number;
   name: string;
   img: string;
   price: number;
+  type: TypeProduct;
+  category: CategoryR;
+  subCategory: SubCategoryR;
+}
 
-  category: Category;
-  subCategory: SubCategory;
+export enum TypeProduct{
+  armatura = "armatura",
+  profilePipe = "profilePipe",
+  proflist = "proflist",
+  shveller = "shveller",
+  balka = "balka",
+  ugolok = "ugolok",
+  dobory = "dobory",
+  setka = "setka",
+  samorezi = "samorezi",
+  square = "square"
+
 }
 
 export interface Armatura extends Product {
@@ -35,7 +49,7 @@ export interface Shveller extends Product {
 }
 
 export interface Balka extends Product {
-  type: number;
+  number: number;
   length: number;
 }
 
@@ -63,3 +77,23 @@ export interface Samorezi extends Product {
   color: number;
   count: number;
 }
+
+
+
+export interface Square extends Product{
+  width: number;
+  length: number;
+}
+
+export interface Wire extends Product {
+  weight: number;
+  thickness: number;
+}
+
+export interface Stripe extends Product{
+  width: number;
+  thickness: number;
+  length: number;
+}
+
+

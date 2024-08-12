@@ -1,15 +1,16 @@
 import { Component, Input } from '@angular/core';
 import {
-  Category,
+
   CategoryInt,
   CategoryR,
-  SubCategory,
+
   SubCategoryDetail,
   SubCategoryR,
 } from '../../Interfaces/category';
 import { NgFor } from '@angular/common';
 import { Router } from '@angular/router';
 import { NavigateService } from '../../Services/navigate.service';
+import {CategoryService} from "../../Services/category.service";
 
 @Component({
   selector: 'app-card-product',
@@ -21,12 +22,15 @@ import { NavigateService } from '../../Services/navigate.service';
 export class CardProductComponent {
   @Input() card!: CategoryInt;
 
-  constructor(private navigate: NavigateService) { }
+  constructor(private navigate: NavigateService, private dataService: CategoryService) { }
 
   navigateToCategory(category: string): void {
     this.navigate.navigateToCategory(category);
   }
   navigateToSubCategory(category: string, subCategory: string): void {
     this.navigate.navigateToSubCategory(category, subCategory)
+  }
+  translit(categoryName: string): string {
+    return this.dataService.transliterate(categoryName);
   }
 }

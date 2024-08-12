@@ -1,7 +1,8 @@
 import { Injectable } from '@angular/core';
 import { BehaviorSubject, Observable } from 'rxjs';
 import { Product } from '../Interfaces/producct';
-import { Category } from '../Interfaces/category';
+import {CategoryR} from "../Interfaces/category";
+
 
 @Injectable({
   providedIn: 'root'
@@ -35,7 +36,7 @@ export class BasketService {
     }
   }
   initializeLengthAndCost(product: Product | undefined): void {
-    if (product?.category === Category.PROFLIST) {
+    if (product?.category === CategoryR.PROFLIST) {
       const lengthInMeters = 1;
       this.setLengthInMeters(lengthInMeters);
       this.calculateTotalCost(product);
