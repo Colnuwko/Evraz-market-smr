@@ -15,6 +15,7 @@ module.exports = {
       greyBg: "#868786",
       white: "#ffffff",
       green: "#5EC401",
+      grenborder: "#42A948",
       red: "#FC0E0E",
       orange: "#ff9036  ",
       orangHover: "#f7862a",
