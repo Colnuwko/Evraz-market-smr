@@ -34,7 +34,6 @@ export class ApplicationFormComponent {
     this.clientForm = this.fb.group({
       name: ['', [Validators.required]],
       number: ['', [Validators.required]],
-      email: ['', []],
       message: ['', [Validators.required]]
     });
   }
