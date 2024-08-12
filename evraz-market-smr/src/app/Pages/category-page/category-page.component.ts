@@ -16,7 +16,7 @@ import { NavigateService } from '../../Shared/Services/navigate.service';
   styleUrl: './category-page.component.css'
 })
 export class CategoryPageComponent {
-  category: CategoryInt | undefined;
+  category!: CategoryInt ;
   subCategories: SubCategoryDetail[] = [];
   constructor(
     private route: ActivatedRoute,
@@ -26,17 +26,19 @@ export class CategoryPageComponent {
 
   ngOnInit(): void {
     this.route.paramMap.subscribe(params => {
-      const categoryId = params.get('categoryId')!;
+      const categoryId = params.get('categoryId');
       const subCategoryId = params.get('subCategoryId');
       if (subCategoryId) {
-        this.dataService.getSubCategoryById(categoryId, subCategoryId).subscribe(category => {
+        this.dataService.getSubCategoryById(categoryId!, subCategoryId).subscribe(category => {
+
           if (category) {
             this.category = category;
             this.subCategories = category.subCategories;
           }
         });
       } else {
-        this.dataService.getCategoryById(categoryId).subscribe(category => {
+        this.dataService.getCategoryById(categoryId!).subscribe(category => {
+
           if (category) {
             this.category = category;
 
@@ -53,6 +55,9 @@ export class CategoryPageComponent {
   }
   goToHome() {
     this.navigate.goToHome();
+  }
+  translit(categoryName: string): string {
+    return this.dataService.transliterate(categoryName);
   }
 
 }
