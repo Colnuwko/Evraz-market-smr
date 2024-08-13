@@ -1,7 +1,6 @@
-import {ChangeDetectionStrategy, inject, Component} from '@angular/core';
+import {Component} from '@angular/core';
 import {MatButtonModule} from '@angular/material/button';
 import {MatDialog, MatDialogModule} from '@angular/material/dialog';
-import {ListCategoriesComponent} from "../../list-categories/list-categories.component";
 import {DialogContentExampleDialog} from "./dialog-content-example-dialog";
 import {CategoryService} from "../../../Services/category.service";
 import {CategoryInt} from "../../../Interfaces/category";
@@ -16,16 +15,22 @@ import {CategoryInt} from "../../../Interfaces/category";
 })
 export class CatalogComponent {
   categories!: CategoryInt[];
-  constructor(public dialog: MatDialog, private dataService: CategoryService,) {}
-   ngOnInit(): void {
-      this.dataService.getCategories().subscribe(categories => {
-        this.categories = categories;
-      })
+
+  constructor(public dialog: MatDialog, private dataService: CategoryService,) {
   }
+
+  ngOnInit(): void {
+    this.dataService.getCategories().subscribe(categories => {
+      this.categories = categories;
+    })
+  }
+
   openDialog(): void {
     const dialogRef = this.dialog.open(DialogContentExampleDialog, {
-      data : this.categories,
-      width: '700px'
+      data: this.categories,
+      width: '700px',
+      autoFocus: false,
+      maxHeight: '90vh'
     });
 
     dialogRef.afterClosed().subscribe(result => {
