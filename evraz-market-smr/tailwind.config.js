@@ -10,6 +10,8 @@ module.exports = {
     colors: {
       black: "#000000",
       grey: "#fffbf2",
+      bgcard: "#fffaf2",
+      greyforabout: "#e3e5e3",
       greyHover: "#fcf5e8",
       superGrey: "#868786",
       greyBg: "#868786",

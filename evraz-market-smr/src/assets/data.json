@@ -12,7 +12,7 @@
             "id": 1,
             "name": "Арматура гладкая 6 А240 ГОСТ 34028-2016",
             "type": "armatura",
-            "img": "assets/products/armatura_gladkaya.webp",
+            "img": "assets/products/armatura_gladka.jpg",
             "price": 70,
             "length": 6000,
             "category": "Сортовой прокат",
@@ -24,7 +24,7 @@
             "name": "Арматура гладкая 8 А240С ГОСТ 34028-2016",
             "type": "armatura",
             "price": 60,
-            "img": "assets/products/armatura_gladkaya.webp",
+            "img": "assets/products/armatura_gladka.jpg",
             "length": 6000,
             "category": "Сортовой прокат",
             "subCategory": "Арматура А1",
@@ -35,7 +35,7 @@
             "name": "Арматура гладкая 10 А240С ГОСТ 34028-2016",
             "type": "armatura",
             "price": 60,
-            "img": "assets/products/armatura_gladkaya.webp",
+            "img": "assets/products/armatura_gladka.jpg",
             "length": 6000,
             "category": "Сортовой прокат",
             "subCategory": "Арматура А1",
@@ -46,7 +46,7 @@
             "name": "Арматура гладкая 12 А240С ГОСТ 34028-2016",
             "type": "armatura",
             "price": 60,
-            "img": "assets/products/armatura_gladkaya.webp",
+            "img": "assets/products/armatura_gladka.jpg",
             "length": 6000,
             "category": "Сортовой прокат",
             "subCategory": "Арматура А1",
@@ -57,7 +57,7 @@
             "name": "Арматура гладкая 14 А240С ГОСТ 34028-2016",
             "type": "armatura",
             "price": 60,
-            "img": "assets/products/armatura_gladkaya.webp",
+            "img": "assets/products/armatura_gladka.jpg",
             "length": 6000,
             "category": "Сортовой прокат",
             "subCategory": "Арматура А1",
@@ -68,7 +68,7 @@
             "name": "Арматура гладкая 16 А240С ГОСТ 34028-2016",
             "type": "armatura",
             "price": 60,
-            "img": "assets/products/armatura_gladkaya.webp",
+            "img": "assets/products/armatura_gladka.jpg",
             "length": 6000,
             "category": "Сортовой прокат",
             "subCategory": "Арматура А1",
@@ -79,7 +79,7 @@
             "name": "Арматура гладкая 18 А240С ГОСТ 34028-2016",
             "type": "armatura",
             "price": 60,
-            "img": "assets/products/armatura_gladkaya.webp",
+            "img": "assets/products/armatura_gladka.jpg",
             "length": 6000,
             "category": "Сортовой прокат",
             "subCategory": "Арматура А1",
@@ -90,7 +90,7 @@
             "name": "Арматура гладкая 20 А240С ГОСТ 34028-2016",
             "type": "armatura",
             "price": 60,
-            "img": "assets/products/armatura_gladkaya.webp",
+            "img": "assets/products/armatura_gladka.jpg",
             "length": 6000,
             "category": "Сортовой прокат",
             "subCategory": "Арматура А1",
@@ -107,7 +107,7 @@
             "name": "Арматура рифленая 6 (2ф) А500С Ст3сп ГОСТ 34028-2016",
             "type": "armatura",
             "price": 100,
-            "img": "assets/products/armatura.webp",
+            "img": "assets/products/armatura_rifl.jpeg",
             "length": 6000,
             "category": "Сортовой прокат",
             "subCategory": "Арматура А3",
@@ -118,7 +118,7 @@
             "name": "Арматура рифленая 8 (2ф) А500С ГОСТ 34028-2016",
             "type": "armatura",
             "price": 100,
-            "img": "assets/products/armatura.webp",
+            "img": "assets/products/armatura_rifl.jpeg",
             "length": 6000,
             "category": "Сортовой прокат",
             "subCategory": "Арматура А3",
@@ -129,7 +129,7 @@
             "name": "Арматура рифленая 10 (2ф) А500С ГОСТ 34028-2016",
             "type": "armatura",
             "price": 100,
-            "img": "assets/products/armatura.webp",
+            "img": "assets/products/armatura_rifl.jpeg",
             "length": 6000,
             "category": "Сортовой прокат",
             "subCategory": "Арматура А3",
@@ -140,7 +140,7 @@
             "name": "Арматура рифленая 12 (2ф) А500С ГОСТ 34028-2016",
             "type": "armatura",
             "price": 100,
-            "img": "assets/products/armatura.webp",
+            "img": "assets/products/armatura_rifl.jpeg",
             "length": 6000,
             "category": "Сортовой прокат",
             "subCategory": "Арматура А3",
@@ -151,7 +151,7 @@
             "name": "Арматура рифленая 14 (2ф) А500С ГОСТ 34028-2016",
             "type": "armatura",
             "price": 100,
-            "img": "assets/products/armatura.webp",
+            "img": "assets/products/armatura_rifl.jpeg",
             "length": 6000,
             "category": "Сортовой прокат",
             "subCategory": "Арматура А3",
@@ -162,7 +162,7 @@
             "name": "Арматура рифленая 16(2ф) А500С ГОСТ 34028-2016",
             "type": "armatura",
             "price": 100,
-            "img": "assets/products/armatura.webp",
+            "img": "assets/products/armatura_rifl.jpeg",
             "length": 6000,
             "category": "Сортовой прокат",
             "subCategory": "Арматура А3",
@@ -173,7 +173,7 @@
             "name": "Арматура рифленая 18 (2ф) А500С ГОСТ 34028-2016",
             "type": "armatura",
             "price": 100,
-            "img": "assets/products/armatura.webp",
+            "img": "assets/products/armatura_rifl.jpeg",
             "length": 6000,
             "category": "Сортовой прокат",
             "subCategory": "Арматура А3",
@@ -184,7 +184,7 @@
             "name": "Арматура рифленая 20 (2ф) А500С ГОСТ 34028-2016",
             "type": "armatura",
             "price": 100,
-            "img": "assets/products/armatura.webp",
+            "img": "assets/products/armatura_rifl.jpeg",
             "length": 6000,
             "category": "Сортовой прокат",
             "subCategory": "Арматура А3",
@@ -195,7 +195,7 @@
             "name": "Арматура рифленая 22 (2ф) А500С ГОСТ 34028-2016",
             "type": "armatura",
             "price": 100,
-            "img": "assets/products/armatura.webp",
+            "img": "assets/products/armatura_rifl.jpeg",
             "length": 6000,
             "category": "Сортовой прокат",
             "subCategory": "Арматура А3",
@@ -206,7 +206,7 @@
             "name": "Арматура рифленая 28 (2ф) А500С ГОСТ 34028-2016",
             "type": "armatura",
             "price": 100,
-            "img": "assets/products/armatura.webp",
+            "img": "assets/products/armatura_rifl.jpeg",
             "length": 6000,
             "category": "Сортовой прокат",
             "subCategory": "Арматура А3",
@@ -217,7 +217,7 @@
             "name": "Арматура рифленая 32 (2ф) А500С ГОСТ 34028-2016",
             "type": "armatura",
             "price": 100,
-            "img": "assets/products/armatura.webp",
+            "img": "assets/products/armatura_rifl.jpeg",
             "length": 6000,
             "category": "Сортовой прокат",
             "subCategory": "Арматура А3",
@@ -233,7 +233,7 @@
             "id": 1,
             "name": "Квадрат 16 ст3",
             "type": "square",
-            "img": "assets/products/armatura_gladkaya.webp",
+            "img": "assets/products/square.jpg",
             "price": 70,
             "length": 6000,
             "category": "Сортовой прокат",
@@ -244,7 +244,7 @@
             "id": 2,
             "name": "Квадрат 14 ст3",
             "type": "square",
-            "img": "assets/products/armatura_gladkaya.webp",
+            "img": "assets/products/square.jpg",
             "price": 70,
             "length": 6000,
             "category": "Сортовой прокат",
@@ -261,7 +261,7 @@
             "id": 1,
             "name": "Круг d34 ст40Х",
             "type": "armatura",
-            "img": "assets/products/armatura_gladkaya.webp",
+            "img": "assets/products/cryg.jpg",
             "price": 70,
             "length": 6000,
             "category": "Сортовой прокат",
@@ -272,12 +272,63 @@
             "id": 2,
             "name": "Круг d32 ст40Х",
             "type": "armatura",
-            "img": "assets/products/armatura_gladkaya.webp",
+            "img": "assets/products/cryg.jpg",
             "price": 80,
             "length": 6000,
             "category": "Сортовой прокат",
             "subCategory": "Круг стальной",
             "diameter": 32
+          }
+        ]
+      },
+      {
+        "price": 70,
+        "title": "Проволовка стальная",
+        "products": [
+          {
+            "id": 1,
+            "name": "Круг d34 ст40Х",
+            "type": "armatura",
+            "img": "assets/products/provolovka_steel.jpg",
+            "price": 70,
+            "length": 6000,
+            "category": "Сортовой прокат",
+            "subCategory": "Проволовка стальная",
+            "diameter": 34
+          }
+        ]
+      },
+      {
+        "price": 70,
+        "title": "Полоса стальная",
+        "products": [
+          {
+            "id": 1,
+            "name": "Круг d34 ст40Х",
+            "type": "armatura",
+            "img": "assets/products/polosa_steel.png",
+            "price": 70,
+            "length": 6000,
+            "category": "Сортовой прокат",
+            "subCategory": "Полоса стальная",
+            "diameter": 34
+          }
+        ]
+      },
+      {
+        "price": 70,
+        "title": "Шестигранник стальной",
+        "products": [
+          {
+            "id": 1,
+            "name": "Круг d34 ст40Х",
+            "type": "armatura",
+            "img": "assets/products/shestigrannik_steel.png",
+            "price": 70,
+            "length": 6000,
+            "category": "Сортовой прокат",
+            "subCategory": "Шестигранник стальной",
+            "diameter": 34
           }
         ]
       }
@@ -298,7 +349,7 @@
             "name": "Труба профильная 15х15х1,5 Ст3пс ГОСТ 13663-86",
             "type": "profilePipe",
             "price": 76,
-            "img": "assets/products/profil.webp",
+            "img": "assets/products/truba_profil_15x15.jpg",
             "length": 6000,
             "category": "Трубный прокат",
             "subCategory": "Труба профильная",
@@ -311,7 +362,7 @@
             "name": "Труба профильная 20х20х1,5 Ст3пс ГОСТ 13663-86",
             "type": "profilePipe",
             "price": 86,
-            "img": "assets/products/profil.webp",
+            "img": "assets/products/truba_profil_15x15.jpg",
             "length": 6000,
             "category": "Трубный прокат",
             "subCategory": "Труба профильная",
@@ -324,7 +375,7 @@
             "name": "Труба профильная 20х20х2 08пс ГОСТ 13663-86",
             "type": "profilePipe",
             "price": 150,
-            "img": "assets/products/profil.webp",
+            "img": "assets/products/truba_profil_15x15.jpg",
             "length": 6000,
             "category": "Трубный прокат",
             "subCategory": "Труба профильная",
@@ -337,7 +388,7 @@
             "name": "Труба профильная 25х25х1,5 08пс ГОСТ 13663-86",
             "type": "profilePipe",
             "price": 150,
-            "img": "assets/products/profil.webp",
+            "img": "assets/products/truba_profil_15x15.jpg",
             "length": 6000,
             "category": "Трубный прокат",
             "subCategory": "Труба профильная",
@@ -350,7 +401,7 @@
             "name": "Труба профильная 25х25х2 08пс ГОСТ 13663-86",
             "type": "profilePipe",
             "price": 150,
-            "img": "assets/products/profil.webp",
+            "img": "assets/products/truba_profil_15x15.jpg",
             "length": 6000,
             "category": "Трубный прокат",
             "subCategory": "Труба профильная",
@@ -363,7 +414,7 @@
             "name": "Труба профильная 30х30х2 08пс ГОСТ 13663-86",
             "type": "profilePipe",
             "price": 150,
-            "img": "assets/products/profil.webp",
+            "img": "assets/products/truba_profil_15x15.jpg",
             "length": 6000,
             "category": "Трубный прокат",
             "subCategory": "Труба профильная",
@@ -376,7 +427,7 @@
             "name": "Труба профильная 20х40х1,5 08пс ГОСТ 13663-86",
             "type": "profilePipe",
             "price": 150,
-            "img": "assets/products/profil.webp",
+            "img": "assets/products/truba_profil_20x40.jpg",
             "length": 6000,
             "category": "Трубный прокат",
             "subCategory": "Труба профильная",
@@ -389,7 +440,7 @@
             "name": "Труба профильная 20х40х2 08пс ГОСТ 13663-86",
             "type": "profilePipe",
             "price": 150,
-            "img": "assets/products/profil.webp",
+            "img": "assets/products/truba_profil_20x40.jpg",
             "length": 6000,
             "category": "Трубный прокат",
             "subCategory": "Труба профильная",
@@ -402,7 +453,7 @@
             "name": "Труба профильная 20х40х3 08пс ГОСТ 13663-86",
             "type": "profilePipe",
             "price": 150,
-            "img": "assets/products/profil.webp",
+            "img": "assets/products/truba_profil_20x40.jpg",
             "length": 6000,
             "category": "Трубный прокат",
             "subCategory": "Труба профильная",
@@ -415,7 +466,7 @@
             "name": "Труба профильная 40х40х1,5 08пс ГОСТ 13663-86",
             "type": "profilePipe",
             "price": 150,
-            "img": "assets/products/profil.webp",
+            "img": "assets/products/truba_profil_50x50.jpg",
             "length": 6000,
             "category": "Трубный прокат",
             "subCategory": "Труба профильная",
@@ -428,7 +479,7 @@
             "name": "Труба профильная 40х40х2 08пс ГОСТ 13663-86",
             "type": "profilePipe",
             "price": 150,
-            "img": "assets/products/profil.webp",
+            "img": "assets/products/truba_profil_50x50.jpg",
             "length": 6000,
             "category": "Трубный прокат",
             "subCategory": "Труба профильная",
@@ -441,7 +492,7 @@
             "name": "Труба профильная 40х40х3 08пс ГОСТ 13663-86",
             "type": "profilePipe",
             "price": 150,
-            "img": "assets/products/profil.webp",
+            "img": "assets/products/truba_profil_50x50.jpg",
             "length": 6000,
             "category": "Трубный прокат",
             "subCategory": "Труба профильная",
@@ -454,7 +505,7 @@
             "name": "Труба профильная 50х50х2 08пс ГОСТ 13663-86",
             "type": "profilePipe",
             "price": 150,
-            "img": "assets/products/profil.webp",
+            "img": "assets/products/truba_profil_50x50.jpg",
             "length": 6000,
             "category": "Трубный прокат",
             "subCategory": "Труба профильная",
@@ -467,7 +518,7 @@
             "name": "Труба профильная 50х50х3 08пс ГОСТ 13663-86",
             "type": "profilePipe",
             "price": 150,
-            "img": "assets/products/profil.webp",
+            "img": "assets/products/truba_profil_50x50.jpg",
             "length": 6000,
             "category": "Трубный прокат",
             "subCategory": "Труба профильная",
@@ -480,7 +531,7 @@
             "name": "Труба профильная 50х50х4 08пс ГОСТ 13663-86",
             "type": "profilePipe",
             "price": 150,
-            "img": "assets/products/profil.webp",
+            "img": "assets/products/truba_profil_50x50.jpg",
             "length": 6000,
             "category": "Трубный прокат",
             "subCategory": "Труба профильная",
@@ -493,7 +544,7 @@
             "name": "Труба профильная 60х60х2 08пс ГОСТ 13663-86",
             "type": "profilePipe",
             "price": 150,
-            "img": "assets/products/profil.webp",
+            "img": "assets/products/truba_profil_50x50.jpg",
             "length": 6000,
             "category": "Трубный прокат",
             "subCategory": "Труба профильная",
@@ -506,7 +557,7 @@
             "name": "Труба профильная 60х60х3 08пс ГОСТ 13663-86",
             "type": "profilePipe",
             "price": 150,
-            "img": "assets/products/profil.webp",
+            "img": "assets/products/truba_profil_50x50.jpg",
             "length": 6000,
             "category": "Трубный прокат",
             "subCategory": "Труба профильная",
@@ -519,7 +570,7 @@
             "name": "Труба профильная 60х60х4 08пс ГОСТ 13663-86",
             "type": "profilePipe",
             "price": 150,
-            "img": "assets/products/profil.webp",
+            "img": "assets/products/truba_profil_50x50.jpg",
             "length": 6000,
             "category": "Трубный прокат",
             "subCategory": "Труба профильная",
@@ -532,7 +583,7 @@
             "name": "Труба профильная 60х30х2 08пс ГОСТ 13663-86",
             "type": "profilePipe",
             "price": 150,
-            "img": "assets/products/profil.webp",
+            "img": "assets/products/truba_profil_60x30.jpg",
             "length": 6000,
             "category": "Трубный прокат",
             "subCategory": "Труба профильная",
@@ -545,7 +596,7 @@
             "name": "Труба профильная 60х30х3 08пс ГОСТ 13663-86",
             "type": "profilePipe",
             "price": 150,
-            "img": "assets/products/profil.webp",
+            "img": "assets/products/truba_profil_60x30.jpg",
             "length": 6000,
             "category": "Трубный прокат",
             "subCategory": "Труба профильная",
@@ -558,7 +609,7 @@
             "name": "Труба профильная 80х80х3 08пс ГОСТ 13663-86",
             "type": "profilePipe",
             "price": 150,
-            "img": "assets/products/profil.webp",
+            "img": "assets/products/truba_profil_80x80.jpg",
             "length": 6000,
             "category": "Трубный прокат",
             "subCategory": "Труба профильная",
@@ -567,8 +618,84 @@
             "thickness": 3
           }
         ]
+      },
+      {
+        "price": 80,
+        "title": "Труба электросварная",
+        "products": [
+          {
+            "id": 1,
+            "name": "Труба профильная 15х15х1,5 Ст3пс ГОСТ 13663-86",
+            "type": "profilePipe",
+            "price": 76,
+            "img": "assets/products/profil.webp",
+            "length": 6000,
+            "category": "Трубный прокат",
+            "subCategory": "Труба электросварная",
+            "width": 15,
+            "height": 15,
+            "thickness": 1.5
+          }
+          ]
+      },
+      {
+        "price": 80,
+        "title": "Труба бесшовная",
+        "products": [
+          {
+            "id": 1,
+            "name": "Труба профильная 15х15х1,5 Ст3пс ГОСТ 13663-86",
+            "type": "profilePipe",
+            "price": 76,
+            "img": "assets/products/profil.webp",
+            "length": 6000,
+            "category": "Трубный прокат",
+            "subCategory": "Труба бесшовная",
+            "width": 15,
+            "height": 15,
+            "thickness": 1.5
+          }
+          ]
+      },
+      {
+        "price": 80,
+        "title": "Труба ВГП",
+        "products": [
+          {
+            "id": 1,
+            "name": "Труба профильная 15х15х1,5 Ст3пс ГОСТ 13663-86",
+            "type": "profilePipe",
+            "price": 76,
+            "img": "assets/products/profil.webp",
+            "length": 6000,
+            "category": "Трубный прокат",
+            "subCategory": "Труба ВГП",
+            "width": 15,
+            "height": 15,
+            "thickness": 1.5
+          }
+          ]
+      },
+      {
+        "price": 80,
+        "title": "Труба ТЭМПО",
+        "products": [
+          {
+            "id": 1,
+            "name": "Труба профильная 15х15х1,5 Ст3пс ГОСТ 13663-86",
+            "type": "profilePipe",
+            "price": 76,
+            "img": "assets/products/profil.webp",
+            "length": 6000,
+            "category": "Трубный прокат",
+            "subCategory": "Труба ТЭМПО",
+            "width": 15,
+            "height": 15,
+            "thickness": 1.5
+          }
+          ]
       }
-    ],
+        ],
     "title": "Трубный прокат"
   },
   {
@@ -949,7 +1076,7 @@
         "products": [
           {
             "id": 1,
-            "name": "Сетка кладочная 4ВР-1 100х100 0,5х1,5м ТУ",
+            "name": "Лист горячекатаный 4ВР-1 100х100 0,5х1,5м ТУ",
             "type": "setka",
             "price": 600,
             "img": "assets/products/ugolok.webp",
@@ -961,7 +1088,7 @@
           },
           {
             "id": 2,
-            "name": "Сетка кладочная 4ВР-1 50х50 0,5х1,5м ТУ",
+            "name": "Лист горячекатаный 4ВР-1 50х50 0,5х1,5м ТУ",
             "type": "setka",
             "price": 400,
             "img": "assets/products/ugolok.webp",
@@ -971,9 +1098,9 @@
             "width": 0.5,
             "length": 1.5
           }
-          ]
-          }
-        ],
+        ]
+      }
+      ],
     "title": "Сетки"
   },
   {
@@ -993,7 +1120,7 @@
             "img": "assets/products/ugolok.webp",
             "category": "Листовой прокат",
             "subCategory": "Лист горячекатаный",
-            "width":1.5,
+            "width": 1.5,
             "thickness": 3,
             "length": 3,
             "steel": "ст3сп"
@@ -1006,14 +1133,72 @@
             "img": "assets/products/ugolok.webp",
             "category": "Листовой прокат",
             "subCategory": "Лист горячекатаный",
-            "width":2,
+            "width": 2,
             "thickness": 12,
             "length": 6,
             "steel": "ст3сп"
           }
-          ]
+        ]
+      },
+      {
+        "price": 400,
+        "title": "Лист рифленный",
+        "products":
+        [
+          {
+            "id": 1,
+            "name": "Лист рифленны 4ВР-1 100х100 0,5х1,5м ТУ",
+            "type": "ugolok",
+            "price": 600,
+            "img": "assets/products/ugolok.webp",
+            "category": "Листовой прокат",
+            "subCategory": "Лист рифленный",
+            "width": 1,
+            "thickness": 2,
+            "length": 3
           }
-        ],
+        ]
+      },
+      {
+        "price": 400,
+        "title": "Рулон горячекатаный",
+        "products":
+        [
+          {
+            "id": 1,
+            "name": "Рулон горячекатаный 4ВР-1 100х100 0,5х1,5м ТУ",
+            "type": "ugolok",
+            "price": 600,
+            "img": "assets/products/ugolok.webp",
+            "category": "Листовой прокат",
+            "subCategory": "Рулон горячекатаный",
+            "width": 1,
+            "thickness": 2,
+            "length": 3
+          }
+        ]
+      },
+      {
+        "price": 400,
+        "title": "Рулон оцинкованный",
+        "products":
+        [
+          {
+            "id": 1,
+            "name": "Рулон оцинкованный 4ВР-1 100х100 0,5х1,5м ТУ",
+            "type": "ugolok",
+            "price": 600,
+            "img": "assets/products/ugolok.webp",
+            "category": "Листовой прокат",
+            "subCategory": "Рулон оцинкованный",
+            "width": 1,
+            "thickness": 2,
+            "length": 3
+          }
+        ]
+      }
+    ],
     "title": "Листовой прокат"
   }
+
 ]

@@ -33,10 +33,10 @@ export class HeadBarComponent {
 
   scroll(name: string ) {
     if(name == 'about') {
-      window.scrollTo(0, 2000);
+      window.scrollTo(0, 2200);
     }
     else {
-      window.scrollTo(0, 1600)
+      window.scrollTo(0, 3650)
     }
   }
 }

@@ -15,20 +15,19 @@ import {NgForOf} from "@angular/common";
   styleUrl: './footer.component.css'
 })
 export class FooterComponent {
-  categories!: CategoryInt[];
- constructor(private navigate: NavigateService, private categoryService: CategoryService) {
+    protected categories!: CategoryInt[]
+    constructor(private navigate: NavigateService, private dataService: CategoryService) {
+      this.dataService.getCategories().subscribe(categories => {
+          this.categories = categories;
+      })}
 
- }
-  ngOnInit(): void {
-   this.categoryService.getCategories().subscribe(category => this.categories = category);
-  }
-  navigateToCategory(category: string, ): void {
-    this.navigate.navigateToCategory(category);
-    window.scrollTo(0, 0);
-  }
+    navigateToCategory(category: string, ): void {
+      this.navigate.navigateToCategory(category);
+      window.scrollTo(0, 0);
+    }
 
-  translit(name: string):string{
-   return this.categoryService.transliterate(name)
-  }
+    translit(categoryName: string): string {
+    return this.dataService.transliterate(categoryName);
+    }
 
 }

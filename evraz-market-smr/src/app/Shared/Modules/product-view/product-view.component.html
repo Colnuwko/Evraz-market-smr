@@ -1,15 +1,14 @@
 <div *ngIf="product">
-
     <div class="text-4xl font-semibold py-10"> {{product.name}}</div>
     <div class="flex gap-10 ">
-        <div class="basis-1/5">
-            <img [src]="product.img" />
+        <div class="basis-1/3 p-4 rounded-2xl shadow-lg">
+            <img class="max-h-60 w-full" [src]="product.img" />
         </div>
-        <div class="basis-2/5 " *ngIf="products">
+        <div class="basis-1/3 p-4 rounded-2xl shadow-lg" *ngIf="products">
             <ng-container *ngIf="products && isArmaturaProducts(products)">
                 <div class="font-semibold">Диаметр (D), мм</div>
                 <div class="flex gap-2 py-4 flex-wrap">
-                    <div *ngFor="let product of products" class=" border-2 p-1 w-20 text-center"
+                    <div *ngFor="let product of products" class=" border-2 p-1 w-20 text-center rounded-md"
                         [class.border-orange]="check(product)" (click)="navigateToProduct(product)">
                         {{product.diameter}}
                     </div>
@@ -21,21 +20,21 @@
             <ng-container *ngIf="isProfilePipe(product)">
                 <div class="font-semibold">Высота (A), мм</div>
                 <div class="flex gap-2 py-4 flex-wrap">
-                    <div *ngFor="let height of heights" class="border-2 p-1 w-20 text-center"
+                    <div *ngFor="let height of heights" class="border-2 p-1 w-20 text-center rounded-md"
                         [class.border-orange]="checkH(height)" (click)="navigateToHeight(height)">
                         {{height}}
                     </div>
                 </div>
                 <div class="font-semibold">Ширина (B), мм</div>
                 <div class="flex gap-2 py-4 flex-wrap">
-                    <div *ngFor="let width of widths" class="border-2 p-1 w-20 text-center"
+                    <div *ngFor="let width of widths" class="border-2 p-1 w-20 text-center rounded-md"
                         [class.border-orange]="checkW(width)" (click)="navigateToWidth(width)">
                         {{ width }}
                     </div>
                 </div>
                 <div class="font-semibold">Толщина (S), мм</div>
                 <div class="flex gap-2 py-4 flex-wrap">
-                    <div *ngFor="let thickness of thicknesses" class="border-2 p-1 w-20 text-center"
+                    <div *ngFor="let thickness of thicknesses" class="border-2 p-1 w-20 text-center rounded-md"
                         [class.border-orange]="checkT(thickness)" (click)="navigateToThickness(thickness)">
                         {{ thickness }}
                     </div>
@@ -46,10 +45,10 @@
             </ng-container>
             <ng-container *ngIf="isProflists(products)">
                 <div class="flex gap-2  flex-wrap">
-                    <div *ngFor="let product of products" [class.border-orange]="check(product)" class="border-2"
+                    <div *ngFor="let product of products" [class.border-orange]="check(product)" class="border-2 rounded-md"
                         (click)="navigateToProduct(product)">
                         <img [src]="product.imgColor" class="h-20" />
-                        <div class="text-center">RAL {{product.color}}</div>
+                        <div class="text-center rounded-md">RAL {{product.color}}</div>
                     </div>
                 </div>
             </ng-container>
@@ -57,7 +56,7 @@
                 <div class="font-semibold">Высота (H), cм</div>
                 <div class="flex gap-2 py-4  flex-wrap">
                     <div *ngFor="let product of products" [class.border-orange]="check(product)"
-                        class="border-2 p-1 w-20 text-center" (click)="navigateToProduct(product)">
+                        class="border-2 p-1 w-20 text-center rounded-md" (click)="navigateToProduct(product)">
                         <div class="text-center">{{product.height}}</div>
                     </div>
                 </div>
@@ -69,7 +68,7 @@
                 <div class="font-semibold">Высота (H), cм</div>
                 <div class="flex gap-2 py-4  flex-wrap">
                     <div *ngFor="let product of products" [class.border-orange]="check(product)"
-                        class="border-2 p-1 w-20 text-center" (click)="navigateToProduct(product)">
+                        class="border-2 p-1 w-20 text-center rounded-md" (click)="navigateToProduct(product)">
                         <div class="text-center">{{product.type}}</div>
                     </div>
                 </div>
@@ -81,7 +80,7 @@
                 <div class="font-semibold">Ширина полки (B), мм</div>
                 <div class="flex gap-2 py-4  flex-wrap">
                     <div *ngFor="let product of products" [class.border-orange]="check(product)"
-                        class="border-2 p-1 w-20 text-center" (click)="navigateToProduct(product)">
+                        class="border-2 p-1 w-20 text-center rounded-md" (click)="navigateToProduct(product)">
                         <div class="text-center">{{product.width}}</div>
                     </div>
                 </div>
@@ -95,7 +94,7 @@
             <ng-container *ngIf="isSquares(products)">
               <div class="font-semibold">Толщина сечения (t), мм: </div>
               <div class="flex gap-2 py-4 flex-wrap">
-                <div *ngFor="let product of products" class=" border-2 p-1 w-20 text-center"
+                <div *ngFor="let product of products" class=" border-2 p-1 w-20 text-center rounded-md"
                      [class.border-orange]="check(product)" (click)="navigateToProduct(product)">
                   {{product.width}}
                 </div>
@@ -106,7 +105,7 @@
           </ng-container>
 
         </div>
-        <div class="basis-2/5 flex-auto p-4 border-superGrey border rounded-2xl shadow-lg">
+        <div class="basis-1/3 flex-auto p-4 rounded-2xl shadow-lg">
             <div class="flex gap-2 items-end">
                 <div class="font-semibold">Стоимость:</div>
                 <div class="text-xl">{{product.price}} &#8381;/м</div>

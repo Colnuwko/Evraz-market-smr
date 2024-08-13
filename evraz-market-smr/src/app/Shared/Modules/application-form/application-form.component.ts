@@ -40,11 +40,18 @@ export class ApplicationFormComponent {
 
   onSubmit() {
     // @ts-ignore
-    let response = this.emailService.sendEmail(this.clientForm.get('name')?.value, this.clientForm.get('number')?.value,
+    if (this.clientForm.valid){
+      let response = this.emailService.sendEmail(this.clientForm.get('name')?.value, this.clientForm.get('number')?.value,
       this.clientForm.get('email')?.value, this.clientForm.get('message')?.value);
+      this.dialog.closeAll();
      const dialogRef = this.dialog.open(CustomAlertComponent, {
       data: "Заявка успешно отправлена. Менеджер свяжится с вами в ближайшее время."
     });
+
+    }
+    else{
+      this.dialog.open(CustomAlertComponent, { data: "Заполните обязательные поля"})
+    }
 
   }
 
