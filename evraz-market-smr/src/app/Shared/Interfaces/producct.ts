@@ -20,7 +20,9 @@ export enum TypeProduct{
   dobory = "dobory",
   setka = "setka",
   samorezi = "samorezi",
-  square = "square"
+  square = "square",
+  wire = "wire",
+  stripe = "stripe"
 
 }
 

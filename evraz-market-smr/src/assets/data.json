@@ -6,7 +6,7 @@
     "subCategories": [
       {
         "price": 30,
-        "title": "Арматура гладкая",
+        "title": "Арматура А1",
         "products": [
           {
             "id": 1,
@@ -16,7 +16,7 @@
             "price": 70,
             "length": 6000,
             "category": "Сортовой прокат",
-            "subCategory": "Арматура гладкая",
+            "subCategory": "Арматура А1",
             "diameter": 6
           },
           {
@@ -27,7 +27,7 @@
             "img": "assets/products/armatura_gladkaya.webp",
             "length": 6000,
             "category": "Сортовой прокат",
-            "subCategory": "Арматура гладкая",
+            "subCategory": "Арматура А1",
             "diameter": 8
           },
           {
@@ -38,7 +38,7 @@
             "img": "assets/products/armatura_gladkaya.webp",
             "length": 6000,
             "category": "Сортовой прокат",
-            "subCategory": "Арматура гладкая",
+            "subCategory": "Арматура А1",
             "diameter": 10
           },
           {
@@ -49,7 +49,7 @@
             "img": "assets/products/armatura_gladkaya.webp",
             "length": 6000,
             "category": "Сортовой прокат",
-            "subCategory": "Арматура гладкая",
+            "subCategory": "Арматура А1",
             "diameter": 12
           },
           {
@@ -60,7 +60,7 @@
             "img": "assets/products/armatura_gladkaya.webp",
             "length": 6000,
             "category": "Сортовой прокат",
-            "subCategory": "Арматура гладкая",
+            "subCategory": "Арматура А1",
             "diameter": 14
           },
           {
@@ -71,7 +71,7 @@
             "img": "assets/products/armatura_gladkaya.webp",
             "length": 6000,
             "category": "Сортовой прокат",
-            "subCategory": "Арматура гладкая",
+            "subCategory": "Арматура А1",
             "diameter": 16
           },
           {
@@ -82,7 +82,7 @@
             "img": "assets/products/armatura_gladkaya.webp",
             "length": 6000,
             "category": "Сортовой прокат",
-            "subCategory": "Арматура гладкая",
+            "subCategory": "Арматура А1",
             "diameter": 18
           },
           {
@@ -93,7 +93,7 @@
             "img": "assets/products/armatura_gladkaya.webp",
             "length": 6000,
             "category": "Сортовой прокат",
-            "subCategory": "Арматура гладкая",
+            "subCategory": "Арматура А1",
             "diameter": 20
           }
         ]
@@ -110,7 +110,7 @@
             "img": "assets/products/armatura.webp",
             "length": 6000,
             "category": "Сортовой прокат",
-            "subCategory": "Арматура рифленая",
+            "subCategory": "Арматура А3",
             "diameter": 6
           },
           {
@@ -121,7 +121,7 @@
             "img": "assets/products/armatura.webp",
             "length": 6000,
             "category": "Сортовой прокат",
-            "subCategory": "Арматура рифленая",
+            "subCategory": "Арматура А3",
             "diameter": 8
           },
           {
@@ -132,7 +132,7 @@
             "img": "assets/products/armatura.webp",
             "length": 6000,
             "category": "Сортовой прокат",
-            "subCategory": "Арматура рифленая",
+            "subCategory": "Арматура А3",
             "diameter": 10
           },
           {
@@ -143,7 +143,7 @@
             "img": "assets/products/armatura.webp",
             "length": 6000,
             "category": "Сортовой прокат",
-            "subCategory": "Арматура рифленая",
+            "subCategory": "Арматура А3",
             "diameter": 12
           },
           {
@@ -154,7 +154,7 @@
             "img": "assets/products/armatura.webp",
             "length": 6000,
             "category": "Сортовой прокат",
-            "subCategory": "Арматура рифленая",
+            "subCategory": "Арматура А3",
             "diameter": 14
           },
           {
@@ -165,7 +165,7 @@
             "img": "assets/products/armatura.webp",
             "length": 6000,
             "category": "Сортовой прокат",
-            "subCategory": "Арматура рифленая",
+            "subCategory": "Арматура А3",
             "diameter": 16
           },
           {
@@ -176,7 +176,7 @@
             "img": "assets/products/armatura.webp",
             "length": 6000,
             "category": "Сортовой прокат",
-            "subCategory": "Арматура рифленая",
+            "subCategory": "Арматура А3",
             "diameter": 18
           },
           {
@@ -187,7 +187,7 @@
             "img": "assets/products/armatura.webp",
             "length": 6000,
             "category": "Сортовой прокат",
-            "subCategory": "Арматура рифленая",
+            "subCategory": "Арматура А3",
             "diameter": 20
           },
           {
@@ -198,7 +198,7 @@
             "img": "assets/products/armatura.webp",
             "length": 6000,
             "category": "Сортовой прокат",
-            "subCategory": "Арматура рифленая",
+            "subCategory": "Арматура А3",
             "diameter": 22
           },
           {
@@ -209,7 +209,7 @@
             "img": "assets/products/armatura.webp",
             "length": 6000,
             "category": "Сортовой прокат",
-            "subCategory": "Арматура рифленая",
+            "subCategory": "Арматура А3",
             "diameter": 28
           },
           {
@@ -220,7 +220,7 @@
             "img": "assets/products/armatura.webp",
             "length": 6000,
             "category": "Сортовой прокат",
-            "subCategory": "Арматура рифленая",
+            "subCategory": "Арматура А3",
             "diameter": 32
           }
         ]
