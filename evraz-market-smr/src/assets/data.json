@@ -987,27 +987,29 @@
         "products": [
           {
             "id": 1,
-            "name": "Сетка кладочная 4ВР-1 100х100 0,5х1,5м ТУ",
-            "type": "ugolok",
+            "name": "Лист ГК 3 ст3сп 1,5х3м",
+            "type": "list",
             "price": 600,
             "img": "assets/products/ugolok.webp",
             "category": "Листовой прокат",
             "subCategory": "Лист горячекатаный",
-            "width":1,
-            "thickness": 2,
-            "length": 3
+            "width":1.5,
+            "thickness": 3,
+            "length": 3,
+            "steel": "ст3сп"
           },
           {
             "id": 2,
-            "name": "Сетка кладочная 4ВР-1 50х50 0,5х1,5м ТУ",
-            "type": "ugolok",
+            "name": "Лист ГК 12 ст3сп5 2х6м",
+            "type": "list",
             "price": 400,
             "img": "assets/products/ugolok.webp",
             "category": "Листовой прокат",
             "subCategory": "Лист горячекатаный",
-            "size": 50,
-            "width": 0.5,
-            "length": 1.5
+            "width":2,
+            "thickness": 12,
+            "length": 6,
+            "steel": "ст3сп"
           }
           ]
           }

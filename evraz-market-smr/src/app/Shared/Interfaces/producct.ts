@@ -97,5 +97,10 @@ export interface Stripe extends Product{
   thickness: number;
   length: number;
 }
-
+export interface list extends Product{
+  width: number;
+  thickness: number;
+  length: number;
+  steel: string;
+}
 
