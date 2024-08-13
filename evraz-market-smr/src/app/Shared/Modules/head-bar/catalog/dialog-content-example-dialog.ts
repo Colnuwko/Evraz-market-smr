@@ -11,24 +11,31 @@ import {NavigateService} from "../../../Services/navigate.service";
   selector: 'dialog-content-example-dialog',
   templateUrl: './dialog-content-example-dialog.html',
   standalone: true,
+  styleUrl: './dialog-content-example.component.css',
   imports: [MatDialogModule, MatButtonModule, ListCategoriesComponent, NgForOf, NgIf],
   changeDetection: ChangeDetectionStrategy.OnPush,
   providers: [ListCategoriesComponent, CategoryService]
 })
 export class DialogContentExampleDialog {
   expandedCategories: Set<number> = new Set();
-  constructor(@Inject(MAT_DIALOG_DATA) public categories: CategoryInt[], private navigate: NavigateService, private dataService: CategoryService) {}
+
+  constructor(@Inject(MAT_DIALOG_DATA) public categories: CategoryInt[], private navigate: NavigateService, private dataService: CategoryService) {
+  }
+
   toggleCategory(id: number): void {
     this.expandedCategories.clear();
     this.expandedCategories.add(id);
 
   }
-   navigateToCategory(category: string ): void {
-      this.navigate.navigateToCategory(category);
-    }
+
+  navigateToCategory(category: string): void {
+    this.navigate.navigateToCategory(category);
+  }
+
   navigateToSubCategory(category: string, subCategory: string): void {
     this.navigate.navigateToSubCategory(category, subCategory)
   }
+
   translit(categoryName: string): string {
     return this.dataService.transliterate(categoryName);
   }

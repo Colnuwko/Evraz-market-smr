@@ -1,22 +1,26 @@
-<div class="bg-grey p-16 shadow-2xl">
+<div class="bg-grey p-16 shadow-2xl ">
   <h1 class="text-black text-semibold text-xl m-2 text-center">Выберите категорию</h1>
-  <div class="flex flex-row flex-wrap justify-between" >
-     <div *ngFor="let category of categories" class="pb-6 m-2" style="width: 250px;">
-        <div (click)="navigateToCategory(translit(category.title))" [mat-dialog-close]="true"
-            class="text-xl font-semibold text-black hover:text-orange">
-          <div class="flex flex-row  ">
-            <img [src]=category.iconimg class="size-6 m-2" alt="Button Image" />
-            <span class="text-silver m-2">{{category.title}}</span>
-          </div>
+  <div class="flex flex-row flex-wrap justify-between">
+    <div *ngFor="let category of categories" class="pb-6 m-2 overflow-contain" style="width: 250px;">
+      <div (click)="navigateToCategory(translit(category.title))" [mat-dialog-close]="true"
+           class="text-xl font-semibold text-black hover:text-orange">
+        <div class="flex flex-row  ">
+          <img [src]=category.iconimg class="size-6 m-2" alt="Button Image"/>
+          <span class="text-silver m-2">{{ category.title }}</span>
         </div>
-        <div class="text-sl p-2">
-            <div class="mx-2 text-black hover:text-orange " *ngFor="let subCategory of category.subCategories"
-                (click)="navigateToSubCategory(translit(category.title), translit(subCategory.title))" [mat-dialog-close]="true">{{subCategory.title}}</div>
+      </div>
+      <div class="text-sl p-2">
+        <div class="mx-2 text-black hover:text-orange " *ngFor="let subCategory of category.subCategories"
+             (click)="navigateToSubCategory(translit(category.title), translit(subCategory.title))"
+             [mat-dialog-close]="true">{{ subCategory.title }}
         </div>
+      </div>
     </div>
   </div>
   <mat-dialog-actions align="end">
-    <button class="text-black rounded-md bg-orange border border-grey hover:border-black hover:bg-orangHover py-2 px-4" mat-dialog-close>Закрыть</button>
+    <button class="text-black rounded-md bg-orange border border-grey hover:border-black hover:bg-orangHover py-2 px-4"
+            mat-dialog-close>Закрыть
+    </button>
   </mat-dialog-actions>
 </div>
 

@@ -1,43 +1,68 @@
 <div *ngIf="category">
-    <table class="table-auto min-w-full bg-backgr rounded-2xl">
-        <thead>
-            <tr class="border-b border-b-orangHover  text-superGrey p-4">
-                <th class="text-left px-2 py-4 text-orange">Наименование</th>
-                <th class="text-center px-2 py-4 text-orange">Склад</th>
-                <th class="text-center px-2 py-4 text-orange">Наличие</th>
-                <th class="text-center px-2 py-4 text-orange">Цена</th>
-            </tr>
-        </thead>
-        <tbody *ngFor="let subCategory of subCategories">
-            <tr *ngFor="let product of subCategory.products" class="border-t  border-orange">
-                <th class="font-medium py-4 text-left px-4 " (click)="navigateToSubCategory(subCategory, product)">
-                    <div class="underline font-sans text-black  hover:text-orangHover">{{product.name }}</div>
-                    <ng-container *ngIf="isArmatura(product)">
-                        <p class="text-sm">Длина (L), мм: {{ product.length }}</p>
-                    </ng-container>
-                    <ng-container *ngIf="isProfilePipe(product)">
-                        <p class="text-sm">Длина (L), мм: {{ product.length }}</p>
+  <table class="table-auto min-w-full bg-backgr rounded-2xl">
+    <thead>
+    <tr class="border-b border-b-orangHover  text-superGrey p-4">
+      <th class="text-left px-2 py-4 text-orange">Наименование</th>
+      <th class="text-center px-2 py-4 text-orange">Склад</th>
+      <th class="text-center px-2 py-4 text-orange">Наличие</th>
+      <th class="text-center px-2 py-4 text-orange">Цена</th>
+    </tr>
+    </thead>
+    <tbody *ngFor="let subCategory of subCategories">
+    <tr *ngFor="let product of subCategory.products" class="border-t  border-orange">
+      <th class="font-medium py-4 text-left px-4 " (click)="navigateToSubCategory(subCategory, product)">
+        <div class="underline font-sans text-black  hover:text-orangHover">{{ product.name }}</div>
+        <ng-container *ngIf="isArmatura(product)">
+          <p class="text-sm">Длина (L), мм: {{ product.length }}</p>
+          <p class="text-sm">Диаметр (D), мм: {{ product.diameter }}</p>
+        </ng-container>
+        <ng-container *ngIf="isSquare(product)">
+          <p class="text-sm">Длина (L), мм: {{ product.length }}</p>
+          <p class="text-sm">Толщина (T), мм: {{ product.width }}</p>
+        </ng-container>
+        <ng-container *ngIf="isProfilePipe(product)">
+          <p class="text-sm">Длина (L), мм: {{ product.length }}</p>
 
-                        <p class="text-sm">Высота (А), мм: {{ product.height }}</p>
-                        <p class="text-sm">Ширина (B), мм: {{ product.width }}</p>
-                        <p class="text-sm">Толщина стенки (S), мм: {{ product.thickness }}</p>
-                    </ng-container>
-                    <ng-container *ngIf="isProflist(product)">
-                        <p class="text-sm">Ширина (B), мм: {{ product.width }}</p>
-                        <p class="text-sm">Толщина металла (S), мм: {{ product.thickness }}</p>
-                        <p class="text-sm">Цвет RAL: {{ product.color }}</p>
-                    </ng-container>
-                </th>
-                <th class="font-medium py-4 text-center px-2">г. Самара</th>
-                <th class="font-medium py-4 text-center px-2">
-                    <div class="flex gap-2 items-center justify-center">
-                        <img src="assets/check.svg" class="h-4" />
-                        <div>В наличии</div>
-                    </div>
-                </th>
-                <th class="font-medium py-4 text-center px-2">{{ product.price }}&#8381;/м</th>
+          <p class="text-sm">Высота (А), мм: {{ product.height }}</p>
+          <p class="text-sm">Ширина (B), мм: {{ product.width }}</p>
+          <p class="text-sm">Толщина стенки (S), мм: {{ product.thickness }}</p>
+        </ng-container>
+        <ng-container *ngIf="isProflist(product)">
+          <p class="text-sm">Ширина (B), мм: {{ product.width }}</p>
+          <p class="text-sm">Толщина металла (S), мм: {{ product.thickness }}</p>
+          <p class="text-sm">Цвет RAL: {{ product.color }}</p>
+        </ng-container>
+        <ng-container *ngIf="isSamorezi(product)">
+          <p class="text-sm">Длина (L), мм: {{ product.length }}</p>
+          <p class="text-sm">Диаметр (D), мм: {{ product.thickness }}</p>
+          <p class="text-sm">Цвет RAL: {{ product.color }}</p>
+          <p class="text-sm">Количество: {{ product.count }}</p>
+        </ng-container>
+        <ng-container *ngIf="isWire(product)">
+          <p class="text-sm">Масса (m), кг: {{ product.weight }}</p>
+          <p class="text-sm">Диаметр (D), мм: {{ product.thickness }}</p>
+        </ng-container>
+        <ng-container *ngIf="isStripe(product)">
+          <p class="text-sm">Длина (L), мм: {{ product.length }}</p>
+          <p class="text-sm">Толщина (T), мм: {{ product.thickness }}</p>
+          <p class="text-sm">Ширина (W), мм: {{ product.width }}</p>
+        </ng-container>
+        <ng-container *ngIf="isSetka(product)">
+          <p class="text-sm">Длина (L), мм: {{ product.length }}</p>
+          <p class="text-sm">Ячейка (S), мм: {{ product.size }}</p>
+          <p class="text-sm">Ширина (W), мм: {{ product.width }}</p>
+        </ng-container>
+      </th>
+      <th class="font-medium py-4 text-center px-2">г. Самара</th>
+      <th class="font-medium py-4 text-center px-2">
+        <div class="flex gap-2 items-center justify-center">
+          <img src="assets/check.svg" class="h-4"/>
+          <div>В наличии</div>
+        </div>
+      </th>
+      <th class="font-medium py-4 text-center px-2">{{ product.price }}&#8381;/м</th>
 
-            </tr>
-        </tbody>
-    </table>
+    </tr>
+    </tbody>
+  </table>
 </div>

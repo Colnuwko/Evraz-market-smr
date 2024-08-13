@@ -1,7 +1,6 @@
-import { Injectable } from '@angular/core';
-import { BehaviorSubject, Observable } from 'rxjs';
-import { Product } from '../Interfaces/producct';
-import {CategoryR} from "../Interfaces/category";
+import {Injectable} from '@angular/core';
+import {BehaviorSubject, Observable} from 'rxjs';
+import {Product, TypeProduct} from '../Interfaces/producct';
 
 
 @Injectable({
@@ -11,7 +10,10 @@ export class BasketService {
 
   public lengthInMeters = new BehaviorSubject<number>(6);
   public totalCost = new BehaviorSubject<number>(0);
-  constructor() { }
+
+  constructor() {
+  }
+
   setLengthInMeters(length: number): void {
     this.lengthInMeters.next(length);
   }
@@ -35,13 +37,13 @@ export class BasketService {
       this.setTotalCost(cost);
     }
   }
+
   initializeLengthAndCost(product: Product | undefined): void {
-    if (product?.category === CategoryR.PROFLIST) {
+    if (product?.type === TypeProduct.proflist || product?.type === TypeProduct.setka) {
       const lengthInMeters = 1;
       this.setLengthInMeters(lengthInMeters);
       this.calculateTotalCost(product);
-    }
-    else {
+    } else {
       const lengthInMeters = 6;
       this.setLengthInMeters(lengthInMeters);
       if (product)

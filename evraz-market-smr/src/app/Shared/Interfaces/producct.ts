@@ -5,12 +5,13 @@ export interface Product {
   name: string;
   img: string;
   price: number;
+  description?: string;
   type: TypeProduct;
   category: CategoryR;
   subCategory: SubCategoryR;
 }
 
-export enum TypeProduct{
+export enum TypeProduct {
   armatura = "armatura",
   profilePipe = "profilePipe",
   proflist = "proflist",
@@ -22,7 +23,8 @@ export enum TypeProduct{
   samorezi = "samorezi",
   square = "square",
   wire = "wire",
-  stripe = "stripe"
+  stripe = "stripe",
+  list = "list"
 
 }
 
@@ -61,11 +63,12 @@ export interface Ugolok extends Product {
   length: number;
 }
 
-export interface Setka extends Product{
+export interface Setka extends Product {
   width: number;
   length: number;
   size: number;
 }
+
 export interface Dobory extends Product {
   length: number;
   thickness: number;
@@ -81,8 +84,7 @@ export interface Samorezi extends Product {
 }
 
 
-
-export interface Square extends Product{
+export interface Square extends Product {
   width: number;
   length: number;
 }
@@ -92,12 +94,13 @@ export interface Wire extends Product {
   thickness: number;
 }
 
-export interface Stripe extends Product{
+export interface Stripe extends Product {
   width: number;
   thickness: number;
   length: number;
 }
-export interface list extends Product{
+
+export interface Listy extends Product {
   width: number;
   thickness: number;
   length: number;
