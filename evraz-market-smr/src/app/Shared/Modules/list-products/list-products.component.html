@@ -1,7 +1,7 @@
 <div *ngIf="category">
-    <table class="table-auto min-w-full bg-backgr border-solid border border-orange ">
+    <table class="table-auto min-w-full bg-backgr rounded-2xl">
         <thead>
-            <tr class="border-b  text-superGrey">
+            <tr class="border-b border-b-orangHover  text-superGrey p-4">
                 <th class="text-left px-2 py-4 text-orange">Наименование</th>
                 <th class="text-center px-2 py-4 text-orange">Склад</th>
                 <th class="text-center px-2 py-4 text-orange">Наличие</th>
@@ -9,9 +9,9 @@
             </tr>
         </thead>
         <tbody *ngFor="let subCategory of subCategories">
-            <tr *ngFor="let product of subCategory.products" class="border-t  border-superGrey ">
-                <th class="font-medium py-4 text-left px-2 " (click)="navigateToSubCategory(subCategory, product)">
-                    <div class="underline decoration-orange underline-offset-4">{{product.name }}</div>
+            <tr *ngFor="let product of subCategory.products" class="border-t  border-orange">
+                <th class="font-medium py-4 text-left px-4 " (click)="navigateToSubCategory(subCategory, product)">
+                    <div class="underline font-sans text-black  hover:text-orangHover">{{product.name }}</div>
                     <ng-container *ngIf="isArmatura(product)">
                         <p class="text-sm">Длина (L), мм: {{ product.length }}</p>
                     </ng-container>

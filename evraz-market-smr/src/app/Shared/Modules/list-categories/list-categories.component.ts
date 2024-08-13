@@ -45,8 +45,11 @@ export class ListCategoriesComponent {
 
   }
 
+  navigateToCategory(category: string): void {
+    this.navigate.navigateToCategory(category);
+  }
   navigateToSubCategory(category: string, subCategory: string): void {
-    this.navigate.navigateToSubCategory(category, subCategory)
+    this.navigate.navigateToSubCategory(category, subCategory);
   }
   translit(categoryName: string): string {
     return this.dataService.transliterate(categoryName);
