@@ -19,14 +19,9 @@
       </div>
       <div class="flex-none m-4">
         <div class="mb-3 mt-4"><p class="text-2xl font-semibold ml-2">Товары</p></div>
-        <ul class="ml-2">
-          <li class="m-1 mb-2"><a class="hover:text-orangHover" (click)="navigateToCategory('listprokat')">Листовой прокат</a></li>
-          <li class="m-1 mb-2"><a class="hover:text-orangHover" (click)="navigateToCategory('armatura')">Арматура</a></li>
-          <li class="m-1 mb-2"><a class="hover:text-orangHover" (click)="navigateToCategory('truby')">Трубный прокат</a></li>
-          <li class="m-1 mb-2"><a class="hover:text-orangHover" (click)="navigateToCategory('proflist')">Кровельные материалы</a></li>
-          <li class="m-1 mb-2"><a class="hover:text-orangHover" (click)="navigateToCategory('fasonnyy_prokat')">Фасонный прокат</a></li>
-          <li class="m-1 mb-2"><a class="hover:text-orangHover" (click)="navigateToCategory('setka')">Сетки</a></li>
-          <li class="m-1 mb-2"><a class="hover:text-orangHover" (click)="navigateToCategory('armatura')">Цветной металлопрокат</a></li>
+        <ul class="ml-2" *ngFor="let category of categories">
+          <li class="m-1 mb-2"><a class="hover:text-orangHover" (click)="navigateToCategory( translit( category.title))">{{category.title}}</a></li>
+
 
         </ul>
       </div>

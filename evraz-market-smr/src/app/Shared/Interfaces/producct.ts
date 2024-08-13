@@ -20,7 +20,9 @@ export enum TypeProduct{
   dobory = "dobory",
   setka = "setka",
   samorezi = "samorezi",
-  square = "square"
+  square = "square",
+  wire = "wire",
+  stripe = "stripe"
 
 }
 
@@ -95,5 +97,10 @@ export interface Stripe extends Product{
   thickness: number;
   length: number;
 }
-
+export interface list extends Product{
+  width: number;
+  thickness: number;
+  length: number;
+  steel: string;
+}
 

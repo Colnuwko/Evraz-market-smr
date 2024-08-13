@@ -16,37 +16,7 @@ export interface SubCategoryDetail {
 
 
 
-export enum Category {
-  ARMATURA = 'armatura',
-  LISTY = 'listy',
-  MITIZ = 'metiznaya_produktsiya',
-  TRUBY = 'truby',
-  PROKAT = 'fasonnyy_prokat',
-  PROFLIST = 'proflist',
-  SETKA = 'setka'
-}
 
-export enum SubCategory {
-  ARMATURA_GLADKAYA = 'armatura_gladkaya',
-  ARMATURA_RIFLENAYA = 'armatura_riflenaya',
-  KATANKA = 'katanka',
-  PROVOLKA = 'provolka',
-  LIST_GORKAT = 'list_gorkat',
-  SHVELLER = 'shveller',
-  TRUBA_PROFILNAYA = "truba_profilnaya",
-  TRUBA_ELECTROSVARNAYA = "truba_elecrosvarnaya",
-  TRUBA_BESSHOVNAYA = "truba_besshovnaya",
-  TRUBA_VGP = "truba_vgp",
-  TRUBA_TEMPO = "truba_tempo",
-  METALLOCHEREPICA = "metallocherepica",
-  PROFNASTIL = 'profnastil',
-  DOBORNIE_ELEMENTY = "dobornie_elementy",
-  SAMOREZI = 'samorezi',
-  BALKA = 'balka',
-  UGOLOK = 'ugolok',
-  SETKA_KLADOCHNAYA = 'setka_kladochnaya',
-
-}
 
 
 export enum CategoryR{
@@ -60,8 +30,8 @@ export enum CategoryR{
 }
 
 export enum SubCategoryR {
-  ARMATURA_GLADKAYA = 'Арматура гладкая',
-  ARMATURA_RIFLENAYA = 'Арматура рифленая',
+  ARMATURA_GLADKAYA = 'Арматура А1',
+  ARMATURA_RIFLENAYA = 'Арматура А3',
   KATANKA = 'Катанка',
   PROVOLKA = 'Проволка',
   LIST_GORKAT = 'Лист горячекатанный',
@@ -77,7 +47,8 @@ export enum SubCategoryR {
   SAMOREZI = 'Саморезы',
   BALKA = 'Балка двутавровая',
   UGOLOK = 'Уголок',
-  SETKA_KLADOCHNAYA = 'Сетка кладочная'
+  SETKA_KLADOCHNAYA = 'Сетка кладочная',
+
 }
 
 
