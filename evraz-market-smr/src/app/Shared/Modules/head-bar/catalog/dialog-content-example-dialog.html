@@ -1,5 +1,5 @@
 <div class="bg-grey p-16 shadow-2xl ">
-  <h1 class="text-black text-semibold text-xl m-2 text-center">Выберите категорию</h1>
+  <h1 class="text-orange text-semibold text-4xl m-2 text-center">Выберите категорию</h1>
   <div class="flex flex-row flex-wrap justify-between">
     <div *ngFor="let category of categories" class="pb-6 m-2 overflow-contain" style="width: 250px;">
       <div (click)="navigateToCategory(translit(category.title))" [mat-dialog-close]="true"

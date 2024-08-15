@@ -28,7 +28,7 @@ export class CatalogComponent {
   openDialog(): void {
     const dialogRef = this.dialog.open(DialogContentExampleDialog, {
       data: this.categories,
-      width: '700px',
+      width: '1000px',
       autoFocus: false,
       maxHeight: '90vh'
     });

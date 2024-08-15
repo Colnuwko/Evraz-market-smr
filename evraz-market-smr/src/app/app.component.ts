@@ -36,5 +36,5 @@ import {AfterheaderBgComponent} from "./Pages/afterheader-bg/afterheader-bg.comp
   providers: [CategoryService, ProductService, NavigateService]
 })
 export class AppComponent {
-  title = 'freshHouse';
+  title = 'MercuryMetal';
 }
