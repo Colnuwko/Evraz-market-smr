@@ -1,9 +1,9 @@
 
-<div class="px-72 md:px-10 lg:px-20 xl:px-20 p-4 my-8  w-full z-40">
-  <div class="text-5xl text-center text-orange font-sans mb-4">Контакты</div>
-  <div class="flex flex-row justify-between py-4  ">
+<div class="px-72 md:px-10 lg:px-20 xl:px-20 p-4 my-8  w-full z-40 tel:px-4">
+  <div class="text-5xl text-center text-orange font-sans mb-4 tel:text-3xl">Контакты</div>
+  <div class="flex flex-row justify-between py-4 tel:flex-wrap tel:flex-auto">
     <div class="flex-auto m-2 px-6 py-2 bg-grey rounded-lg shadow-2xl">
-      <p class="text-orange font-sans m-3 text-2xl">Мы находимся по адресу:</p>
+      <p class="text-orange font-sans m-3 text-2xl tel:text-xl">Мы находимся по адресу:</p>
       <div class="m-3 flex items-center">
         <img class="size-10" src="assets/place_location_point_pointer_position_marker_pin_icon_224747.svg" />
         <a href="https://yandex.ru/maps/-/CDc~7A8r" class="underline font-sans text-black text-xl hover:text-orangHover" target="_blank">
@@ -11,7 +11,7 @@
       </div>
     </div>
     <div class="flex-auto m-2 bg-grey rounded-lg px-6 py-2 shadow-2xl">
-      <p class="text-orange font-sans m-3 text-2xl">Телефон:</p>
+      <p class="text-orange font-sans m-3 text-2xl tel:text-xl">Телефон:</p>
       <div class="m-3 flex items-center">
         <img class="h-5 my-auto mr-3" src="assets/phone.svg" />
         <p class="underline font-sans text-black text-xl hover:text-orangHover" (click)="CopyNumber()">
@@ -19,7 +19,7 @@
       </div>
     </div>
     <div class="flex-auto m-2 bg-grey rounded-lg px-6 py-2 shadow-2xl">
-      <p class="text-orange font-sans m-3 text-2xl">Электронная почта:</p>
+      <p class="text-orange font-sans m-3 text-2xl tel:text-xl">Электронная почта:</p>
       <div class="m-3 flex items-center">
         <img class="h-5 my-auto mr-3" src="assets/email.svg" />
         <p class="underline font-sans text-black text-xl hover:text-orangHover" (click)="CopyMail()">
@@ -27,10 +27,10 @@
       </div>
     </div>
     <div class="flex-auto m-2 bg-grey rounded-lg px-6 py-2 shadow-2xl">
-      <p class="text-orange font-sans m-3 text-2xl">График работы:</p>
+      <p class="text-orange font-sans m-3 text-2xl tel:text-xl">График работы:</p>
       <div class="m-3 flex flex-col text-black font-sans text-lg">
         <ul class="text-black z-50">
-          <li class="font-sans text-black text-xl">Пн 8:00-17:00</li>
+          <li class="font-sans text-black text-xl tel:text-l">Пн 8:00-17:00</li>
           <li class="font-sans text-black text-xl">Вт 8:00-17:00</li>
           <li class="font-sans text-black text-xl">Ср 8:00-17:00</li>
           <li class="font-sans text-black text-xl">Чт 8:00-17:00</li>

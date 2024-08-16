@@ -14,6 +14,7 @@ import { ProductService } from './Shared/Services/product.service';
 import { NavigateService } from './Shared/Services/navigate.service';
 import {FooterComponent} from "./Shared/Modules/footer/footer.component";
 import {AfterheaderBgComponent} from "./Pages/afterheader-bg/afterheader-bg.component";
+import {TelheadbarComponent} from "./Shared/Modules/head-bar/telheadbar/telheadbar.component";
 
 
 @Component({
@@ -30,6 +31,7 @@ import {AfterheaderBgComponent} from "./Pages/afterheader-bg/afterheader-bg.comp
     HeadBarComponent,
     FooterComponent,
     AfterheaderBgComponent,
+    TelheadbarComponent,
   ],
   templateUrl: './app.component.html',
   styleUrl: './app.component.css',
