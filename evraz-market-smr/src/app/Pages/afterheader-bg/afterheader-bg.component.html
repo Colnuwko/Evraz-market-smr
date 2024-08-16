@@ -1,4 +1,4 @@
-<div>
+<div class="tel:hidden">
   <div class="absolute px-72 xl:px-20 md:px-10 lg:px-20 pb-10 mt-48 h-96 w-full flex flex-row justify-between">
     <div class="basis-2/3">
       <p class="text-5xl text-orange mt-4 mb-10 font-sans">Качество без компромисов</p>
@@ -18,5 +18,28 @@
       </ul>
     </div>
   </div>
-  <img src="assets/6323546.jpg" class="w-full">
+<img src="assets/6323546.jpg">
+</div>
+
+<div style="height: 1000px;" [ngStyle]="{'background-image': 'url(assets/6323546.jpg)', 'background-position': 'center', 'background-size': 'cover' }"
+     class="sm:hidden md:hidden lg:hidden xl:hidden xxl:hidden">
+  <div class="absolute p-10 mt-24 h-96 w-full flex flex-row flex-wrap">
+    <div class="w-full mx-auto">
+      <p class="text-3xl text-orange mb-10 font-sans">Качество без компромисов</p>
+      <span class="text-xl text-white font-system-ui">Под таким слоганом мы поставляем металлопрокат <br/>и стройматериалы
+        нашим клиентам <br/>по всей территории Самарской области<br/></span>
+      <div class="mt-10"><span class="text-xl text-white  font-system-ui">Строй с нами!</span></div>
+    </div>
+    <div>
+      <div><p class="my-4 text-3xl text-orange font-sans">Мы гарантируем</p></div>
+      <ul class="my-10">
+        <li><div class="flex flex-row"><img src="assets/complete_done_checkmark_completed_icon_208202.svg" class="size-6 mr-4">
+          <p class="text-white text-xl mb-10">Качественные материалы</p></div></li>
+        <li><div class="flex flex-row"><img src="assets/complete_done_checkmark_completed_icon_208202.svg" class="size-6 mr-4">
+          <p class="text-white text-xl mb-10">Быструю доставку</p></div></li>
+        <li><div class="flex flex-row"><img src="assets/complete_done_checkmark_completed_icon_208202.svg" class="size-6 mr-4">
+          <p class="text-white text-xl mb-10">Лучшие цены</p></div></li>
+      </ul>
+    </div>
+  </div>
 </div>

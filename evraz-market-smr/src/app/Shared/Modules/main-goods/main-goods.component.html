@@ -1,6 +1,6 @@
-<div class="px-72 xl:px-20 md:px-10 lg:px-20 pt-20 flex flex-col gap-10 mb-36  " id="product">
-  <div class="text-4xl font-sans text-orange">Популярные категории</div>
-  <div class="grid grid-cols-3 grid-rows-2 gap-5">
+<div class="px-72 xl:px-20 md:px-10 lg:px-20 pt-20 flex flex-col gap-10 mb-36 tel:px-4 tel:w-screen" id="product">
+  <div class="text-4xl font-sans text-orange tel:text-3xl">Популярные категории</div>
+  <div class="grid grid-cols-3 grid-rows-2 gap-5 tel:grid-cols-1 tel:grid-rows-6">
     <app-card-product *ngFor="let card of categories" [card]="card"></app-card-product>
 
   </div>
