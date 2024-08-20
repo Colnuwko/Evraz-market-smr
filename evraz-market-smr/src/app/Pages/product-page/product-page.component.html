@@ -1,5 +1,5 @@
-  <div class="my-48 px-72 xl:px-20 md:px-10 lg:px-20" *ngIf="category">
-    <div class="flex gap-4 text-superGrey text-sm">
+  <div class="my-48 px-72 xl:px-20 md:px-10 lg:px-20 tel:px-4" *ngIf="category">
+    <div class="flex gap-4 text-superGrey text-sm tel:flex tel:flex-row tel:flex-wrap">
         <div (click)="goToHome()">Главная</div>
 
         <div (click)="navigateToCategory(translit(category!.title))">→ {{ category!.title }}</div>

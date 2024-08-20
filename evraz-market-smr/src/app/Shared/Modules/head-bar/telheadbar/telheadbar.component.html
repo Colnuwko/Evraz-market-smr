@@ -1,19 +1,19 @@
-<div class="fixed z-50 bottom-0 text-black w-screen">
+<div class="fixed z-50 bottom-0 text-black w-screen bg-orange">
   <div class="flex flex-row w-full h-full">
-      <div class="basis-1/4 content-center"><app-catalog></app-catalog></div>
-      <button class="basis-1/4" (click)="scroll('about')">
-        <div class="flex flex-col items-center bg-orange p-1.5 hover:bg-orangHover tel:px-0" >
+      <div class="basis-1/4 content-center w-full"><app-catalog></app-catalog></div>
+      <button class="basis-1/4 w-full" >
+        <a class="flex flex-col items-center bg-orange p-1.5 hover:bg-orangHover tel:px-0" href="#aboutus" >
             <img src="assets/downarrow_abajo3_5820.png" class="size-3"/>
             <div class="text-white text-sm mx-2">О нас</div>
-        </div>
+        </a>
       </button>
-      <button class="basis-1/4" (click)="scroll('product')">
-        <div class="flex flex-col items-center bg-orange p-1.5 hover:bg-orangHover tel:px-0">
+      <button class="basis-1/4 w-full">
+        <a class="flex flex-col items-center bg-orange p-1.5 hover:bg-orangHover tel:px-0" href="#call">
             <img src="assets/communication_conversation_contact_call_phone_icon2_256523.png" class="size-3" />
             <div class="text-white text-sm mx-2">Контакты</div>
-        </div>
+        </a>
       </button>
-      <button class="basis-1/4" (click)="openform()">
+      <button class="basis-1/4 w-full" (click)="openform()">
         <div class="flex flex-col items-center bg-orange p-1.5 hover:bg-orangHover tel:px-0">
             <img src="assets/interface_clipboard_file_paper_document_office_writing_icon2_132983.png" class="size-3" />
             <div class="text-white text-sm mx-2">Заявка</div>

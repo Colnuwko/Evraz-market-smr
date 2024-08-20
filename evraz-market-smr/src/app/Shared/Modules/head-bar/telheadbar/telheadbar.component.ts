@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
 import {CatalogComponent} from "../catalog/catalog.component";
-import {RouterLink} from "@angular/router";
+import {ActivatedRoute, RouterLink} from "@angular/router";
 import {ApplicationFormComponent} from "../../application-form/application-form.component";
 import {MatDialog} from "@angular/material/dialog";
 import {HttpClient} from "@angular/common/http";
@@ -18,18 +18,10 @@ import {HttpClient} from "@angular/common/http";
 export class TelheadbarComponent {
   constructor(public dialog: MatDialog, public html: HttpClient){}
 
+
   openform(){
     const dialogRef = this.dialog.open(ApplicationFormComponent, {
       width: '700px'
     });
-  }
-
-  scroll(name: string ) {
-    if(name == 'about') {
-      window.scrollTo(0, 2200);
-    }
-    else {
-      window.scrollTo(0, 3650)
-    }
   }
 }
