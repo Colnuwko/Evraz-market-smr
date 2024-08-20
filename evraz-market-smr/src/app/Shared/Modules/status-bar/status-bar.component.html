@@ -1,8 +1,11 @@
 <div class="bg-grey fixed w-full tel:w-screen tel:px-1 tel:flex-column tel:flex-wrap z-50 flex gap-2 items-center px-72 md:px-10 lg:px-20 xl:px-20 flex-row justify-between">
-  <div class=" flex items-center gap-2">
+ <div class="hidden tel:block tel:flex tel:flex-row" (click)="goToHome()">
+    <img src="/assets/logo.png" class="h-10 mx-2 my-auto">
+    <p class="text-2xl font-semibold mx-2 my-2">Меркурий</p>
+  </div>
+  <div class=" flex items-center gap-2 tel:pr-2">
     <img class="size-10" src="assets/place_location_point_pointer_position_marker_pin_icon_224747.svg" />
     <div class="text-black" (click)="goToHome()">Самара</div>
   </div>
-
-  <app-drop-down-telefon class="z-50"></app-drop-down-telefon>
+  <app-drop-down-telefon class="z-50 tel:w-full"></app-drop-down-telefon>
 </div>

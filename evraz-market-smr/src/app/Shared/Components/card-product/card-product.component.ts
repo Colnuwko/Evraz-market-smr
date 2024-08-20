@@ -7,7 +7,7 @@ import {
   SubCategoryDetail,
   SubCategoryR,
 } from '../../Interfaces/category';
-import { NgFor } from '@angular/common';
+import {NgFor, NgIf, SlicePipe} from '@angular/common';
 import { Router } from '@angular/router';
 import { NavigateService } from '../../Services/navigate.service';
 import {CategoryService} from "../../Services/category.service";
@@ -15,13 +15,12 @@ import {CategoryService} from "../../Services/category.service";
 @Component({
   selector: 'app-card-product',
   standalone: true,
-  imports: [NgFor],
+  imports: [NgFor, NgIf, SlicePipe],
   templateUrl: './card-product.component.html',
   styleUrl: './card-product.component.css',
 })
 export class CardProductComponent {
   @Input() card!: CategoryInt;
-
   constructor(private navigate: NavigateService, private dataService: CategoryService) { }
 
   navigateToCategory(category: string): void {
