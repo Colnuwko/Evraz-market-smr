@@ -1,8 +1,7 @@
 
-<div class="px-72 xl:px-20 md:px-10 lg:px-20 pt-16 mb-36 tel:px-4 tel:pt-2">
-  <img src="assets/bggrey.jpg" class="absolute -z-50 w-full left-0 h-full tel:h-full" >
+<div class="px-72 xl:px-20 md:px-10 lg:px-20 pt-16 mb-36 tel:px-4 tel:pt-2" [ngStyle]="{'background-image': 'url(assets/bggrey.jpg)'}">
   <div class="rounded-lg flex flex-col gap-8 p-4">
-  <div  class="text-5xl text-center text-orange font-sans tel:text-3xl mt-8">Главное о компании</div>
+  <div  class="text-5xl text-center text-orange font-sans tel:text-3xl mt-8" id="aboutus">Главное о компании</div>
   <div class="grid grid-cols-3 grid-rows-2 gap-4 h-full tel:flex tel:flex-col">
     <div class="relative bg-cover h-full col-span-2 tel:col-span-2 tel:h-32 rounded-lg" [ngStyle]="{'background-image': 'url(assets/3e8fa4aa28773aeb218b5b84282e4ea1.jpg)'}">
       <div class="absolute p-4">
@@ -19,7 +18,7 @@
       <div class="border-b-2 border-orange pb-4 font-medium tel:text-sm">Поддерживаем большой ассортимент продукции на складе для обеспечения быстрой отгрузки и доставки по всей стране</div>
       <div class="border-b-2 border-orange pb-4  font-medium tel:text-sm">Наши специалисты всегда готовы помочь с выбором материалов и предоставлением технической информации</div>
     </div>
-    <div class="relative bg-cover h-full col-span-2 rounded-lg tel:h-32" [ngStyle]="{'background-image': 'url(assets/Slide4-1.jpg)'}">
+    <div class="relative bg-cover h-full col-span-2 rounded-lg tel:h-32 mb-2" [ngStyle]="{'background-image': 'url(assets/Slide4-1.jpg)'}">
       <div class="absolute p-4">
         <h1 class="text-2xl font-semibold text-white tel:text-xl">Профессиональный поставщик продукции для строительных оъектов
         любого масштаба
@@ -29,5 +28,6 @@
 
   </div>
   </div>
+
 </div>
 

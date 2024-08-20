@@ -1,27 +1,27 @@
-<div class="bg-grey p-16 shadow-2xl rounded-md">
-  <h1 class="text-4xl font-sans text-orange mb-4 text-center">Заявка</h1>
+<div class="bg-grey p-16 shadow-2xl rounded-md tel:w-full tel:p-4">
+  <h1 class="text-4xl font-sans text-orange mb-4 text-center tel:text-3xl">Заявка</h1>
   <div class="contact-form-wrapper d-flex justify-content-center">
     <form [formGroup]="clientForm" (ngSubmit)="onSubmit()">
       <div class="text-center">
         <p class="text-superGrey text-sm m-1">Имя*</p>
-        <input type="text" class="form-control rounded mb-3 w-64 p-2 border border-orange shadow-xl" formControlName="name" placeholder="Введите имя" required>
+        <input type="text" class="form-control rounded mb-3 w-64 p-2 border border-orange shadow-xl tel:h-9 tel:text-sm" formControlName="name" placeholder="Введите имя" required>
       </div>
       <div class="text-center">
         <p class="text-superGrey text-sm m-1">Телефон*</p>
-        <input type="email" class="form-control rounded  mb-3 form-input w-64 p-2 border border-orange shadow-xl" formControlName="number" placeholder="Введите номер" required>
+        <input type="email" class="form-control rounded  mb-3 form-input w-64 p-2 border border-orange shadow-xl tel:h-9 tel:text-sm" formControlName="number" placeholder="Введите номер" required>
       </div>
       <div class="text-center">
         <p class="text-superGrey text-sm m-1">Почта (не обязательно)</p>
-        <input type="email" class="form-control rounded  mb-3 form-input w-64 p-2 border border-grenborder shadow-xl" formControlName="email" placeholder="Введите E-mail" required>
+        <input type="email" class="form-control rounded  mb-3 form-input w-64 p-2 border border-grenborder shadow-xl tel:h-9 tel:text-sm" formControlName="email" placeholder="Введите E-mail" required>
       </div>
       <div class="text-center">
         <p class="text-superGrey text-sm m-1">Коментарий заявки*</p>
-        <textarea class="form-control rounded  mb-3 form-text-area m-2 p-2 min-h-28 max-h-96 border border-orange shadow-xl" formControlName="message" rows="5" cols="30"
+        <textarea class="form-control rounded  mb-3 form-text-area p-2 min-h-28 max-h-96 border border-orange shadow-xl tel:text-sm tel:w-64" formControlName="message" rows="5" cols="30"
                   placeholder="Укажите коментарий" required></textarea>
       </div>
       <div class="submit-button-wrapper text-center">
         <button class="text-black rounded-md bg-orange border border-grey hover:border-black hover:bg-orangHover py-2
-         px-4 shadow-2xl" type="submit">Отправить</button>
+         px-4 shadow-2xl tel:text-sm tel:px-2 tel:py-1.5" type="submit">Отправить</button>
       </div>
     </form>
   </div>

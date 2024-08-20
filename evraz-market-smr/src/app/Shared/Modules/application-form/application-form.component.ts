@@ -50,7 +50,7 @@ export class ApplicationFormComponent {
 
     }
     else{
-      this.dialog.open(CustomAlertComponent, { data: "Заполните обязательные поля"})
+      this.dialog.open(CustomAlertComponent, { data: "Заполните обязательные* поля"})
     }
 
   }
