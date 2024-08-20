@@ -12,6 +12,7 @@ export interface SubCategoryDetail {
   price: number;
   title: SubCategoryR;
   products: Product[];
+  id: number;
 }
 
 
