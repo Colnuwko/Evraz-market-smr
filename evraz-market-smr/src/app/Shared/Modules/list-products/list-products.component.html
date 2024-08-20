@@ -1,16 +1,16 @@
-<div *ngIf="category">
+<div *ngIf="category" class="">
   <table class="table-auto min-w-full bg-backgr rounded-2xl">
     <thead>
     <tr class="border-b border-b-orangHover  text-superGrey p-4">
       <th class="text-left px-2 py-4 text-orange">Наименование</th>
-      <th class="text-center px-2 py-4 text-orange">Склад</th>
-      <th class="text-center px-2 py-4 text-orange">Наличие</th>
+      <th class="text-center px-2 py-4 text-orange tel:hidden">Склад</th>
+      <th class="text-center px-2 py-4 text-orange tel:w-30">Наличие</th>
       <th class="text-center px-2 py-4 text-orange">Цена</th>
     </tr>
     </thead>
     <tbody *ngFor="let subCategory of subCategories">
     <tr *ngFor="let product of subCategory.products" class="border-t  border-orange">
-      <th class="font-medium py-4 text-left px-4 " (click)="navigateToSubCategory(subCategory, product)">
+      <th class="font-medium py-4 text-left px-4 tel:text-sm tel:px-0" (click)="navigateToSubCategory(subCategory, product)">
         <div class="underline font-sans text-black  hover:text-orangHover">{{ product.name }}</div>
         <ng-container *ngIf="isArmatura(product)">
           <p class="text-sm">Длина (L), мм: {{ product.length }}</p>
@@ -53,14 +53,14 @@
           <p class="text-sm">Ширина (W), мм: {{ product.width }}</p>
         </ng-container>
       </th>
-      <th class="font-medium py-4 text-center px-2">г. Самара</th>
+      <th class="font-medium py-4 text-center px-2 tel:hidden">г. Самара</th>
       <th class="font-medium py-4 text-center px-2">
         <div class="flex gap-2 items-center justify-center">
           <img src="assets/check.svg" class="h-4"/>
-          <div>В наличии</div>
+          <div class="tel:text-sm">В наличии</div>
         </div>
       </th>
-      <th class="font-medium py-4 text-center px-2">{{ product.price }}&#8381;/м</th>
+      <th class="font-medium py-4 text-center px-2 tel:text-sm">{{ product.price }}&#8381;/м</th>
 
     </tr>
     </tbody>
