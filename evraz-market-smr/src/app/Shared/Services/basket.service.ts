@@ -39,7 +39,7 @@ export class BasketService {
   }
 
   initializeLengthAndCost(product: Product | undefined): void {
-    if (product?.type === TypeProduct.proflist || product?.type === TypeProduct.setka) {
+    if (product?.type === TypeProduct.proflist || product?.type === TypeProduct.setka || product?.type === TypeProduct.list) {
       const lengthInMeters = 1;
       this.setLengthInMeters(lengthInMeters);
       this.calculateTotalCost(product);

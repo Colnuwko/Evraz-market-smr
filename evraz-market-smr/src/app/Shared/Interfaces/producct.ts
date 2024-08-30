@@ -24,12 +24,19 @@ export enum TypeProduct {
   square = "square",
   wire = "wire",
   stripe = "stripe",
-  list = "list"
+  list = "list",
+  trubaC = "trubaC"
 
 }
 
 export interface Armatura extends Product {
   diameter: number;
+  length: number;
+}
+
+export interface TrubaC extends Product {
+  diameter: number;
+  thickness: number;
   length: number;
 }
 
@@ -40,11 +47,17 @@ export interface ProfilePipe extends Product {
   length: number;
 }
 
-export interface Proflist extends Product {
-  width: number;
-  thickness: number;
-  color: number;
+export interface Color {
+  color: string;
   imgColor: string;
+}
+
+
+export interface Proflist extends Product {
+  widthM: number;
+  widthG: number;
+  thickness: number;
+  colors: Color[];
 }
 
 export interface Shveller extends Product {

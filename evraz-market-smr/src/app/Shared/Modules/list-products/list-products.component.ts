@@ -4,14 +4,19 @@ import {ActivatedRoute, Router} from '@angular/router';
 import {CategoryService} from '../../Services/category.service';
 import {
   Armatura,
+  Balka,
+  Listy,
   Product,
   ProfilePipe,
   Proflist,
   Samorezi,
   Setka,
+  Shveller,
   Square,
   Stripe,
+  TrubaC,
   TypeProduct,
+  Ugolok,
   Wire
 } from '../../Interfaces/producct';
 import {NgFor, NgIf} from '@angular/common';
@@ -87,8 +92,28 @@ export class ListProductsComponent {
     return (product as Stripe).type === TypeProduct.stripe;
   }
 
+  isTruba(product: Product): product is TrubaC {
+    return (product as TrubaC).type === TypeProduct.trubaC;
+  }
+
+  isShveller(product: Product): product is Shveller {
+    return (product as Shveller).type === TypeProduct.shveller;
+  }
+
+  isBalka(product: Product): product is Balka {
+    return (product as Balka).type === TypeProduct.balka;
+  }
+
+  isUgolok(product: Product): product is Ugolok {
+    return (product as Ugolok).type === TypeProduct.ugolok;
+  }
+
   isSetka(product: Product): product is Setka {
     return (product as Setka).type === TypeProduct.setka;
+  }
+
+  isList(product: Product): product is Listy {
+    return (product as Listy).type === TypeProduct.list
   }
 
   navigateToSubCategory(detail: SubCategoryDetail, product: Product): void {
