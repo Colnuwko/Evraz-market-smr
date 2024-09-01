@@ -57,7 +57,7 @@
           мм: {{ product.length }}</p>
       </ng-container>
       <ng-container *ngIf="isProflist(product)">
-        <div class="font-semibold tel:text-sm">Толщина металла (T):</div>
+        <div class="font-semibold tel:text-sm">Толщина металла (T), мм:</div>
         <div class="flex gap-2 py-4 flex-wrap">
           <div *ngFor="let thickness of thicknesses"
                class="border-2 p-1 w-20 text-center rounded-md tel:text-sm tel:w-16"
@@ -81,6 +81,29 @@
         </div>
         <div class="font-semibold tel:text-sm py-2">Габаритная ширина,
           мм: {{ product.widthG }}
+        </div>
+        <div class=" font-semibold tel:text-sm  text-greyBg py-2"> Текстура
+          (бархат), Принтек,
+          Двусторонний "Уточняйте у менеджера"
+        </div>
+      </ng-container>
+      <ng-container *ngIf="isDobory(product)">
+        <div class="font-semibold tel:text-sm">Толщина металла, мм
+          (T): {{ product.thickness }}
+        </div>
+
+        <div class="font-semibold tel:text-sm py-2">Доступные цвета:</div>
+        <div class="flex gap-2 flex-wrap">
+          <div *ngFor="let color of product.colors "
+               class="border rounded-lg  h-full flex flex-col justify-between tel:w-24 tel:h-24 ">
+            <img [src]="color.imgColor"
+                 class="w-24  h-20 object-cover rounded self-center"/>
+            <div class="text-center rounded-lg  p-2">RAL {{ color.color }}
+            </div>
+          </div>
+        </div>
+        <div class="font-semibold tel:text-sm py-2">Длина: (L),
+          мм: {{ product.length }}
         </div>
       </ng-container>
       <ng-container *ngIf="isShvellers(products)">
@@ -199,7 +222,8 @@
       <ng-container *ngIf="isSamorezi(product)">
         <p class="font-semibold tel:text-sm">Длина (L),
           мм: {{ product.length }}</p>
-        <p class="font-semibold tel:text-sm">Цвет RAL: {{ product.color }}</p>
+        <p class="font-semibold tel:text-sm">Диаметр (D),
+          мм: {{ product.thickness }}</p>
       </ng-container>
       <ng-container *ngIf="isWires(products)">
         <div class="font-semibold tel:text-sm">Диаметр (D), мм:</div>
@@ -269,14 +293,11 @@
           </div>
         </div>
       </ng-container>
-      <ng-container *ngIf="isProfilePipe(product)">
-        <p class="font-semibold tel:text-sm">Длина (L),
-          мм: {{ product.length }}</p>
-      </ng-container>
     </div>
     <div
       class="basis-1/3 w-full  p-4 rounded-2xl shadow-lg tel:flex-none tel:w-full">
-      <div class="flex gap-2 items-end">
+      <div *ngIf="!isDobory(product) || !isSamorezi(product)"
+           class="flex gap-2 items-end">
         <div class="font-semibold tel:text-sm">Стоимость:</div>
         <div class="text-xl tel:text-sm">{{ product.price }} &#8381;</div>
       </div>
@@ -305,20 +326,26 @@
             </button>
           </div>
         </div>
-        <div class="tel:text-sm">
+        <div *ngIf="!isDobory(product) || !isSamorezi(product)"
+             class="tel:text-sm">
           Итоговая стоимость:
         </div>
-        <div class="font-semibold tel:text-sm">
+        <div *ngIf="!isDobory(product) || !isSamorezi(product)"
+             class="font-semibold tel:text-sm">
           {{ totalCost }} &#8381;
-          <div class="text-sm font-sans text-greyBg">Уточняйте цену у
+          <div class="text-sm  text-greyBg">Уточняйте цену у
             менеджера
           </div>
         </div>
       </div>
+      <div *ngIf="isDobory(product) || isSamorezi(product)"
+           class="text-sm  text-greyBg">
+        Уточняйте цену у
+        менеджера
+      </div>
       <div class="flex items-center py-4 gap-2">
         <img src="assets/check.svg" class="h-6 tel:h-5"/>
         <div class="font-semibold tel:text-sm">В наличии</div>
-
       </div>
     </div>
   </div>

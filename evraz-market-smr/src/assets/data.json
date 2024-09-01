@@ -414,7 +414,7 @@
       },
       {
         "price": 70,
-        "title": "Проволовка стальная",
+        "title": "Проволока стальная",
         "products": [
           {
             "id": 1,
@@ -3574,34 +3574,1091 @@
         ]
       },
       {
-        "price": 150,
+        "price": 140,
         "title": "Доборные элементы",
         "products": [
           {
             "id": 1,
             "name": "Конек полукруглый",
             "type": "dobory",
+            "price": 340,
+            "img": "assets/products/dobor_element-min.jpg",
+            "category": "Кровельные материалы",
+            "subCategory": "Доборные элементы",
+            "length": 2000,
+            "thickness": 0.45,
+            "colors": [
+              {
+                "color": "3005",
+                "imgColor": "assets/colors/3005.jpg"
+              },
+              {
+                "color": "6005",
+                "imgColor": "assets/colors/6005.webp"
+              },
+              {
+                "color": "7024",
+                "imgColor": "assets/colors/7024.webp"
+              },
+              {
+                "color": "8004",
+                "imgColor": "assets/colors/8004.webp"
+              },
+              {
+                "color": "8017",
+                "imgColor": "assets/colors/8017.png"
+              }
+            ]
+          },
+          {
+            "id": 2,
+            "name": "Конек плоский 140*140мм",
+            "type": "dobory",
             "price": 320,
             "img": "assets/products/dobor_element-min.jpg",
             "category": "Кровельные материалы",
             "subCategory": "Доборные элементы",
-            "length": 2,
+            "length": 2000,
             "thickness": 0.45,
-            "color": 7024,
-            "imgColor": "assets/7024.png"
+            "colors": [
+              {
+                "color": "Оцинкованный",
+                "imgColor": "assets/colors/zn.webp"
+              }
+            ]
           },
           {
-            "id": 2,
-            "name": "Планка карнизная 120х80 0,4 PE с пленкой RAL 8017 шоколад (2м)",
+            "id": 3,
+            "name": "Конек плоский 190*190мм",
             "type": "dobory",
-            "price": 1284,
+            "price": 320,
             "img": "assets/products/dobor_element-min.jpg",
             "category": "Кровельные материалы",
             "subCategory": "Доборные элементы",
-            "length": 1100,
-            "thickness": 0.4,
-            "color": 8017,
-            "imgColor": "assets/7024.png"
+            "length": 2000,
+            "thickness": 0.45,
+            "colors": [
+              {
+                "color": "Оцинкованный",
+                "imgColor": "assets/colors/zn.webp"
+              }
+            ]
+          },
+          {
+            "id": 4,
+            "name": "Конек фигурный 95*20*40*20*95 мм",
+            "type": "dobory",
+            "price": 320,
+            "img": "assets/products/dobor_element-min.jpg",
+            "category": "Кровельные материалы",
+            "subCategory": "Доборные элементы",
+            "length": 2000,
+            "thickness": 0.45,
+            "colors": [
+              {
+                "color": "Оцинкованный",
+                "imgColor": "assets/colors/zn.webp"
+              }
+            ]
+          },
+          {
+            "id": 5,
+            "name": "Конек фигурный 170*20*90*20*170 мм Трамонтана",
+            "type": "dobory",
+            "price": 320,
+            "img": "assets/products/dobor_element-min.jpg",
+            "category": "Кровельные материалы",
+            "subCategory": "Доборные элементы",
+            "length": 2000,
+            "thickness": 0.45,
+            "colors": [
+              {
+                "color": "Оцинкованный",
+                "imgColor": "assets/colors/zn.webp"
+              }
+            ]
+          },
+          {
+            "id": 6,
+            "name": "Конек фигурный 150*20*40*20*150 мм",
+            "type": "dobory",
+            "price": 320,
+            "img": "assets/products/dobor_element-min.jpg",
+            "category": "Кровельные материалы",
+            "subCategory": "Доборные элементы",
+            "length": 2000,
+            "thickness": 0.45,
+            "colors": [
+              {
+                "color": "Оцинкованный",
+                "imgColor": "assets/colors/zn.webp"
+              }
+            ]
+          },
+          {
+            "id": 7,
+            "name": "Фронтонная планка 85*85 мм профиль СС10, С21",
+            "type": "dobory",
+            "price": 320,
+            "img": "assets/products/dobor_element-min.jpg",
+            "category": "Кровельные материалы",
+            "subCategory": "Доборные элементы",
+            "length": 2000,
+            "thickness": 0.45,
+            "colors": [
+              {
+                "color": "Оцинкованный",
+                "imgColor": "assets/colors/zn.webp"
+              }
+            ]
+          },
+          {
+            "id": 8,
+            "name": "Фронтонная планка 130*90 мм Трамонтана",
+            "type": "dobory",
+            "price": 320,
+            "img": "assets/products/dobor_element-min.jpg",
+            "category": "Кровельные материалы",
+            "subCategory": "Доборные элементы",
+            "length": 2000,
+            "thickness": 0.45,
+            "colors": [
+              {
+                "color": "Оцинкованный",
+                "imgColor": "assets/colors/zn.webp"
+              }
+            ]
+          },
+          {
+            "id": 9,
+            "name": "Фронтонная планка 120*100 мм Монтерей",
+            "type": "dobory",
+            "price": 320,
+            "img": "assets/products/dobor_element-min.jpg",
+            "category": "Кровельные материалы",
+            "subCategory": "Доборные элементы",
+            "length": 2000,
+            "thickness": 0.45,
+            "colors": [
+              {
+                "color": "Оцинкованный",
+                "imgColor": "assets/colors/zn.webp"
+              }
+            ]
+          },
+          {
+            "id": 10,
+            "name": "Фронтонная планка 190*90 мм Каскад",
+            "type": "dobory",
+            "price": 320,
+            "img": "assets/products/dobor_element-min.jpg",
+            "category": "Кровельные материалы",
+            "subCategory": "Доборные элементы",
+            "length": 2000,
+            "thickness": 0.45,
+            "colors": [
+              {
+                "color": "Оцинкованный",
+                "imgColor": "assets/colors/zn.webp"
+              }
+            ]
+          },
+          {
+            "id": 11,
+            "name": "Состыковочное (примыкания) 140*140 мм",
+            "type": "dobory",
+            "price": 320,
+            "img": "assets/products/dobor_element-min.jpg",
+            "category": "Кровельные материалы",
+            "subCategory": "Доборные элементы",
+            "length": 2000,
+            "thickness": 0.45,
+            "colors": [
+              {
+                "color": "Оцинкованный",
+                "imgColor": "assets/colors/zn.webp"
+              }
+            ]
+          },
+          {
+            "id": 12,
+            "name": "Карнизная планка (капельник) 70*65 мм",
+            "type": "dobory",
+            "price": 320,
+            "img": "assets/products/dobor_element-min.jpg",
+            "category": "Кровельные материалы",
+            "subCategory": "Доборные элементы",
+            "length": 2000,
+            "thickness": 0.45,
+            "colors": [
+              {
+                "color": "Оцинкованный",
+                "imgColor": "assets/colors/zn.webp"
+              }
+            ]
+          },
+          {
+            "id": 13,
+            "name": "Снегозадержатель 30*140*90*50 мм",
+            "type": "dobory",
+            "price": 320,
+            "img": "assets/products/dobor_element-min.jpg",
+            "category": "Кровельные материалы",
+            "subCategory": "Доборные элементы",
+            "length": 2000,
+            "thickness": 0.45,
+            "colors": [
+              {
+                "color": "Оцинкованный",
+                "imgColor": "assets/colors/zn.webp"
+              }
+            ]
+          },
+          {
+            "id": 14,
+            "name": "Ендова нижняя 300*300 мм",
+            "type": "dobory",
+            "price": 320,
+            "img": "assets/products/dobor_element-min.jpg",
+            "category": "Кровельные материалы",
+            "subCategory": "Доборные элементы",
+            "length": 2000,
+            "thickness": 0.45,
+            "colors": [
+              {
+                "color": "Оцинкованный",
+                "imgColor": "assets/colors/zn.webp"
+              }
+            ]
+          },
+          {
+            "id": 15,
+            "name": "Ендова нижняя 140*140 мм",
+            "type": "dobory",
+            "price": 320,
+            "img": "assets/products/dobor_element-min.jpg",
+            "category": "Кровельные материалы",
+            "subCategory": "Доборные элементы",
+            "length": 2000,
+            "thickness": 0.45,
+            "colors": [
+              {
+                "color": "Оцинкованный",
+                "imgColor": "assets/colors/zn.webp"
+              }
+            ]
+          },
+          {
+            "id": 16,
+            "name": "Накладка Ендовы 100*20**50*20*100 мм",
+            "type": "dobory",
+            "price": 320,
+            "img": "assets/products/dobor_element-min.jpg",
+            "category": "Кровельные материалы",
+            "subCategory": "Доборные элементы",
+            "length": 2000,
+            "thickness": 0.45,
+            "colors": [
+              {
+                "color": "Оцинкованный",
+                "imgColor": "assets/colors/zn.webp"
+              }
+            ]
+          },
+          {
+            "id": 17,
+            "name": "Декор, планка на СС10, СС8 30*20*30 мм",
+            "type": "dobory",
+            "price": 320,
+            "img": "assets/products/dobor_element-min.jpg",
+            "category": "Кровельные материалы",
+            "subCategory": "Доборные элементы",
+            "length": 2000,
+            "thickness": 0.45,
+            "colors": [
+              {
+                "color": "Оцинкованный",
+                "imgColor": "assets/colors/zn.webp"
+              }
+            ]
+          },
+          {
+            "id": 18,
+            "name": "Декор, планка на штакетник 20*10*20 мм",
+            "type": "dobory",
+            "price": 320,
+            "img": "assets/products/dobor_element-min.jpg",
+            "category": "Кровельные материалы",
+            "subCategory": "Доборные элементы",
+            "length": 2000,
+            "thickness": 0.45,
+            "colors": [
+              {
+                "color": "Оцинкованный",
+                "imgColor": "assets/colors/zn.webp"
+              }
+            ]
+          },
+          {
+            "id": 19,
+            "name": "Декор, планка на С21 30*30*30 мм",
+            "type": "dobory",
+            "price": 320,
+            "img": "assets/products/dobor_element-min.jpg",
+            "category": "Кровельные материалы",
+            "subCategory": "Доборные элементы",
+            "length": 2000,
+            "thickness": 0.45,
+            "colors": [
+              {
+                "color": "Оцинкованный",
+                "imgColor": "assets/colors/zn.webp"
+              }
+            ]
+          },
+          {
+            "id": 20,
+            "name": "Угол 100*100 мм с завальцовкой",
+            "type": "dobory",
+            "price": 320,
+            "img": "assets/products/dobor_element-min.jpg",
+            "category": "Кровельные материалы",
+            "subCategory": "Доборные элементы",
+            "length": 2000,
+            "thickness": 0.45,
+            "colors": [
+              {
+                "color": "Оцинкованный",
+                "imgColor": "assets/colors/zn.webp"
+              }
+            ]
+          },
+          {
+            "id": 21,
+            "name": "Угол 50*50 мм с завальцовкой",
+            "type": "dobory",
+            "price": 320,
+            "img": "assets/products/dobor_element-min.jpg",
+            "category": "Кровельные материалы",
+            "subCategory": "Доборные элементы",
+            "length": 2000,
+            "thickness": 0.45,
+            "colors": [
+              {
+                "color": "Оцинкованный",
+                "imgColor": "assets/colors/zn.webp"
+              }
+            ]
+          },
+          {
+            "id": 22,
+            "name": "J профиль",
+            "type": "dobory",
+            "price": 320,
+            "img": "assets/products/dobor_element-min.jpg",
+            "category": "Кровельные материалы",
+            "subCategory": "Доборные элементы",
+            "length": 2000,
+            "thickness": 0.45,
+            "colors": [
+              {
+                "color": "Оцинкованный",
+                "imgColor": "assets/colors/zn.webp"
+              }
+            ]
+          },
+          {
+            "id": 23,
+            "name": "J профиль",
+            "type": "dobory",
+            "price": 320,
+            "img": "assets/products/dobor_element-min.jpg",
+            "category": "Кровельные материалы",
+            "subCategory": "Доборные элементы",
+            "length": 2000,
+            "thickness": 0.45,
+            "colors": [
+              {
+                "color": "3005",
+                "imgColor": "assets/colors/3005.jpg"
+              },
+              {
+                "color": "6005",
+                "imgColor": "assets/colors/6005.webp"
+              },
+              {
+                "color": "7024",
+                "imgColor": "assets/colors/7024.webp"
+              },
+              {
+                "color": "8004",
+                "imgColor": "assets/colors/8004.webp"
+              },
+              {
+                "color": "8017",
+                "imgColor": "assets/colors/8017.png"
+              }
+            ]
+          },
+          {
+            "id": 24,
+            "name": "Угол 50*50 мм с завальцовкой",
+            "type": "dobory",
+            "price": 320,
+            "img": "assets/products/dobor_element-min.jpg",
+            "category": "Кровельные материалы",
+            "subCategory": "Доборные элементы",
+            "length": 2000,
+            "thickness": 0.45,
+            "colors": [
+              {
+                "color": "3005",
+                "imgColor": "assets/colors/3005.jpg"
+              },
+              {
+                "color": "6005",
+                "imgColor": "assets/colors/6005.webp"
+              },
+              {
+                "color": "7024",
+                "imgColor": "assets/colors/7024.webp"
+              },
+              {
+                "color": "8004",
+                "imgColor": "assets/colors/8004.webp"
+              },
+              {
+                "color": "8017",
+                "imgColor": "assets/colors/8017.png"
+              }
+            ]
+          },
+          {
+            "id": 25,
+            "name": "Угол 100*100 мм с завальцовкой",
+            "type": "dobory",
+            "price": 320,
+            "img": "assets/products/dobor_element-min.jpg",
+            "category": "Кровельные материалы",
+            "subCategory": "Доборные элементы",
+            "length": 2000,
+            "thickness": 0.45,
+            "colors": [
+              {
+                "color": "3005",
+                "imgColor": "assets/colors/3005.jpg"
+              },
+              {
+                "color": "6005",
+                "imgColor": "assets/colors/6005.webp"
+              },
+              {
+                "color": "7024",
+                "imgColor": "assets/colors/7024.webp"
+              },
+              {
+                "color": "8004",
+                "imgColor": "assets/colors/8004.webp"
+              },
+              {
+                "color": "8017",
+                "imgColor": "assets/colors/8017.png"
+              }
+            ]
+          },
+          {
+            "id": 26,
+            "name": "Декор, планка на С21 30*30*30 мм",
+            "type": "dobory",
+            "price": 320,
+            "img": "assets/products/dobor_element-min.jpg",
+            "category": "Кровельные материалы",
+            "subCategory": "Доборные элементы",
+            "length": 2000,
+            "thickness": 0.45,
+            "colors": [
+              {
+                "color": "3005",
+                "imgColor": "assets/colors/3005.jpg"
+              },
+              {
+                "color": "6005",
+                "imgColor": "assets/colors/6005.webp"
+              },
+              {
+                "color": "7024",
+                "imgColor": "assets/colors/7024.webp"
+              },
+              {
+                "color": "8004",
+                "imgColor": "assets/colors/8004.webp"
+              },
+              {
+                "color": "8017",
+                "imgColor": "assets/colors/8017.png"
+              }
+            ]
+          },
+          {
+            "id": 27,
+            "name": "Декор, планка на штакетник 20*10*20 мм",
+            "type": "dobory",
+            "price": 320,
+            "img": "assets/products/dobor_element-min.jpg",
+            "category": "Кровельные материалы",
+            "subCategory": "Доборные элементы",
+            "length": 2000,
+            "thickness": 0.45,
+            "colors": [
+              {
+                "color": "3005",
+                "imgColor": "assets/colors/3005.jpg"
+              },
+              {
+                "color": "6005",
+                "imgColor": "assets/colors/6005.webp"
+              },
+              {
+                "color": "7024",
+                "imgColor": "assets/colors/7024.webp"
+              },
+              {
+                "color": "8004",
+                "imgColor": "assets/colors/8004.webp"
+              },
+              {
+                "color": "8017",
+                "imgColor": "assets/colors/8017.png"
+              }
+            ]
+          },
+          {
+            "id": 28,
+            "name": "Декор, планка на СС10, СС8 30*20*30 мм",
+            "type": "dobory",
+            "price": 320,
+            "img": "assets/products/dobor_element-min.jpg",
+            "category": "Кровельные материалы",
+            "subCategory": "Доборные элементы",
+            "length": 2000,
+            "thickness": 0.45,
+            "colors": [
+              {
+                "color": "3005",
+                "imgColor": "assets/colors/3005.jpg"
+              },
+              {
+                "color": "6005",
+                "imgColor": "assets/colors/6005.webp"
+              },
+              {
+                "color": "7024",
+                "imgColor": "assets/colors/7024.webp"
+              },
+              {
+                "color": "8004",
+                "imgColor": "assets/colors/8004.webp"
+              },
+              {
+                "color": "8017",
+                "imgColor": "assets/colors/8017.png"
+              }
+            ]
+          },
+          {
+            "id": 29,
+            "name": "Накладка Ендовы 100*20**50*20*100 мм",
+            "type": "dobory",
+            "price": 320,
+            "img": "assets/products/dobor_element-min.jpg",
+            "category": "Кровельные материалы",
+            "subCategory": "Доборные элементы",
+            "length": 2000,
+            "thickness": 0.45,
+            "colors": [
+              {
+                "color": "3005",
+                "imgColor": "assets/colors/3005.jpg"
+              },
+              {
+                "color": "6005",
+                "imgColor": "assets/colors/6005.webp"
+              },
+              {
+                "color": "7024",
+                "imgColor": "assets/colors/7024.webp"
+              },
+              {
+                "color": "8004",
+                "imgColor": "assets/colors/8004.webp"
+              },
+              {
+                "color": "8017",
+                "imgColor": "assets/colors/8017.png"
+              }
+            ]
+          },
+          {
+            "id": 30,
+            "name": "Конек плоский 140*140мм",
+            "type": "dobory",
+            "price": 320,
+            "img": "assets/products/dobor_element-min.jpg",
+            "category": "Кровельные материалы",
+            "subCategory": "Доборные элементы",
+            "length": 2000,
+            "thickness": 0.45,
+            "colors": [
+              {
+                "color": "3005",
+                "imgColor": "assets/colors/3005.jpg"
+              },
+              {
+                "color": "6005",
+                "imgColor": "assets/colors/6005.webp"
+              },
+              {
+                "color": "7024",
+                "imgColor": "assets/colors/7024.webp"
+              },
+              {
+                "color": "8004",
+                "imgColor": "assets/colors/8004.webp"
+              },
+              {
+                "color": "8017",
+                "imgColor": "assets/colors/8017.png"
+              }
+            ]
+          },
+          {
+            "id": 31,
+            "name": "Конек плоский 190*190мм",
+            "type": "dobory",
+            "price": 320,
+            "img": "assets/products/dobor_element-min.jpg",
+            "category": "Кровельные материалы",
+            "subCategory": "Доборные элементы",
+            "length": 2000,
+            "thickness": 0.45,
+            "colors": [
+              {
+                "color": "3005",
+                "imgColor": "assets/colors/3005.jpg"
+              },
+              {
+                "color": "6005",
+                "imgColor": "assets/colors/6005.webp"
+              },
+              {
+                "color": "7024",
+                "imgColor": "assets/colors/7024.webp"
+              },
+              {
+                "color": "8004",
+                "imgColor": "assets/colors/8004.webp"
+              },
+              {
+                "color": "8017",
+                "imgColor": "assets/colors/8017.png"
+              }
+            ]
+          },
+          {
+            "id": 32,
+            "name": "Конек фигурный 95*20*40*20*95 мм",
+            "type": "dobory",
+            "price": 320,
+            "img": "assets/products/dobor_element-min.jpg",
+            "category": "Кровельные материалы",
+            "subCategory": "Доборные элементы",
+            "length": 2000,
+            "thickness": 0.45,
+            "colors": [
+              {
+                "color": "3005",
+                "imgColor": "assets/colors/3005.jpg"
+              },
+              {
+                "color": "6005",
+                "imgColor": "assets/colors/6005.webp"
+              },
+              {
+                "color": "7024",
+                "imgColor": "assets/colors/7024.webp"
+              },
+              {
+                "color": "8004",
+                "imgColor": "assets/colors/8004.webp"
+              },
+              {
+                "color": "8017",
+                "imgColor": "assets/colors/8017.png"
+              }
+            ]
+          },
+          {
+            "id": 33,
+            "name": "Конек фигурный 170*20*90*20*170 мм Трамонтана",
+            "type": "dobory",
+            "price": 320,
+            "img": "assets/products/dobor_element-min.jpg",
+            "category": "Кровельные материалы",
+            "subCategory": "Доборные элементы",
+            "length": 2000,
+            "thickness": 0.45,
+            "colors": [
+              {
+                "color": "3005",
+                "imgColor": "assets/colors/3005.jpg"
+              },
+              {
+                "color": "6005",
+                "imgColor": "assets/colors/6005.webp"
+              },
+              {
+                "color": "7024",
+                "imgColor": "assets/colors/7024.webp"
+              },
+              {
+                "color": "8004",
+                "imgColor": "assets/colors/8004.webp"
+              },
+              {
+                "color": "8017",
+                "imgColor": "assets/colors/8017.png"
+              }
+            ]
+          },
+          {
+            "id": 34,
+            "name": "Конек фигурный 150*20*40*20*150 мм",
+            "type": "dobory",
+            "price": 320,
+            "img": "assets/products/dobor_element-min.jpg",
+            "category": "Кровельные материалы",
+            "subCategory": "Доборные элементы",
+            "length": 2000,
+            "thickness": 0.45,
+            "colors": [
+              {
+                "color": "3005",
+                "imgColor": "assets/colors/3005.jpg"
+              },
+              {
+                "color": "6005",
+                "imgColor": "assets/colors/6005.webp"
+              },
+              {
+                "color": "7024",
+                "imgColor": "assets/colors/7024.webp"
+              },
+              {
+                "color": "8004",
+                "imgColor": "assets/colors/8004.webp"
+              },
+              {
+                "color": "8017",
+                "imgColor": "assets/colors/8017.png"
+              }
+            ]
+          },
+          {
+            "id": 35,
+            "name": "Фронтонная планка 85*85 мм профиль СС10, С21",
+            "type": "dobory",
+            "price": 320,
+            "img": "assets/products/dobor_element-min.jpg",
+            "category": "Кровельные материалы",
+            "subCategory": "Доборные элементы",
+            "length": 2000,
+            "thickness": 0.45,
+            "colors": [
+              {
+                "color": "3005",
+                "imgColor": "assets/colors/3005.jpg"
+              },
+              {
+                "color": "6005",
+                "imgColor": "assets/colors/6005.webp"
+              },
+              {
+                "color": "7024",
+                "imgColor": "assets/colors/7024.webp"
+              },
+              {
+                "color": "8004",
+                "imgColor": "assets/colors/8004.webp"
+              },
+              {
+                "color": "8017",
+                "imgColor": "assets/colors/8017.png"
+              }
+            ]
+          },
+          {
+            "id": 35,
+            "name": "Фронтонная планка 130*90 мм Трамонтана",
+            "type": "dobory",
+            "price": 320,
+            "img": "assets/products/dobor_element-min.jpg",
+            "category": "Кровельные материалы",
+            "subCategory": "Доборные элементы",
+            "length": 2000,
+            "thickness": 0.45,
+            "colors": [
+              {
+                "color": "3005",
+                "imgColor": "assets/colors/3005.jpg"
+              },
+              {
+                "color": "6005",
+                "imgColor": "assets/colors/6005.webp"
+              },
+              {
+                "color": "7024",
+                "imgColor": "assets/colors/7024.webp"
+              },
+              {
+                "color": "8004",
+                "imgColor": "assets/colors/8004.webp"
+              },
+              {
+                "color": "8017",
+                "imgColor": "assets/colors/8017.png"
+              }
+            ]
+          },
+          {
+            "id": 36,
+            "name": "Фронтонная планка 120*100 мм Монтерей",
+            "type": "dobory",
+            "price": 320,
+            "img": "assets/products/dobor_element-min.jpg",
+            "category": "Кровельные материалы",
+            "subCategory": "Доборные элементы",
+            "length": 2000,
+            "thickness": 0.45,
+            "colors": [
+              {
+                "color": "3005",
+                "imgColor": "assets/colors/3005.jpg"
+              },
+              {
+                "color": "6005",
+                "imgColor": "assets/colors/6005.webp"
+              },
+              {
+                "color": "7024",
+                "imgColor": "assets/colors/7024.webp"
+              },
+              {
+                "color": "8004",
+                "imgColor": "assets/colors/8004.webp"
+              },
+              {
+                "color": "8017",
+                "imgColor": "assets/colors/8017.png"
+              }
+            ]
+          },
+          {
+            "id": 37,
+            "name": "Фронтонная планка 190*90 мм Каскад",
+            "type": "dobory",
+            "price": 320,
+            "img": "assets/products/dobor_element-min.jpg",
+            "category": "Кровельные материалы",
+            "subCategory": "Доборные элементы",
+            "length": 2000,
+            "thickness": 0.45,
+            "colors": [
+              {
+                "color": "3005",
+                "imgColor": "assets/colors/3005.jpg"
+              },
+              {
+                "color": "6005",
+                "imgColor": "assets/colors/6005.webp"
+              },
+              {
+                "color": "7024",
+                "imgColor": "assets/colors/7024.webp"
+              },
+              {
+                "color": "8004",
+                "imgColor": "assets/colors/8004.webp"
+              },
+              {
+                "color": "8017",
+                "imgColor": "assets/colors/8017.png"
+              }
+            ]
+          },
+          {
+            "id": 38,
+            "name": "Состыковочное (примыкания) 140*140 мм",
+            "type": "dobory",
+            "price": 320,
+            "img": "assets/products/dobor_element-min.jpg",
+            "category": "Кровельные материалы",
+            "subCategory": "Доборные элементы",
+            "length": 2000,
+            "thickness": 0.45,
+            "colors": [
+              {
+                "color": "3005",
+                "imgColor": "assets/colors/3005.jpg"
+              },
+              {
+                "color": "6005",
+                "imgColor": "assets/colors/6005.webp"
+              },
+              {
+                "color": "7024",
+                "imgColor": "assets/colors/7024.webp"
+              },
+              {
+                "color": "8004",
+                "imgColor": "assets/colors/8004.webp"
+              },
+              {
+                "color": "8017",
+                "imgColor": "assets/colors/8017.png"
+              }
+            ]
+          },
+          {
+            "id": 39,
+            "name": "Карнизная планка (капельник) 70*65 мм",
+            "type": "dobory",
+            "price": 320,
+            "img": "assets/products/dobor_element-min.jpg",
+            "category": "Кровельные материалы",
+            "subCategory": "Доборные элементы",
+            "length": 2000,
+            "thickness": 0.45,
+            "colors": [
+              {
+                "color": "3005",
+                "imgColor": "assets/colors/3005.jpg"
+              },
+              {
+                "color": "6005",
+                "imgColor": "assets/colors/6005.webp"
+              },
+              {
+                "color": "7024",
+                "imgColor": "assets/colors/7024.webp"
+              },
+              {
+                "color": "8004",
+                "imgColor": "assets/colors/8004.webp"
+              },
+              {
+                "color": "8017",
+                "imgColor": "assets/colors/8017.png"
+              }
+            ]
+          },
+          {
+            "id": 40,
+            "name": "Снегозадержатель 30*140*90*50 мм",
+            "type": "dobory",
+            "price": 320,
+            "img": "assets/products/dobor_element-min.jpg",
+            "category": "Кровельные материалы",
+            "subCategory": "Доборные элементы",
+            "length": 2000,
+            "thickness": 0.45,
+            "colors": [
+              {
+                "color": "3005",
+                "imgColor": "assets/colors/3005.jpg"
+              },
+              {
+                "color": "6005",
+                "imgColor": "assets/colors/6005.webp"
+              },
+              {
+                "color": "7024",
+                "imgColor": "assets/colors/7024.webp"
+              },
+              {
+                "color": "8004",
+                "imgColor": "assets/colors/8004.webp"
+              },
+              {
+                "color": "8017",
+                "imgColor": "assets/colors/8017.png"
+              }
+            ]
+          },
+          {
+            "id": 41,
+            "name": "Ендова нижняя 300*300 мм",
+            "type": "dobory",
+            "price": 320,
+            "img": "assets/products/dobor_element-min.jpg",
+            "category": "Кровельные материалы",
+            "subCategory": "Доборные элементы",
+            "length": 2000,
+            "thickness": 0.45,
+            "colors": [
+              {
+                "color": "3005",
+                "imgColor": "assets/colors/3005.jpg"
+              },
+              {
+                "color": "6005",
+                "imgColor": "assets/colors/6005.webp"
+              },
+              {
+                "color": "7024",
+                "imgColor": "assets/colors/7024.webp"
+              },
+              {
+                "color": "8004",
+                "imgColor": "assets/colors/8004.webp"
+              },
+              {
+                "color": "8017",
+                "imgColor": "assets/colors/8017.png"
+              }
+            ]
+          },
+          {
+            "id": 42,
+            "name": "Ендова нижняя 140*140 мм",
+            "type": "dobory",
+            "price": 320,
+            "img": "assets/products/dobor_element-min.jpg",
+            "category": "Кровельные материалы",
+            "subCategory": "Доборные элементы",
+            "length": 2000,
+            "thickness": 0.45,
+            "colors": [
+              {
+                "color": "3005",
+                "imgColor": "assets/colors/3005.jpg"
+              },
+              {
+                "color": "6005",
+                "imgColor": "assets/colors/6005.webp"
+              },
+              {
+                "color": "7024",
+                "imgColor": "assets/colors/7024.webp"
+              },
+              {
+                "color": "8004",
+                "imgColor": "assets/colors/8004.webp"
+              },
+              {
+                "color": "8017",
+                "imgColor": "assets/colors/8017.png"
+              }
+            ]
           }
         ]
       },
@@ -3611,29 +4668,124 @@
         "products": [
           {
             "id": 1,
-            "name": "Саморез по металлу Daxmer 4,8х19 RAL 7024 (250) сверло №2",
+            "name": "Саморез кровельный 4,8*35 мм",
+            "type": "samorezi",
+            "price": 800,
+            "img": "assets/products/samores.webp",
+            "category": "Кровельные материалы",
+            "subCategory": "Саморезы",
+            "length": 35,
+            "thickness": 4.8
+          },
+          {
+            "id": 2,
+            "name": "Саморез кровельный 4,8*51 мм",
+            "type": "samorezi",
+            "price": 800,
+            "img": "assets/products/samores.webp",
+            "category": "Кровельные материалы",
+            "subCategory": "Саморезы",
+            "length": 51,
+            "thickness": 4.8
+          },
+          {
+            "id": 3,
+            "name": "Саморез кровельный 4,8*70 мм",
+            "type": "samorezi",
+            "price": 800,
+            "img": "assets/products/samores.webp",
+            "category": "Кровельные материалы",
+            "subCategory": "Саморезы",
+            "length": 70,
+            "thickness": 4.8
+          },
+          {
+            "id": 4,
+            "name": "Саморез кровельный 5,5*19 мм",
             "type": "samorezi",
             "price": 800,
             "img": "assets/products/samores.webp",
             "category": "Кровельные материалы",
             "subCategory": "Саморезы",
             "length": 19,
-            "thickness": 4.8,
-            "color": 7024,
-            "count": 250
+            "thickness": 5.5
           },
           {
-            "id": 2,
-            "name": "Саморез по металлу Daxmer 4,8х25 RAL 7024 (250) сверло №2",
+            "id": 5,
+            "name": "Саморез кровельный 5,5*25 мм",
             "type": "samorezi",
             "price": 800,
             "img": "assets/products/samores.webp",
             "category": "Кровельные материалы",
             "subCategory": "Саморезы",
             "length": 25,
-            "thickness": 4.8,
-            "color": 7024,
-            "count": 250
+            "thickness": 5.5
+          },
+          {
+            "id": 6,
+            "name": "Саморез ПШО 4,2*16 мм",
+            "type": "samorezi",
+            "price": 800,
+            "img": "assets/products/samores.webp",
+            "category": "Кровельные материалы",
+            "subCategory": "Саморезы",
+            "length": 16,
+            "thickness": 4.2
+          },
+          {
+            "id": 7,
+            "name": "Саморез ПШО 4,2*19 мм",
+            "type": "samorezi",
+            "price": 800,
+            "img": "assets/products/samores.webp",
+            "category": "Кровельные материалы",
+            "subCategory": "Саморезы",
+            "length": 19,
+            "thickness": 4.2
+          },
+          {
+            "id": 8,
+            "name": "Саморез ПШС 4,2*16 мм",
+            "type": "samorezi",
+            "price": 800,
+            "img": "assets/products/samores.webp",
+            "category": "Кровельные материалы",
+            "subCategory": "Саморезы",
+            "length": 16,
+            "thickness": 4.2
+          },
+          {
+            "id": 9,
+            "name": "Саморез ПШС 4,2*19 мм",
+            "type": "samorezi",
+            "price": 800,
+            "img": "assets/products/samores.webp",
+            "category": "Кровельные материалы",
+            "subCategory": "Саморезы",
+            "length": 19,
+            "thickness": 4.2
+          },
+          {
+            "id": 10,
+            "name": "Саморез ПШО 4,2*19 мм (дерево)",
+            "type": "samorezi",
+            "price": 800,
+            "img": "assets/products/samores.webp",
+            "category": "Кровельные материалы",
+            "subCategory": "Саморезы",
+            "length": 19,
+            "thickness": 4.2
+          },
+          {
+            "id": 11,
+            "name": "Саморез ПШС 4,2*19 мм (дерево)",
+            "type": "samorezi",
+            "price": 800,
+            "img": "assets/products/samores.webp",
+            "category": "Кровельные материалы",
+            "subCategory": "Саморезы",
+            "length": 19,
+            "thickness": 4.2
           }
         ]
       }

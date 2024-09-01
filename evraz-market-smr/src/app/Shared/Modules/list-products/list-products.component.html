@@ -31,6 +31,23 @@
           <p class="text-sm">Ширина (B), мм: {{ product.width }}</p>
           <p class="text-sm">Толщина стенки (S), мм: {{ product.thickness }}</p>
         </ng-container>
+        <ng-container *ngIf="isDobory(product)">
+          <p class="text-sm">Длина (L), мм: {{ product.length }}</p>
+          <p class="text-sm">Толщина (T), мм: {{ product.thickness }}</p>
+          <div class="flex">
+            <p class="text-sm">Цвет RAL: </p>
+            <div class="text-sm"
+                 *ngFor="let color of product.colors; let isLast = last">
+              <div *ngIf="isLast">
+                {{ color.color }}
+              </div>
+              <div *ngIf="!isLast">
+                {{ color.color }},
+              </div>
+
+            </div>
+          </div>
+        </ng-container>
         <ng-container *ngIf="isProflist(product)">
           <p class="text-sm">Ширина монтажная (w), мм: {{ product.widthM }}</p>
           <p class="text-sm">Ширина габаритная, мм: {{ product.widthG }}</p>
@@ -54,8 +71,6 @@
         <ng-container *ngIf="isSamorezi(product)">
           <p class="text-sm">Длина (L), мм: {{ product.length }}</p>
           <p class="text-sm">Диаметр (D), мм: {{ product.thickness }}</p>
-          <p class="text-sm">Цвет RAL: {{ product.color }}</p>
-          <p class="text-sm">Количество: {{ product.count }}</p>
         </ng-container>
         <ng-container *ngIf="isWire(product)">
           <p class="text-sm">Масса (m), кг: {{ product.weight }}</p>

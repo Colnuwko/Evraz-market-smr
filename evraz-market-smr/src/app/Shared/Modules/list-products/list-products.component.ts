@@ -5,6 +5,7 @@ import {CategoryService} from '../../Services/category.service';
 import {
   Armatura,
   Balka,
+  Dobory,
   Listy,
   Product,
   ProfilePipe,
@@ -112,6 +113,10 @@ export class ListProductsComponent {
     return (product as Setka).type === TypeProduct.setka;
   }
 
+  isDobory(product: Product): product is Dobory {
+    return (product as Dobory).type === TypeProduct.dobory
+  }
+
   isList(product: Product): product is Listy {
     return (product as Listy).type === TypeProduct.list
   }
@@ -123,4 +128,6 @@ export class ListProductsComponent {
   translit(categoryName: string): string {
     return this.dataService.transliterate(categoryName);
   }
+
+  protected readonly TypeProduct = TypeProduct;
 }
