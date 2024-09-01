@@ -1,9 +1,8 @@
 import {HttpClient} from "@angular/common/http";
 import { Injectable } from '@angular/core';
 
-
 @Injectable({
-  providedIn: 'root',
+  providedIn: 'root'
 })
 export class EmailService {
 
@@ -19,7 +18,8 @@ export class EmailService {
       email: email,
       message: message
     };
-      return this.http.post(this.emailUrl, data);
+    console.log(data);
+    this.http.post(this.emailUrl, data).subscribe(response => console.log(response));
   }
 
 }
