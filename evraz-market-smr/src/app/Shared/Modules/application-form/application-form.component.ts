@@ -34,6 +34,7 @@ export class ApplicationFormComponent {
     this.clientForm = this.fb.group({
       name: ['', [Validators.required]],
       number: ['', [Validators.required]],
+      email: [],
       message: ['', [Validators.required]]
     });
   }
@@ -41,8 +42,8 @@ export class ApplicationFormComponent {
   onSubmit() {
     // @ts-ignore
     if (this.clientForm.valid){
-      let response = this.emailService.sendEmail(this.clientForm.get('name')?.value, this.clientForm.get('number')?.value,
-      this.clientForm.get('email')?.value, this.clientForm.get('message')?.value);
+      console.log(this.clientForm.get('email')?.value)
+      this.emailService.sendEmail(this.clientForm.get('name')?.value, this.clientForm.get('number')?.value, this.clientForm.get('email')?.value, this.clientForm.get('message')?.value);
       this.dialog.closeAll();
      const dialogRef = this.dialog.open(CustomAlertComponent, {
       data: "Заявка успешно отправлена. Менеджер свяжится с вами в ближайшее время."
