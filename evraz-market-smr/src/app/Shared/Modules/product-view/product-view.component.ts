@@ -2,6 +2,7 @@ import {Component} from '@angular/core';
 import {
   Armatura,
   Balka,
+  Dobory,
   Listy,
   Product,
   ProfilePipe,
@@ -141,10 +142,6 @@ export class ProductViewComponent {
     return (product as Shveller)!.type === TypeProduct.proflist
   }
 
-  isProflists(products: Product[]): products is Proflist[] {
-
-    return products?.length > 0 && products[0]?.type === TypeProduct.proflist
-  }
 
   isShvellers(products: Product[]): products is Shveller[] {
     return products?.length > 0 && products[0]?.type === TypeProduct.shveller
@@ -174,9 +171,6 @@ export class ProductViewComponent {
     return (product as Square)!.type === TypeProduct.square
   }
 
-  isLists(products: Product[]): products is Listy[] {
-    return products?.length > 0 && products[0]?.type === TypeProduct.list
-  }
 
   isList(product: Product): product is Listy {
     return (product as Square)!.type === TypeProduct.list
@@ -214,8 +208,8 @@ export class ProductViewComponent {
     return (product as Setka)!.type === TypeProduct.setka
   }
 
-  isTrubas(products: Product[]): products is TrubaC[] {
-    return products?.length > 0 && products[0]?.type === TypeProduct.trubaC
+  isDobory(product: Product): product is Dobory {
+    return (product as Dobory)!.type === TypeProduct.dobory
   }
 
   isTruba(product: Product): product is TrubaC {

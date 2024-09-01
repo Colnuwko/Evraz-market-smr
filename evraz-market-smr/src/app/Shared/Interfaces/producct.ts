@@ -85,15 +85,12 @@ export interface Setka extends Product {
 export interface Dobory extends Product {
   length: number;
   thickness: number;
-  color: number;
-  imgColor: string;
+  colors: Color[];
 }
 
 export interface Samorezi extends Product {
   length: number;
   thickness: number;
-  color: number;
-  count: number;
 }
 
 
