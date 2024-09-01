@@ -1,177 +1,281 @@
 <div *ngIf="product">
-  <div class="text-4xl font-semibold text-orange py-10 tel:text-3xl"> {{ product.name }}</div>
+  <div
+    class="text-4xl font-semibold text-orange py-10 tel:text-3xl"> {{ product.name }}
+  </div>
   <div class="flex gap-10 items-start tel:flex-wrap">
     <div class="basis-1/3 rounded-2xl shadow-lg tel:flex-none tel:w-full">
       <img class="w-full object-cover rounded-2xl" [src]="product.img"/>
     </div>
-    <div class="basis-1/3 p-4 rounded-2xl shadow-lg tel:flex-none tel:w-full" *ngIf="products">
+    <div class="basis-1/3 p-4 rounded-2xl shadow-lg tel:flex-none tel:w-full"
+         *ngIf="products">
       <ng-container *ngIf="products && isArmaturaProducts(products)">
         <div class="font-semibold tel:text-sm">Диаметр (D), мм</div>
         <div class="flex gap-2 py-4 flex-wrap">
-          <div *ngFor="let product of products" class=" border-2 p-1 w-20 text-center rounded-md tel:text-sm tel:w-16"
-               [class.border-orange]="check(product)" (click)="navigateToProduct(product)">
+          <div *ngFor="let product of products"
+               class=" border-2 p-1 w-20 text-center rounded-md tel:text-sm tel:w-16"
+               [class.border-orange]="check(product)"
+               (click)="navigateToProduct(product)">
             {{ product.diameter }}
           </div>
         </div>
       </ng-container>
       <ng-container *ngIf="isArmatura(product)">
-        <p class="font-semibold tel:text-sm">Длина (L), мм: {{ product.length }}</p>
+        <p class="font-semibold tel:text-sm">Длина (L),
+          мм: {{ product.length }}</p>
       </ng-container>
       <ng-container *ngIf="isProfilePipe(product)">
         <div class="font-semibold tel:text-sm">Высота (A), мм</div>
         <div class="flex gap-2 py-4 flex-wrap">
-          <div *ngFor="let height of heights" class="border-2 p-1 w-20 text-center rounded-md tel:text-sm tel:w-16"
-               [class.border-orange]="checkH(height)" (click)="navigateToHeight(height)">
+          <div *ngFor="let height of heights"
+               class="border-2 p-1 w-20 text-center rounded-md tel:text-sm tel:w-16"
+               [class.border-orange]="checkH(height)"
+               (click)="navigateToHeight(height)">
             {{ height }}
           </div>
         </div>
         <div class="font-semibold tel:text-sm">Ширина (B), мм</div>
         <div class="flex gap-2 py-4 flex-wrap">
-          <div *ngFor="let width of widths" class="border-2 p-1 w-20 text-center rounded-md tel:text-sm tel:w-16"
-               [class.border-orange]="checkW(width)" (click)="navigateToWidth(width)">
+          <div *ngFor="let width of widths"
+               class="border-2 p-1 w-20 text-center rounded-md tel:text-sm tel:w-16"
+               [class.border-orange]="checkW(width)"
+               (click)="navigateToWidth(width)">
             {{ width }}
           </div>
         </div>
         <div class="font-semibold tel:text-sm">Толщина (S), мм</div>
         <div class="flex gap-2 py-4 flex-wrap">
-          <div *ngFor="let thickness of thicknesses" class="border-2 p-1 w-20 text-center rounded-md tel:text-sm tel:w-16"
-               [class.border-orange]="checkT(thickness)" (click)="navigateToThickness(thickness)">
+          <div *ngFor="let thickness of thicknesses"
+               class="border-2 p-1 w-20 text-center rounded-md tel:text-sm tel:w-16"
+               [class.border-orange]="checkT(thickness)"
+               (click)="navigateToThickness(thickness)">
             {{ thickness }}
           </div>
         </div>
       </ng-container>
       <ng-container *ngIf="isProfilePipe(product)">
-        <p class="font-semibold tel:text-sm">Длина (L), мм: {{ product.length }}</p>
+        <p class="font-semibold tel:text-sm">Длина (L),
+          мм: {{ product.length }}</p>
       </ng-container>
-      <ng-container *ngIf="isProflists(products)">
-        <div class="flex gap-2 flex-wrap">
-          <div *ngFor="let product of products"
-               [class.border-orange]="check(product)"
-               class="border-2 rounded-lg w-32 h-32 flex flex-col justify-between tel:w-24 tel:h-24 "
-               (click)="navigateToProduct(product)">
-            <img [src]="product.imgColor" class="w-full h-3/5 object-cover rounded-md"/>
-            <div class="text-center rounded-lg  py-2">RAL {{ product.color }}</div>
+      <ng-container *ngIf="isProflist(product)">
+        <div class="font-semibold tel:text-sm">Толщина металла (T):</div>
+        <div class="flex gap-2 py-4 flex-wrap">
+          <div *ngFor="let thickness of thicknesses"
+               class="border-2 p-1 w-20 text-center rounded-md tel:text-sm tel:w-16"
+               [class.border-orange]="checkT(thickness)"
+               (click)="navigateToProflistThickness(thickness)">
+            {{ thickness }}
           </div>
+        </div>
+        <div class="font-semibold tel:text-sm py-2">Доступные цвета:</div>
+        <div class="flex gap-2 flex-wrap">
+          <div *ngFor="let color of product.colors "
+               class="border rounded-lg  h-full flex flex-col justify-between tel:w-24 tel:h-24 ">
+            <img [src]="color.imgColor"
+                 class="w-24  h-20 object-cover rounded self-center"/>
+            <div class="text-center rounded-lg  p-2">RAL {{ color.color }}
+            </div>
+          </div>
+        </div>
+        <div class="font-semibold tel:text-sm py-2">Монтажная ширина
+          (W), мм: {{ product.widthM }}
+        </div>
+        <div class="font-semibold tel:text-sm py-2">Габаритная ширина,
+          мм: {{ product.widthG }}
         </div>
       </ng-container>
       <ng-container *ngIf="isShvellers(products)">
-        <div class="font-semibold tel:text-sm">Высота (H), cм</div>
+        <div class="font-semibold tel:text-sm">Высота (H), cм:</div>
         <div class="flex gap-2 py-4  flex-wrap">
-          <div *ngFor="let product of products" [class.border-orange]="check(product)"
-               class="border-2 p-1 w-20 text-center rounded-md" (click)="navigateToProduct(product)">
+          <div *ngFor="let product of products"
+               [class.border-orange]="check(product)"
+               class="border-2 p-1 w-20 text-center rounded-md"
+               (click)="navigateToProduct(product)">
             <div class="text-center">{{ product.height }}</div>
           </div>
         </div>
       </ng-container>
       <ng-container *ngIf="isShveller(product)">
-        <p class="font-semibold tel:text-sm">Длина (L), мм: {{ product.length }}</p>
+        <p class="font-semibold tel:text-sm">Длина (L),
+          мм: {{ product.length }}</p>
       </ng-container>
       <ng-container *ngIf="isBalkas(products)">
         <div class="font-semibold tel:text-sm">Высота (H), cм</div>
         <div class="flex gap-2 py-4  flex-wrap">
-          <div *ngFor="let product of products" [class.border-orange]="check(product)"
-               class="border-2 p-1 w-20 text-center rounded-md" (click)="navigateToProduct(product)">
-            <div class="text-center">{{ product.type }}</div>
+          <div *ngFor="let product of products"
+               [class.border-orange]="check(product)"
+               class="border-2 p-1 w-20 text-center rounded-md"
+               (click)="navigateToProduct(product)">
+            <div class="text-center">{{ product.number }}</div>
           </div>
         </div>
       </ng-container>
       <ng-container *ngIf="isBalka(product)">
-        <p class="font-semibold tel:text-sm">Длина (L), мм: {{ product.length }}</p>
+        <p class="font-semibold tel:text-sm">Длина (L),
+          мм: {{ product.length }}</p>
       </ng-container>
       <ng-container *ngIf="isUgoloks(products)">
         <div class="font-semibold tel:text-sm">Ширина полки (B), мм</div>
         <div class="flex gap-2 py-4  flex-wrap">
-          <div *ngFor="let product of products" [class.border-orange]="check(product)"
-               class="border-2 p-1 w-20 text-center rounded-md" (click)="navigateToProduct(product)">
-            <div class="text-center">{{ product.width }}</div>
+          <div *ngFor="let width of widths"
+               [class.border-orange]="checkW(width)"
+               class="border-2 p-1 w-20 text-center rounded-md"
+               (click)="navigateToWidthUgolok(width)">
+            <div class="text-center">{{ width }}</div>
+          </div>
+        </div>
+        <div class="font-semibold tel:text-sm">Толщина полки (t), мм:</div>
+        <div class="flex gap-2 py-4  flex-wrap">
+          <div *ngFor="let thickness of thicknesses"
+               [class.border-orange]="checkT(thickness)"
+               (click)="navigateToThicknessUgolok(thickness)"
+               class="border-2 p-1 w-20 text-center rounded-md">
+            <div class="text-center">{{ thickness }}</div>
           </div>
         </div>
 
 
       </ng-container>
       <ng-container *ngIf="isUgolok(product)">
-        <div class="font-semibold tel:text-sm">Толщина полки (t), мм: {{ product.thickness }}</div>
-        <p class="font-semibold tel:text-sm">Длина (L), мм: {{ product.length }}</p>
+        <p class="font-semibold tel:text-sm">Длина (L),
+          мм: {{ product.length }}</p>
       </ng-container>
       <ng-container *ngIf="isSquares(products)">
         <div class="font-semibold tel:text-sm">Толщина сечения (t), мм:</div>
         <div class="flex gap-2 py-4 flex-wrap">
-          <div *ngFor="let product of products" class=" border-2 p-1 w-20 text-center rounded-md"
-               [class.border-orange]="check(product)" (click)="navigateToProduct(product)">
+          <div *ngFor="let product of products"
+               class=" border-2 p-1 w-20 text-center rounded-md"
+               [class.border-orange]="check(product)"
+               (click)="navigateToProduct(product)">
             {{ product.width }}
           </div>
         </div>
       </ng-container>
       <ng-container *ngIf="isSquare(product)">
-        <p class="font-semibold tel:text-sm">Длина (L), мм: {{ product.length }}</p>
-      </ng-container>
-      <ng-container *ngIf="isLists(products)">
-        <div class="font-semibold tel:text-sm">Толщина сечения (t), мм:</div>
-        <div class="flex gap-2 py-4 flex-wrap">
-          <div *ngFor="let product of products" class=" border-2 p-1 w-20 text-center rounded-md"
-               [class.border-orange]="check(product)" (click)="navigateToProduct(product)">
-            {{ product.thickness }}
-          </div>
-        </div>
+        <p class="font-semibold tel:text-sm">Длина (L),
+          мм: {{ product.length }}</p>
       </ng-container>
       <ng-container *ngIf="isList(product)">
-        <p class="font-semibold tel:text-sm">Ширина (W), мм: {{ product.width }}</p>
-        <p class="font-semibold tel:text-sm">Длина (L), мм: {{ product.length }}</p>
-        <p class="font-semibold tel:text-sm">Марка стали: {{ product.steel }}</p>
+        <div class="font-semibold tel:text-sm">Толщина сечения (t), мм:</div>
+        <div class="flex gap-2 py-4 flex-wrap">
+          <div *ngFor="let thickness of thicknesses"
+               class=" border-2 p-1 w-20 text-center rounded-md"
+               [class.border-orange]="checkT(thickness)"
+               (click)="navigateToListThickness(thickness)">
+            {{ thickness }}
+          </div>
+        </div>
+        <p class="font-semibold tel:text-sm">Ширина (W), мм:</p>
+        <div class="flex gap-2 py-4 flex-wrap">
+          <div *ngFor="let width of widths"
+               class=" border-2 p-1 w-20 text-center rounded-md"
+               [class.border-orange]="checkW(width)"
+               (click)="navigateToListWidth(width)">
+            {{ width }}
+          </div>
+        </div>
+        <p class="font-semibold tel:text-sm">Длина (L), мм:</p>
+        <div class="flex gap-2 py-4 flex-wrap">
+          <div *ngFor="let length of lengths"
+               class=" border-2 p-1 w-20 text-center rounded-md"
+               [class.border-orange]="checkL(length)"
+               (click)="navigateToListLength(length)">
+            {{ length }}
+          </div>
+        </div>
+        <p class="font-semibold tel:text-sm">Марка
+          стали: {{ product.steel }}</p>
       </ng-container>
       <ng-container *ngIf="isSamorezis(products)">
         <div class="font-semibold tel:text-sm">Длина (L), мм:</div>
         <div class="flex gap-2 py-4 flex-wrap">
-          <div *ngFor="let product of products" class=" border-2 p-1 w-20 text-center rounded-md"
-               [class.border-orange]="check(product)" (click)="navigateToProduct(product)">
+          <div *ngFor="let product of products"
+               class=" border-2 p-1 w-20 text-center rounded-md"
+               [class.border-orange]="check(product)"
+               (click)="navigateToProduct(product)">
             {{ product.length }}
           </div>
         </div>
       </ng-container>
       <ng-container *ngIf="isSamorezi(product)">
-        <p class="font-semibold tel:text-sm">Длина (L), мм: {{ product.length }}</p>
+        <p class="font-semibold tel:text-sm">Длина (L),
+          мм: {{ product.length }}</p>
         <p class="font-semibold tel:text-sm">Цвет RAL: {{ product.color }}</p>
       </ng-container>
       <ng-container *ngIf="isWires(products)">
         <div class="font-semibold tel:text-sm">Диаметр (D), мм:</div>
         <div class="flex gap-2 py-4 flex-wrap">
-          <div *ngFor="let product of products" class=" border-2 p-1 w-20 text-center rounded-md"
-               [class.border-orange]="check(product)" (click)="navigateToProduct(product)">
+          <div *ngFor="let product of products"
+               class=" border-2 p-1 w-20 text-center rounded-md"
+               [class.border-orange]="check(product)"
+               (click)="navigateToProduct(product)">
             {{ product.weight }}
           </div>
         </div>
       </ng-container>
       <ng-container *ngIf="isWire(product)">
-        <p class="font-semibold tel:text-sm">Масса (m), кг: {{ product.weight }}</p>
+        <p class="font-semibold tel:text-sm">Масса (m),
+          кг: {{ product.weight }}</p>
       </ng-container>
       <ng-container *ngIf="isStripes(products)">
         <div class="font-semibold tel:text-sm">Ширина (W), мм:</div>
         <div class="flex gap-2 py-4 flex-wrap">
-          <div *ngFor="let product of products" class=" border-2 p-1 w-20 text-center rounded-md"
-               [class.border-orange]="check(product)" (click)="navigateToProduct(product)">
+          <div *ngFor="let product of products"
+               class=" border-2 p-1 w-20 text-center rounded-md"
+               [class.border-orange]="check(product)"
+               (click)="navigateToProduct(product)">
             {{ product.width }}
           </div>
         </div>
       </ng-container>
       <ng-container *ngIf="isStripe(product)">
-        <p class="font-semibold tel:text-sm">Толщина (t), мм: {{ product.thickness }}</p>
+        <p class="font-semibold tel:text-sm">Толщина (t),
+          мм: {{ product.thickness }}</p>
       </ng-container>
       <ng-container *ngIf="isSetkas(products)">
         <div class="font-semibold tel:text-sm">Ячейка (S), мм:</div>
         <div class="flex gap-2 py-4 flex-wrap">
-          <div *ngFor="let product of products" class=" border-2 p-1 w-20 text-center rounded-md"
-               [class.border-orange]="check(product)" (click)="navigateToProduct(product)">
+          <div *ngFor="let product of products"
+               class=" border-2 p-1 w-20 text-center rounded-md"
+               [class.border-orange]="check(product)"
+               (click)="navigateToProduct(product)">
             {{ product.size }}
           </div>
         </div>
       </ng-container>
 
       <ng-container *ngIf="isSetka(product)">
-        <p class="font-semibold tel:text-sm">Длина (L), м: {{ product.length }}</p>
-        <p class="font-semibold tel:text-sm">Ширина (W), м: {{ product.width }}</p>
+        <p class="font-semibold tel:text-sm">Длина (L),
+          м: {{ product.length }}</p>
+        <p class="font-semibold tel:text-sm">Ширина (W),
+          м: {{ product.width }}</p>
+      </ng-container>
+      <ng-container *ngIf="isTruba(product)">
+        <div class="font-semibold tel:text-sm">Диаметр (D), мм</div>
+        <div class="flex gap-2 py-4 flex-wrap">
+          <div *ngFor="let diameter of diameters"
+               class="border-2 p-1 w-20 text-center rounded-md tel:text-sm tel:w-16"
+               [class.border-orange]="checkD(diameter)"
+               (click)="navigateToDiameter(diameter)">
+            {{ diameter }}
+          </div>
+        </div>
+        <div class="font-semibold tel:text-sm">Толщина (S), мм</div>
+        <div class="flex gap-2 py-4 flex-wrap">
+          <div *ngFor="let thickness of thicknesses"
+               class="border-2 p-1 w-20 text-center rounded-md tel:text-sm tel:w-16"
+               [class.border-orange]="checkThickness(thickness)"
+               (click)="navigateToTrubaThickness(thickness)">
+            {{ thickness }}
+          </div>
+        </div>
+      </ng-container>
+      <ng-container *ngIf="isProfilePipe(product)">
+        <p class="font-semibold tel:text-sm">Длина (L),
+          мм: {{ product.length }}</p>
       </ng-container>
     </div>
-    <div class="basis-1/3 w-full  p-4 rounded-2xl shadow-lg tel:flex-none tel:w-full">
+    <div
+      class="basis-1/3 w-full  p-4 rounded-2xl shadow-lg tel:flex-none tel:w-full">
       <div class="flex gap-2 items-end">
         <div class="font-semibold tel:text-sm">Стоимость:</div>
         <div class="text-xl tel:text-sm">{{ product.price }} &#8381;</div>
@@ -206,7 +310,9 @@
         </div>
         <div class="font-semibold tel:text-sm">
           {{ totalCost }} &#8381;
-          <div class="text-sm font-sans text-greyBg">Уточняйте цену у менеджера</div>
+          <div class="text-sm font-sans text-greyBg">Уточняйте цену у
+            менеджера
+          </div>
         </div>
       </div>
       <div class="flex items-center py-4 gap-2">
@@ -216,8 +322,11 @@
       </div>
     </div>
   </div>
-  <div class="w-2/3 flex flex-col gap-6 pt-10 tel:w-full">
+  <div class="w-2/3 flex flex-col gap-6 pt-10 tel:w-full"
+       *ngIf="product.description">
     <div class="text-4xl font-semibold text-orange tel:text-3xl">Описание</div>
-    <div class="text-lg tel:text-sm" *ngIf="product.description">{{ product.description }}</div>
+    <div class="text-lg tel:text-sm"
+         *ngIf="product.description">{{ product.description }}
+    </div>
   </div>
 </div>

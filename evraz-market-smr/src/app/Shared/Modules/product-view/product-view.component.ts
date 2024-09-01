@@ -11,6 +11,7 @@ import {
   Shveller,
   Square,
   Stripe,
+  TrubaC,
   TypeProduct,
   Ugolok,
   Wire
@@ -22,7 +23,7 @@ import {NgFor, NgIf} from '@angular/common';
 import {CategoryService} from '../../Services/category.service';
 import {BasketService} from '../../Services/basket.service';
 import {Subscription} from 'rxjs';
-import {CategoryR} from "../../Interfaces/category";
+import {CategoryR, SubCategoryR} from "../../Interfaces/category";
 import {FormsModule} from "@angular/forms";
 
 @Component({
@@ -38,7 +39,9 @@ export class ProductViewComponent {
   products: Product[] = [];
   widths: number[] = [];
   thicknesses: number[] = [];
+  diameters: number[] = [];
   heights: number[] = [];
+  lengths: number[] = [];
   lengthInMeters: number = 6;
   totalCost: number = 0;
   private lengthSubscription!: Subscription;
@@ -56,13 +59,49 @@ export class ProductViewComponent {
         this.product = product!;
         this.basket.initializeLengthAndCost(product);
         if (categoryId === this.categoryService.transliterate(CategoryR.TRUBY)) {
-          this.productService.getProfilePipeProductsByHeight(categoryId, subCategoryId, (this.product as ProfilePipe).height).subscribe(data => {
-            this.widths = data.widths;
-            this.thicknesses = data.thicknesses;
+          this.productService.getProfilePipeProductsByHeight(categoryId, subCategoryId, (this.product as ProfilePipe).height).subscribe(widths => {
+            this.widths = widths;
+
           });
           this.productService.getUniqueHeightsByCategoryAndSubCategory(categoryId, subCategoryId).subscribe(heights => {
             this.heights = heights;
           });
+          this.productService.getThicknessByHeightWidth(categoryId, subCategoryId, (this.product as ProfilePipe).height, (this.product as ProfilePipe).width).subscribe(thickness => {
+            this.thicknesses = thickness;
+          });
+        }
+        if (subCategoryId === this.categoryService.transliterate(SubCategoryR.UGOLOK)) {
+          this.productService.getUgolokProducts(categoryId, subCategoryId, (this.product as Ugolok).width).subscribe(ugolokProducts => {
+            this.thicknesses = ugolokProducts;
+          })
+          this.productService.getUgolokWidth(categoryId, subCategoryId).subscribe(widths => {
+            this.widths = widths;
+          })
+        }
+        if (categoryId === this.categoryService.transliterate(CategoryR.LISTY)) {
+          this.productService.getListThickness(categoryId, subCategoryId).subscribe(thicknesses => {
+            this.thicknesses = thicknesses;
+          })
+          this.productService.getListWidth(categoryId, subCategoryId, (this.product as Listy).thickness).subscribe(widths => {
+            this.widths = widths;
+          })
+          this.productService.getListLength(categoryId, subCategoryId, (this.product as Listy).thickness, (this.product as Listy).width).subscribe(lengths => {
+            this.lengths = lengths;
+          })
+
+        }
+        if (subCategoryId === this.categoryService.transliterate(SubCategoryR.TRUBA_ELECTROSVARNAYA || SubCategoryR.TRUBA_BESSHOVNAYA || SubCategoryR.TRUBA_VGP || SubCategoryR.TRUBA_TEMPO)) {
+          this.productService.getUniqueDiameterByCategoryAndSubCategory(categoryId, subCategoryId).subscribe(diameters => {
+            this.diameters = diameters;
+          })
+          this.productService.getTrubaProductsByDiameter(categoryId, subCategoryId, (this.product as TrubaC).diameter).subscribe(trubaProducts => {
+            this.thicknesses = trubaProducts;
+          })
+        }
+        if (categoryId === this.categoryService.transliterate(CategoryR.PROFLIST)) {
+          this.productService.getProflistProductsByThickness(categoryId, subCategoryId).subscribe(proflistProducts => {
+            this.thicknesses = proflistProducts;
+          })
         }
       });
       this.productService.getProductsByCategoryAndSubCategory(categoryId, subCategoryId).subscribe(product => {
@@ -95,6 +134,11 @@ export class ProductViewComponent {
 
   isShveller(product: Product): product is Shveller {
     return (product as Shveller)!.type === TypeProduct.shveller;
+  }
+
+  isProflist(product: Product): product is Proflist {
+
+    return (product as Shveller)!.type === TypeProduct.proflist
   }
 
   isProflists(products: Product[]): products is Proflist[] {
@@ -170,6 +214,14 @@ export class ProductViewComponent {
     return (product as Setka)!.type === TypeProduct.setka
   }
 
+  isTrubas(products: Product[]): products is TrubaC[] {
+    return products?.length > 0 && products[0]?.type === TypeProduct.trubaC
+  }
+
+  isTruba(product: Product): product is TrubaC {
+    return (product as Setka)!.type === TypeProduct.trubaC
+  }
+
   ngOnDestroy(): void {
     if (this.lengthSubscription) {
       this.lengthSubscription.unsubscribe();
@@ -181,6 +233,14 @@ export class ProductViewComponent {
 
   check(product: Product): boolean {
     return product.id === this.product.id;
+  }
+
+  checkThickness(product: number): boolean {
+    return product === (this.product as TrubaC).thickness;
+  }
+
+  checkD(product: number): boolean {
+    return product === (this.product as TrubaC).diameter;
   }
 
   checkH(product: number): boolean {
@@ -195,6 +255,10 @@ export class ProductViewComponent {
     return product === (this.product as ProfilePipe).thickness;
   }
 
+  checkL(product: number): boolean {
+    return product === (this.product as Listy).length;
+  }
+
   navigateToProduct(product: Product): void {
     this.router.navigate(['/category/', this.categoryService.transliterate(product.category), 'subCategory', this.categoryService.transliterate(product.subCategory), product.id]);
   }
@@ -207,11 +271,76 @@ export class ProductViewComponent {
     });
   }
 
+  navigateToDiameter(diameter: number): void {
+    const categoryId = this.route.snapshot.paramMap.get('categoryId');
+    const subCategoryId = this.route.snapshot.paramMap.get('subCategoryId');
+    this.productService.getTrubaByDiameter(categoryId!, subCategoryId!, diameter).subscribe(product => {
+      this.navigateToProduct(product);
+    });
+  }
+
+  navigateToListThickness(thickness: number): void {
+    const categoryId = this.route.snapshot.paramMap.get('categoryId')!;
+    const subCategoryId = this.route.snapshot.paramMap.get('subCategoryId')!;
+    this.productService.getListByThickness(categoryId, subCategoryId, thickness).subscribe(product => {
+      this.navigateToProduct(product);
+    });
+  }
+
+  navigateToProflistThickness(thickness: number): void {
+    const categoryId = this.route.snapshot.paramMap.get('categoryId')!;
+    const subCategoryId = this.route.snapshot.paramMap.get('subCategoryId')!;
+    this.productService.getProflistByThickness(categoryId, subCategoryId, thickness, (this.product as Proflist).colors.length).subscribe(product => {
+      this.navigateToProduct(product);
+    });
+  }
+
+  navigateToListWidth(width: number): void {
+    const categoryId = this.route.snapshot.paramMap.get('categoryId')!;
+    const subCategoryId = this.route.snapshot.paramMap.get('subCategoryId')!;
+    this.productService.getListByWidth(categoryId, subCategoryId, (this.product as Listy).thickness, width).subscribe(product => {
+      this.navigateToProduct(product);
+    });
+  }
+
+  navigateToListLength(length: number): void {
+    const categoryId = this.route.snapshot.paramMap.get('categoryId')!;
+    const subCategoryId = this.route.snapshot.paramMap.get('subCategoryId')!;
+    this.productService.getListByLength(categoryId, subCategoryId, (this.product as Listy).thickness, (this.product as Listy).width, length).subscribe(product => {
+      this.navigateToProduct(product);
+    });
+  }
+
+  navigateToTrubaThickness(thickness: number): void {
+    const categoryId = this.route.snapshot.paramMap.get('categoryId')!;
+    const subCategoryId = this.route.snapshot.paramMap.get('subCategoryId')!;
+    const diameter = (this.product as TrubaC).diameter;
+    this.productService.getTrubaByThickness(categoryId, subCategoryId, diameter, thickness).subscribe(product => {
+      this.navigateToProduct(product);
+    });
+  }
+
   navigateToWidth(width: number): void {
     const categoryId = this.route.snapshot.paramMap.get('categoryId')!;
     const subCategoryId = this.route.snapshot.paramMap.get('subCategoryId')!;
     const height = (this.product as ProfilePipe).height;
     this.productService.getProfilePipeByWidth(categoryId, subCategoryId, height, width).subscribe(product => {
+      this.navigateToProduct(product);
+    });
+  }
+
+  navigateToWidthUgolok(width: number): void {
+    const categoryId = this.route.snapshot.paramMap.get('categoryId')!;
+    const subCategoryId = this.route.snapshot.paramMap.get('subCategoryId')!;
+    this.productService.getUgolokByWidth(categoryId, subCategoryId, width).subscribe(product => {
+      this.navigateToProduct(product);
+    });
+  }
+
+  navigateToThicknessUgolok(thickness: number): void {
+    const categoryId = this.route.snapshot.paramMap.get('categoryId')!;
+    const subCategoryId = this.route.snapshot.paramMap.get('subCategoryId')!;
+    this.productService.getUgolokThicknes(categoryId, subCategoryId, (this.product as Ugolok).width, thickness).subscribe(product => {
       this.navigateToProduct(product);
     });
   }

@@ -9,9 +9,13 @@
     </tr>
     </thead>
     <tbody *ngFor="let subCategory of subCategories">
-    <tr *ngFor="let product of subCategory.products" class="border-t  border-orange">
-      <th class="font-medium py-4 text-left px-4 tel:text-sm tel:px-0" (click)="navigateToSubCategory(subCategory, product)">
-        <div class="underline font-sans text-black  hover:text-orangHover">{{ product.name }}</div>
+    <tr *ngFor="let product of subCategory.products"
+        class="border-t  border-orange">
+      <th class="font-medium py-4 text-left px-4 tel:text-sm tel:px-0"
+          (click)="navigateToSubCategory(subCategory, product)">
+        <div
+          class="underline font-sans text-black  hover:text-orangHover">{{ product.name }}
+        </div>
         <ng-container *ngIf="isArmatura(product)">
           <p class="text-sm">Длина (L), мм: {{ product.length }}</p>
           <p class="text-sm">Диаметр (D), мм: {{ product.diameter }}</p>
@@ -28,9 +32,24 @@
           <p class="text-sm">Толщина стенки (S), мм: {{ product.thickness }}</p>
         </ng-container>
         <ng-container *ngIf="isProflist(product)">
-          <p class="text-sm">Ширина (B), мм: {{ product.width }}</p>
-          <p class="text-sm">Толщина металла (S), мм: {{ product.thickness }}</p>
-          <p class="text-sm">Цвет RAL: {{ product.color }}</p>
+          <p class="text-sm">Ширина монтажная (w), мм: {{ product.widthM }}</p>
+          <p class="text-sm">Ширина габаритная, мм: {{ product.widthG }}</p>
+          <p class="text-sm">Толщина металла (S),
+            мм: {{ product.thickness }}</p>
+          <div class="flex">
+            <p class="text-sm">Цвет RAL: </p>
+            <div class="text-sm"
+                 *ngFor="let color of product.colors; let isLast = last">
+              <div *ngIf="isLast">
+                {{ color.color }}
+              </div>
+              <div *ngIf="!isLast">
+                {{ color.color }},
+              </div>
+
+            </div>
+          </div>
+
         </ng-container>
         <ng-container *ngIf="isSamorezi(product)">
           <p class="text-sm">Длина (L), мм: {{ product.length }}</p>
@@ -52,6 +71,29 @@
           <p class="text-sm">Ячейка (S), мм: {{ product.size }}</p>
           <p class="text-sm">Ширина (W), мм: {{ product.width }}</p>
         </ng-container>
+        <ng-container *ngIf="isTruba(product)">
+          <p class="text-sm">Длина (L), мм: {{ product.length }}</p>
+          <p class="text-sm">Диаметр (D), мм: {{ product.diameter }}</p>
+          <p class="text-sm">Толщина стенки (T), мм: {{ product.thickness }}</p>
+        </ng-container>
+        <ng-container *ngIf="isShveller(product)">
+          <p class="text-sm">Длина (L), мм: {{ product.length }}</p>
+          <p class="text-sm">Высота (H), см: {{ product.height }}</p>
+        </ng-container>
+        <ng-container *ngIf="isBalka(product)">
+          <p class="text-sm">Длина (L), мм: {{ product.length }}</p>
+          <p class="text-sm">Высота (H), см: {{ product.number }}</p>
+        </ng-container>
+        <ng-container *ngIf="isUgolok(product)">
+          <p class="text-sm">Длина (L), мм: {{ product.length }}</p>
+          <p class="text-sm">Ширина (W), мм: {{ product.width }}</p>
+          <p class="text-sm">Толщина (T), мм: {{ product.thickness }}</p>
+        </ng-container>
+        <ng-container *ngIf="isList(product)">
+          <p class="text-sm">Длина (L), мм: {{ product.length }}</p>
+          <p class="text-sm">Ширина (W), мм: {{ product.width }}</p>
+          <p class="text-sm">Толщина (T), мм: {{ product.thickness }}</p>
+        </ng-container>
       </th>
       <th class="font-medium py-4 text-center px-2 tel:hidden">г. Самара</th>
       <th class="font-medium py-4 text-center px-2">
@@ -60,7 +102,9 @@
           <div class="tel:text-sm">В наличии</div>
         </div>
       </th>
-      <th class="font-medium py-4 text-center px-2 tel:text-sm">{{ product.price }}&#8381;/м</th>
+      <th
+        class="font-medium py-4 text-center px-2 tel:text-sm">{{ product.price }}&#8381;/м
+      </th>
 
     </tr>
     </tbody>

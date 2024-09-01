@@ -1,4 +1,4 @@
-import { Product } from "./producct";
+import {Product} from "./producct";
 
 export interface CategoryInt {
   id: number;
@@ -16,11 +16,7 @@ export interface SubCategoryDetail {
 }
 
 
-
-
-
-
-export enum CategoryR{
+export enum CategoryR {
   ARMATURA = 'Арматурный прокат',
   LISTY = 'Листовой прокат',
   MITIZ = 'Метизная продукция',
@@ -44,11 +40,13 @@ export enum SubCategoryR {
   TRUBA_TEMPO = "Труба ТЭМПО",
   METALLOCHEREPICA = "Металлочерепица",
   PROFNASTIL = 'Профнастил',
+  GLADKIY_LIST = 'Гладкий лист',
   DOBORNIE_ELEMENTY = "Доборные элементы",
   SAMOREZI = 'Саморезы',
   BALKA = 'Балка двутавровая',
   UGOLOK = 'Уголок',
   SETKA_KLADOCHNAYA = 'Сетка кладочная',
+
 
 }
 
