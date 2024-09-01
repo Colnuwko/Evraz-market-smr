@@ -4,7 +4,7 @@ module.exports = {
   theme: {
     extend: {
       fontFamily: {
-        noah: ["Noah", "sans-serif"],
+        noah: ["Montserrat", "sans-serif"],
       },
     },
     colors: {
