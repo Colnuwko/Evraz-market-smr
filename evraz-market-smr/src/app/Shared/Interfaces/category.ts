@@ -40,6 +40,7 @@ export enum SubCategoryR {
   TRUBA_TEMPO = "Труба ТЭМПО",
   METALLOCHEREPICA = "Металлочерепица",
   PROFNASTIL = 'Профнастил',
+  GLADKIY_LIST = 'Гладкий лист',
   DOBORNIE_ELEMENTY = "Доборные элементы",
   SAMOREZI = 'Саморезы',
   BALKA = 'Балка двутавровая',

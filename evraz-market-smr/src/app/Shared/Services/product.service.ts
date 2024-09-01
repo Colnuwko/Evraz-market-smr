@@ -5,6 +5,7 @@ import {
   Listy,
   Product,
   ProfilePipe,
+  Proflist,
   TrubaC,
   Ugolok
 } from '../Interfaces/producct';
@@ -45,7 +46,6 @@ export class ProductService {
   }
 
   getProductsByCategoryAndSubCategory(category: string, subCategory: string): Observable<Product[]> {
-
     return this.http.get<CategoryInt[]>(this.jsonUrl).pipe(
       map(categories => {
         const selectedCategory = categories.find(cat => this.dataService.transliterate(cat.title) === category);
@@ -71,6 +71,23 @@ export class ProductService {
               .filter(product => (product as ProfilePipe).height === height)
               .map(product => (product as ProfilePipe).width);
 
+            return [...new Set(width)];
+          }
+        }
+        return [];
+      })
+    );
+  }
+
+  getProflistProductsByThickness(categoryId: string, subCategoryId: string): Observable<number[]> {
+    return this.http.get<CategoryInt[]>(this.jsonUrl).pipe(
+      map(categories => {
+        const category = categories.find(cat => this.dataService.transliterate(cat.title) === categoryId);
+        if (category) {
+          const subCategory = category.subCategories.find(sub => this.dataService.transliterate(sub.title) === subCategoryId);
+          if (subCategory) {
+            const width = subCategory.products
+              .map(product => (product as Proflist).thickness);
             return [...new Set(width)];
           }
         }
@@ -243,6 +260,13 @@ export class ProductService {
       })
     );
   }
+
+  getProflistByThickness(categoryId: string, subCategoryId: string, thickness: number, colorsLength: number): Observable<Proflist> {
+    return this.http.get<any>(this.jsonUrl).pipe(
+      map(data => this.extractProducts(data).find(product => this.dataService.transliterate(product.category) === categoryId && this.dataService.transliterate(product.subCategory) === subCategoryId && (product as Proflist).thickness === thickness && (product as Proflist).colors.length === colorsLength) as Proflist)
+    );
+  }
+
 
   getListByThickness(categoryId: string, subCategoryId: string, thickness: number): Observable<Listy> {
     return this.http.get<any>(this.jsonUrl).pipe(

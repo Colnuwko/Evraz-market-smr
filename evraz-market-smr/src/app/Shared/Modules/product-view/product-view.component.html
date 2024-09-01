@@ -57,20 +57,34 @@
           мм: {{ product.length }}</p>
       </ng-container>
       <ng-container *ngIf="isProflist(product)">
+        <div class="font-semibold tel:text-sm">Толщина металла (T):</div>
+        <div class="flex gap-2 py-4 flex-wrap">
+          <div *ngFor="let thickness of thicknesses"
+               class="border-2 p-1 w-20 text-center rounded-md tel:text-sm tel:w-16"
+               [class.border-orange]="checkT(thickness)"
+               (click)="navigateToProflistThickness(thickness)">
+            {{ thickness }}
+          </div>
+        </div>
+        <div class="font-semibold tel:text-sm py-2">Доступные цвета:</div>
         <div class="flex gap-2 flex-wrap">
-          <div *ngFor="let color of product.colors"
-               [class.border-orange]="check(product)"
-               class="border-2 rounded-lg w-32 h-32 flex flex-col justify-between tel:w-24 tel:h-24 "
-               (click)="navigateToProduct(product)">
+          <div *ngFor="let color of product.colors "
+               class="border rounded-lg  h-full flex flex-col justify-between tel:w-24 tel:h-24 ">
             <img [src]="color.imgColor"
-                 class="w-full h-3/5 object-cover rounded-md"/>
-            <div class="text-center rounded-lg  py-2">RAL {{ color.color }}
+                 class="w-24  h-20 object-cover rounded self-center"/>
+            <div class="text-center rounded-lg  p-2">RAL {{ color.color }}
             </div>
           </div>
         </div>
+        <div class="font-semibold tel:text-sm py-2">Монтажная ширина
+          (W), мм: {{ product.widthM }}
+        </div>
+        <div class="font-semibold tel:text-sm py-2">Габаритная ширина,
+          мм: {{ product.widthG }}
+        </div>
       </ng-container>
       <ng-container *ngIf="isShvellers(products)">
-        <div class="font-semibold tel:text-sm">Высота (H), cм</div>
+        <div class="font-semibold tel:text-sm">Высота (H), cм:</div>
         <div class="flex gap-2 py-4  flex-wrap">
           <div *ngFor="let product of products"
                [class.border-orange]="check(product)"

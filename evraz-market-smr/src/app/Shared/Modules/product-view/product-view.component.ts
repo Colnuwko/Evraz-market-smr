@@ -98,6 +98,11 @@ export class ProductViewComponent {
             this.thicknesses = trubaProducts;
           })
         }
+        if (categoryId === this.categoryService.transliterate(CategoryR.PROFLIST)) {
+          this.productService.getProflistProductsByThickness(categoryId, subCategoryId).subscribe(proflistProducts => {
+            this.thicknesses = proflistProducts;
+          })
+        }
       });
       this.productService.getProductsByCategoryAndSubCategory(categoryId, subCategoryId).subscribe(product => {
         this.products = product;
@@ -278,6 +283,14 @@ export class ProductViewComponent {
     const categoryId = this.route.snapshot.paramMap.get('categoryId')!;
     const subCategoryId = this.route.snapshot.paramMap.get('subCategoryId')!;
     this.productService.getListByThickness(categoryId, subCategoryId, thickness).subscribe(product => {
+      this.navigateToProduct(product);
+    });
+  }
+
+  navigateToProflistThickness(thickness: number): void {
+    const categoryId = this.route.snapshot.paramMap.get('categoryId')!;
+    const subCategoryId = this.route.snapshot.paramMap.get('subCategoryId')!;
+    this.productService.getProflistByThickness(categoryId, subCategoryId, thickness, (this.product as Proflist).colors.length).subscribe(product => {
       this.navigateToProduct(product);
     });
   }
