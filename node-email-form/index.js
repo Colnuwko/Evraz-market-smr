@@ -27,7 +27,7 @@ app.post('/send-email', (req, res) => {
 
   const mailOptions = {
     from: 'Mail from <merkuri_metal_info@mail.ru>',
-    to: 'danil211-1@yandex.ru', // Replace with recipient email address
+    to: 'Vladislav290403@gmail.com', // Replace with recipient email address
     subject: 'New Contact Form Submission',
     text: `
       Клиент: ${name} Оставил заявку

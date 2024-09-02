@@ -6,7 +6,7 @@ import { Injectable } from '@angular/core';
 })
 export class EmailService {
 
- private emailUrl = 'http://localhost:3000/send-email'; // Replace with your backend URL
+ private emailUrl = 'http://mercurimetall.store:3000/send-email'; // Replace with your backend URL
 
   constructor(private http: HttpClient) { }
 
