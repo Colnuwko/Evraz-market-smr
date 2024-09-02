@@ -81,6 +81,14 @@ export class ListProductsComponent {
     return (product as Samorezi).type === TypeProduct.samorezi;
   }
 
+  checkSamorezi(product: Product): boolean {
+    return product.type === TypeProduct.samorezi;
+  }
+
+  checkDobory(product: Product): boolean {
+    return product.type === TypeProduct.dobory;
+  }
+
   isSquare(product: Product): product is Square {
     return (product as Square).type === TypeProduct.square;
   }
