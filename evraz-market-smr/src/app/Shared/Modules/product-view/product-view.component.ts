@@ -68,7 +68,16 @@ export class ProductViewComponent {
             this.heights = heights;
           });
           this.productService.getThicknessByHeightWidth(categoryId, subCategoryId, (this.product as ProfilePipe).height, (this.product as ProfilePipe).width).subscribe(thickness => {
-            this.thicknesses = thickness;
+            if (this.product.type === TypeProduct.trubaC) {
+              this.productService.getUniqueDiameterByCategoryAndSubCategory(categoryId, subCategoryId).subscribe(diameters => {
+                this.diameters = diameters;
+              })
+              this.productService.getTrubaProductsByDiameter(categoryId, subCategoryId, (this.product as TrubaC).diameter).subscribe(trubaProducts => {
+                this.thicknesses = trubaProducts;
+              })
+            } else {
+              this.thicknesses = thickness;
+            }
           });
         }
         if (subCategoryId === this.categoryService.transliterate(SubCategoryR.UGOLOK)) {
@@ -91,12 +100,9 @@ export class ProductViewComponent {
           })
 
         }
-        if (subCategoryId === this.categoryService.transliterate(SubCategoryR.TRUBA_ELECTROSVARNAYA || SubCategoryR.TRUBA_BESSHOVNAYA || SubCategoryR.TRUBA_VGP || SubCategoryR.TRUBA_TEMPO)) {
+        if (this.product.type === TypeProduct.trubaC) {
           this.productService.getUniqueDiameterByCategoryAndSubCategory(categoryId, subCategoryId).subscribe(diameters => {
             this.diameters = diameters;
-          })
-          this.productService.getTrubaProductsByDiameter(categoryId, subCategoryId, (this.product as TrubaC).diameter).subscribe(trubaProducts => {
-            this.thicknesses = trubaProducts;
           })
         }
         if (categoryId === this.categoryService.transliterate(CategoryR.PROFLIST)) {
@@ -171,6 +177,13 @@ export class ProductViewComponent {
     return (product as Square)!.type === TypeProduct.square
   }
 
+  checkSamorezi(product: Product): boolean {
+    return product.type === TypeProduct.samorezi;
+  }
+
+  checkDobory(product: Product): boolean {
+    return product.type === TypeProduct.dobory;
+  }
 
   isList(product: Product): product is Listy {
     return (product as Square)!.type === TypeProduct.list
@@ -373,11 +386,11 @@ export class ProductViewComponent {
   }
 
   isCategoryProfListOrSetka(): boolean {
-    return this.product.type === TypeProduct.proflist || this.product.type === TypeProduct.setka;
+    return (this.product?.type === TypeProduct.proflist || this.product?.type === TypeProduct.setka || this.product?.type === TypeProduct.list || this.product?.type === TypeProduct.dobory || this.product?.type === TypeProduct.wire || this.product?.type === TypeProduct.samorezi)
   }
 
   onLengthBlur(): void {
-    if (this.isCategoryProfListOrSetka()) {
+    if (this.product.type === TypeProduct.proflist || this.product.type === TypeProduct.setka || this.product.type === TypeProduct.list || this.product.type === TypeProduct.dobory || this.product.type === TypeProduct.wire || this.product.type === TypeProduct.samorezi) {
       if (this.lengthInMeters < 1) {
         this.lengthInMeters = 1;
       }

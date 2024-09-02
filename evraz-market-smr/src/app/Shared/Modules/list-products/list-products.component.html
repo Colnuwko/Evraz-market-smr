@@ -117,8 +117,9 @@
           <div class="tel:text-sm">В наличии</div>
         </div>
       </th>
-      <th
-        class="font-medium py-4 text-center px-2 tel:text-sm">{{ product.price }}&#8381;/м
+      <th *ngIf="!(checkSamorezi(product) || checkDobory(product))"
+          class="font-medium py-4 text-center px-2
+        tel:text-sm">{{ product.price }}&#8381;/м
       </th>
 
     </tr>
