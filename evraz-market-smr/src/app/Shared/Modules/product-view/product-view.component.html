@@ -67,11 +67,11 @@
           </div>
         </div>
         <div class="font-semibold tel:text-sm py-2">Доступные цвета:</div>
-        <div class="flex gap-2 flex-wrap">
-          <div *ngFor="let color of product.colors "
-               class="border rounded-lg  h-full flex flex-col justify-between tel:w-24 tel:h-24 ">
+        <div class="flex flex-row gap-2 flex-wrap">
+          <div *ngFor="let color of product.colors"
+               class="border rounded-lg h-auto w-28 flex flex-col justify-between ">
             <img [src]="color.imgColor"
-                 class="w-24  h-20 object-cover rounded self-center"/>
+                 class="w-full  h-20 object-cover rounded self-center"/>
             <div class="text-center rounded-lg  p-2">RAL {{ color.color }}
             </div>
           </div>
