@@ -114,7 +114,7 @@
       <th class="font-medium py-4 text-center px-2">
         <div class="flex gap-2 items-center justify-center">
           <img src="assets/check.svg" class="h-4"/>
-          <div class="tel:text-sm">В наличии</div>
+          <div class="tel:text-sm whitespace-nowrap">В наличии</div>
         </div>
       </th>
       <th *ngIf="!(checkSamorezi(product) || checkDobory(product))"
@@ -123,19 +123,19 @@
         <div class="flex gap-1 items-end justify-center">
           <div class=" tel:text-sm">{{ product.price }}&#8381;</div>
           <div *ngIf="isProflist(product) || isSetka(product)"
-               class=" tel:text-sm">/м2
+               class=" tel:text-sm whitespace-nowrap">/м2
           </div>
           <div
             *ngIf="isBalka(product) || isShveller(product)|| isStripe(product)|| isSquare(product) || isArmatura(product) || isTruba(product) || isUgolok(product)  || isProfilePipe(product)"
-            class=" tel:text-sm">/м
+            class=" tel:text-sm whitespace-nowrap">/м
           </div>
           <div
             *ngIf="isDobory(product) || isSamorezi(product) || isList(product) "
-            class=" tel:text-sm">/шт
+            class=" tel:text-sm whitespace-nowrap">/шт
           </div>
           <div
             *ngIf="isWire(product) "
-            class=" tel:text-sm">/кг
+            class=" tel:text-sm whitespace-nowrap">/кг
           </div>
         </div>
       </th>
