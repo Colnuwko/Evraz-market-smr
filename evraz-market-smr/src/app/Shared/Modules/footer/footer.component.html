@@ -8,8 +8,7 @@
         </div>
         <div class="mb-4 mx-4 flex flex-col justify-between">
           <p class="text-superGrey m-1">Телефон для контакта</p>
-          <p class="mb-1 ml-1">8-800-555-35-35</p>
-          <p class="mb-1 ml-1">8-800-555-35-35</p>
+          <p class="mb-1 ml-1">+79277369925</p>
         </div>
         <div class="mb-4 mx-4 flex flex-col justify-between">
           <p class="text-superGrey m-1">Почта для контактов</p>
@@ -18,10 +17,12 @@
         </div>
       </div>
       <div class="flex-none m-4">
-        <div class="mb-3 mt-4"><p class="text-2xl font-semibold ml-2">Товары</p></div>
+        <div class="mb-3 mt-4"><p class="text-2xl font-semibold ml-2">Товары</p>
+        </div>
         <ul class="ml-2">
           <li class="m-1 mb-2" *ngFor="let category of categories">
-            <a class="hover:text-orangHover" (click)="navigateToCategory(translit(category.title))">{{category.title}}</a>
+            <a class="hover:text-orangHover"
+               (click)="navigateToCategory(translit(category.title))">{{ category.title }}</a>
           </li>
         </ul>
       </div>
@@ -29,7 +30,8 @@
       <div class="flex-none m-4">
         <img src="assets/image_2024-08-13_16-52-12.png" class="h-32">
         <div class="m-4 tel:mb-10"><span class="text-superGrey text-sm">© 2024 Меркурий<br/>Все права защищены.<br/><br/>Вся представленная на сайте информация<br/>
-          носит исключительно информационный<br/> характер и ни при каких условиях<br/> не является публичной офертой.</span></div>
+          носит исключительно информационный<br/> характер и ни при каких условиях<br/> не является публичной офертой.</span>
+        </div>
       </div>
     </div>
   </div>
