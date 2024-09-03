@@ -119,7 +119,25 @@
       </th>
       <th *ngIf="!(checkSamorezi(product) || checkDobory(product))"
           class="font-medium py-4 text-center px-2
-        tel:text-sm">{{ product.price }}&#8381;/м
+        tel:text-sm">
+        <div class="flex gap-1 items-end justify-center">
+          <div class=" tel:text-sm">{{ product.price }}&#8381;</div>
+          <div *ngIf="isProflist(product) || isSetka(product)"
+               class=" tel:text-sm">/м2
+          </div>
+          <div
+            *ngIf="isBalka(product) || isShveller(product)|| isStripe(product)|| isSquare(product) || isArmatura(product) || isTruba(product) || isUgolok(product)  || isProfilePipe(product)"
+            class=" tel:text-sm">/м
+          </div>
+          <div
+            *ngIf="isDobory(product) || isSamorezi(product) || isList(product) "
+            class=" tel:text-sm">/шт
+          </div>
+          <div
+            *ngIf="isWire(product) "
+            class=" tel:text-sm">/кг
+          </div>
+        </div>
       </th>
 
     </tr>
