@@ -58,7 +58,7 @@ export class ProductViewComponent {
       const productId = Number(params.get('productId'));
       this.productService.findProduct(categoryId, subCategoryId, productId).subscribe(product => {
         this.product = product!;
-        this.basket.initializeLengthAndCost(product);
+        this.basket.initializeLengthAndCost(product!);
         if (categoryId === this.categoryService.transliterate(CategoryR.TRUBY)) {
           this.productService.getProfilePipeProductsByHeight(categoryId, subCategoryId, (this.product as ProfilePipe).height).subscribe(widths => {
             this.widths = widths;
@@ -363,7 +363,7 @@ export class ProductViewComponent {
   }
 
   increaseLength(): void {
-    if (this.product.type === TypeProduct.proflist || this.product.type === TypeProduct.setka) {
+    if (this.isCategoryProfListOrSetka()) {
       this.basket.setLengthInMeters(this.lengthInMeters + 1);
     } else {
       this.basket.setLengthInMeters(this.lengthInMeters + 6);
@@ -372,7 +372,7 @@ export class ProductViewComponent {
   }
 
   decreaseLength(): void {
-    if (this.product.type === TypeProduct.proflist || this.product.type === TypeProduct.setka) {
+    if (this.isCategoryProfListOrSetka()) {
       if (this.lengthInMeters - 1 > 0) {
         this.basket.setLengthInMeters(this.lengthInMeters - 1);
         this.basket.calculateTotalCost(this.product);
@@ -386,11 +386,11 @@ export class ProductViewComponent {
   }
 
   isCategoryProfListOrSetka(): boolean {
-    return (this.product?.type === TypeProduct.proflist || this.product?.type === TypeProduct.setka || this.product?.type === TypeProduct.list || this.product?.type === TypeProduct.dobory || this.product?.type === TypeProduct.wire || this.product?.type === TypeProduct.samorezi)
+    return (this.product.type === TypeProduct.proflist || this.product.type === TypeProduct.setka || this.product.type === TypeProduct.list || this.product.type === TypeProduct.dobory || this.product.type === TypeProduct.wire || this.product.type === TypeProduct.samorezi)
   }
 
   onLengthBlur(): void {
-    if (this.product.type === TypeProduct.proflist || this.product.type === TypeProduct.setka || this.product.type === TypeProduct.list || this.product.type === TypeProduct.dobory || this.product.type === TypeProduct.wire || this.product.type === TypeProduct.samorezi) {
+    if (this.isCategoryProfListOrSetka()) {
       if (this.lengthInMeters < 1) {
         this.lengthInMeters = 1;
       }
