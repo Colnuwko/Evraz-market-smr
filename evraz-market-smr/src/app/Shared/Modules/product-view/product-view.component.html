@@ -299,7 +299,25 @@
       <div *ngIf="!(checkSamorezi(product) || checkDobory(product))"
            class="flex gap-2 items-end">
         <div class="font-semibold tel:text-sm">Стоимость:</div>
-        <div class="text-xl tel:text-sm">{{ product.price }} &#8381;</div>
+        <div class="flex gap-1 items-end">
+          <div class="text-xl tel:text-sm">{{ product.price }}&#8381;</div>
+          <div *ngIf="isProflist(product) || isSetka(product)"
+               class="text-xl tel:text-sm">/м2
+          </div>
+          <div
+            *ngIf="isBalka(product) || isShveller(product)|| isStripe(product)|| isSquare(product) || isArmatura(product) || isTruba(product) || isUgolok(product)  || isProfilePipe(product)"
+            class="text-xl tel:text-sm">/м
+          </div>
+          <div
+            *ngIf="isDobory(product) || isSamorezi(product) || isList(product) "
+            class="text-xl tel:text-sm">/шт
+          </div>
+          <div
+            *ngIf="isWire(product) "
+            class="text-xl tel:text-sm">/кг
+          </div>
+        </div>
+
       </div>
       <div class="py-2 text-lg">
         <div>
