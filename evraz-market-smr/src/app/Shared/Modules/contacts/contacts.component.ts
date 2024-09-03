@@ -14,9 +14,9 @@ export class ContactsComponent {
   constructor(public dialog: MatDialog) {
   }
    CopyNumber(){
-      navigator.clipboard.writeText("8-800-555-3535")
+      navigator.clipboard.writeText("+79277369925")
       this.dialog.open(CustomAlertComponent,{
-      data: "Номер телефона скопирован: 8-800-555-3535"
+      data: "Номер телефона скопирован: +79277369925"
     });
     }
 
