@@ -5,12 +5,3 @@
 .underline {
   text-decoration:none;
 }
-.color-list {
-  display: flex;
-  flex-wrap: wrap;
-}
-
-.color-list span {
-  display: inline-block;
-  margin-right: 5px; /* Добавляет отступ между элементами */
-}
