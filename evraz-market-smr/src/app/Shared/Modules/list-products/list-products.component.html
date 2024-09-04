@@ -4,7 +4,7 @@
     <tr class="border-b border-b-orangHover  text-superGrey p-4">
       <th class="text-left px-2 py-4 text-orange">Наименование</th>
       <th class="text-center px-2 py-4 text-orange tel:hidden">Склад</th>
-      <th class="text-center px-2 py-4 text-orange tel:w-30">Наличие</th>
+      <th class="text-center px-2 py-4 text-orange ">Наличие</th>
       <th class="text-center px-2 py-4 text-orange">Цена</th>
     </tr>
     </thead>
@@ -54,13 +54,13 @@
           </div>
         </ng-container>
         <ng-container *ngIf="isProflist(product)">
-          <p class="text-sm whitespace-nowrap">Ширина монтажная (w),
+          <p class="text-sm ">Ширина монтажная (w),
             мм: {{ product.widthM }}</p>
-          <p class="text-sm whitespace-nowrap">Ширина габаритная,
+          <p class="text-sm">Ширина габаритная,
             мм: {{ product.widthG }}</p>
-          <p class="text-sm whitespace-nowrap">Толщина металла (S),
+          <p class="text-sm ">Толщина металла (S),
             мм: {{ product.thickness }}</p>
-          <div class="flex">
+          <div class="flex tel:flex-col">
             <p class="text-sm">Цвет RAL: </p>
             <div class="text-sm"
                  *ngFor="let color of product.colors; let isLast = last">
@@ -126,7 +126,7 @@
       <th class="font-medium py-4 text-center px-2">
         <div class="flex gap-2 items-center justify-center">
           <img src="assets/check.svg" class="h-4"/>
-          <div class="tel:text-sm whitespace-nowrap">В наличии</div>
+          <div class="tel:text-sm whitespace-nowrap tel:hidden">В наличии</div>
         </div>
       </th>
       <th *ngIf="!(checkSamorezi(product) || checkDobory(product))"
