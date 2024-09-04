@@ -79,7 +79,7 @@ export class ProductService {
     );
   }
 
-  getProflistProductsByThickness(categoryId: string, subCategoryId: string): Observable<number[]> {
+  getProflistProductsByThickness(categoryId: string, subCategoryId: string, typeM: string): Observable<number[]> {
     return this.http.get<CategoryInt[]>(this.jsonUrl).pipe(
       map(categories => {
         const category = categories.find(cat => this.dataService.transliterate(cat.title) === categoryId);
@@ -87,6 +87,7 @@ export class ProductService {
           const subCategory = category.subCategories.find(sub => this.dataService.transliterate(sub.title) === subCategoryId);
           if (subCategory) {
             const width = subCategory.products
+              .filter(product => (product as Proflist).typeM === typeM)
               .map(product => (product as Proflist).thickness);
             return [...new Set(width)];
           }
@@ -261,9 +262,9 @@ export class ProductService {
     );
   }
 
-  getProflistByThickness(categoryId: string, subCategoryId: string, thickness: number, colorsLength: number): Observable<Proflist> {
+  getProflistByThickness(categoryId: string, subCategoryId: string, thickness: number, colorsLength: number, typeM: string): Observable<Proflist> {
     return this.http.get<any>(this.jsonUrl).pipe(
-      map(data => this.extractProducts(data).find(product => this.dataService.transliterate(product.category) === categoryId && this.dataService.transliterate(product.subCategory) === subCategoryId && (product as Proflist).thickness === thickness && (product as Proflist).colors.length === colorsLength) as Proflist)
+      map(data => this.extractProducts(data).find(product => this.dataService.transliterate(product.category) === categoryId && this.dataService.transliterate(product.subCategory) === subCategoryId && (product as Proflist).thickness === thickness && (product as Proflist).colors.length === colorsLength && (product as Proflist).typeM === typeM) as Proflist)
     );
   }
 

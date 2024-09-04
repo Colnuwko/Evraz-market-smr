@@ -62,7 +62,7 @@
           <button *ngFor="let thickness of thicknesses"
                class="border-2 p-1 w-20 text-center rounded-md tel:text-sm tel:w-16"
                [class.border-orange]="checkT(thickness)"
-               (click)="navigateToProflistThickness(thickness)">
+               (click)="navigateToProflistThickness(thickness, product.typeM)">
             {{ thickness }}
           </button>
         </div>
