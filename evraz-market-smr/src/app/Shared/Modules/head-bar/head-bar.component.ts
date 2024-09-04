@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import {Component, ElementRef} from '@angular/core';
 import {CatalogComponent} from "./catalog/catalog.component";
 import { RouterLink } from '@angular/router';
 import {TemplateButtonRouterComponent} from "../../../template-button-router/template-button-router.component";
@@ -21,7 +21,7 @@ import {EmailService} from "../../Services/email.service";
 })
 export class HeadBarComponent {
 
-  constructor(public dialog: MatDialog, public html: HttpClient){}
+  constructor(public dialog: MatDialog, public html: HttpClient, private elementRef: ElementRef){}
   submitForm(myForm: NgForm) {
     alert("sfgsd")
   }
@@ -32,11 +32,11 @@ export class HeadBarComponent {
   }
 
   scroll(name: string ) {
-    if(name == 'about') {
-      window.scrollTo(0, 2200);
+   if(name == 'about') {
+       window.scrollTo(0, 2200);
     }
     else {
-      window.scrollTo(0, 3650)
+       window.scrollTo(0, 3650)
     }
-  }
+   }
 }

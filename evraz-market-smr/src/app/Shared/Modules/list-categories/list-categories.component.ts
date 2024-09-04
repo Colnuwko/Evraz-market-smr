@@ -1,39 +1,42 @@
-import { Component } from '@angular/core';
-import { CategoryService } from '../../Services/category.service';
-import { CategoryInt } from '../../Interfaces/category';
-import { CommonModule, NgFor, NgIf } from '@angular/common';
-import { NavigateService } from '../../Services/navigate.service';
-import { ActivatedRoute } from '@angular/router';
+import {Component} from '@angular/core';
+import {CategoryService} from '../../Services/category.service';
+import {CategoryInt} from '../../Interfaces/category';
+import {NgClass, NgFor, NgIf} from '@angular/common';
+import {NavigateService} from '../../Services/navigate.service';
+import {ActivatedRoute} from '@angular/router';
 
 @Component({
   selector: 'app-list-categories',
   standalone: true,
-  imports: [NgFor, NgIf],
+  imports: [NgFor, NgIf, NgClass],
   templateUrl: './list-categories.component.html',
   styleUrl: './list-categories.component.css'
 })
 export class ListCategoriesComponent {
   categories!: CategoryInt[];
   expandedCategories: Set<number> = new Set();
+  subCategoryId!: string;
 
   constructor(
     private dataService: CategoryService,
     private navigate: NavigateService,
     private route: ActivatedRoute,
-  ) { }
+  ) {
+  }
 
   ngOnInit(): void {
 
     this.route.paramMap.subscribe(params => {
       const categoryId = params.get('categoryId')!;
+      this.subCategoryId = params.get('subCategoryId')!;
       this.dataService.getCategoryById(categoryId).subscribe(category => {
         if (category) {
           this.toggleCategory(category.id)
         }
       });
       this.dataService.getCategories().subscribe(categories => {
-        this.categories = categories;
-      }
+          this.categories = categories;
+        }
       )
 
     });
@@ -48,10 +51,16 @@ export class ListCategoriesComponent {
   navigateToCategory(category: string): void {
     this.navigate.navigateToCategory(category);
   }
+
   navigateToSubCategory(category: string, subCategory: string): void {
     this.navigate.navigateToSubCategory(category, subCategory);
   }
+
   translit(categoryName: string): string {
     return this.dataService.transliterate(categoryName);
+  }
+
+  checkSubCategory(subCategory: string): boolean {
+    return this.translit(subCategory) === this.subCategoryId
   }
 }
