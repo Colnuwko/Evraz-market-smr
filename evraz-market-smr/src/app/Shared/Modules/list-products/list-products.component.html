@@ -40,7 +40,7 @@
           <p class="text-sm whitespace-nowrap">Толщина (T),
             мм: {{ product.thickness }}</p>
           <div class="flex">
-            <p class="text-sm">Цвет RAL: </p>
+            <p class="text-sm whitespace-nowrap">Цвет RAL: </p>
             <div class="text-sm"
                  *ngFor="let color of product.colors; let isLast = last">
               <div *ngIf="isLast">
@@ -60,9 +60,9 @@
             мм: {{ product.widthG }}</p>
           <p class="text-sm whitespace-nowrap">Толщина металла (S),
             мм: {{ product.thickness }}</p>
-          <div class="flex">
+          <div class="flex flex-wrap">
             <p class="text-sm">Цвет RAL: </p>
-            <div class="text-sm"
+            <div class="text-sm flex flex-wrap"
                  *ngFor="let color of product.colors; let isLast = last">
               <div *ngIf="isLast">
                 {{ color.color }}
@@ -126,7 +126,7 @@
       <th class="font-medium py-4 text-center px-2">
         <div class="flex gap-2 items-center justify-center">
           <img src="assets/check.svg" class="h-4"/>
-          <div class="tel:text-sm whitespace-nowrap">В наличии</div>
+          <div class="tel:hidden whitespace-nowrap">В наличии</div>
         </div>
       </th>
       <th *ngIf="!(checkSamorezi(product) || checkDobory(product))"
