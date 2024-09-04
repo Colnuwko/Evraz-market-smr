@@ -54,6 +54,7 @@ export interface Color {
 
 
 export interface Proflist extends Product {
+  typeM: string;
   widthM: number;
   widthG: number;
   thickness: number;
@@ -90,6 +91,7 @@ export interface Dobory extends Product {
 
 export interface Samorezi extends Product {
   length: number;
+  typeS: "string";
   thickness: number;
 }
 

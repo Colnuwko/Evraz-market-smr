@@ -106,7 +106,7 @@ export class ProductViewComponent {
           })
         }
         if (categoryId === this.categoryService.transliterate(CategoryR.PROFLIST)) {
-          this.productService.getProflistProductsByThickness(categoryId, subCategoryId).subscribe(proflistProducts => {
+          this.productService.getProflistProductsByThickness(categoryId, subCategoryId, (this.product as Proflist).typeM).subscribe(proflistProducts => {
             this.thicknesses = proflistProducts;
           })
         }
@@ -147,7 +147,9 @@ export class ProductViewComponent {
 
     return (product as Shveller)!.type === TypeProduct.proflist
   }
-
+  checkTypeSamorezi(type:string): boolean {
+    return (this.product as Samorezi).typeS === type;
+  }
 
   isShvellers(products: Product[]): products is Shveller[] {
     return products?.length > 0 && products[0]?.type === TypeProduct.shveller
@@ -294,10 +296,10 @@ export class ProductViewComponent {
     });
   }
 
-  navigateToProflistThickness(thickness: number): void {
+  navigateToProflistThickness(thickness: number, typeM: string): void {
     const categoryId = this.route.snapshot.paramMap.get('categoryId')!;
     const subCategoryId = this.route.snapshot.paramMap.get('subCategoryId')!;
-    this.productService.getProflistByThickness(categoryId, subCategoryId, thickness, (this.product as Proflist).colors.length).subscribe(product => {
+    this.productService.getProflistByThickness(categoryId, subCategoryId, thickness, (this.product as Proflist).colors.length, typeM).subscribe(product => {
       this.navigateToProduct(product);
     });
   }
