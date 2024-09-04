@@ -7,15 +7,15 @@
       <div (click)="navigateToCategory(translit(category.title))"
            [mat-dialog-close]="true"
            class="text-xl font-semibold text-black hover:text-orange tel:text-lg">
-        <div class="flex flex-row  ">
-          <button>
+        <button class="flex flex-row  items-start">
+
             <img [src]=category.iconimg class="size-6 m-2" alt="Button Image"/>
-          </button>
-          <button class="text-silver m-2 ">{{ category.title }}</button>
-        </div>
+
+          <button class="text-silver m-2 text-left">{{ category.title }}</button>
+        </button>
       </div>
       <div class="text-sl p-2 tel:text-sm">
-        <button class="mx-2 text-black hover:text-orange "
+        <button class="mx-2 text-black hover:text-orange flex flex-col"
                 *ngFor="let subCategory of category.subCategories"
                 (click)="navigateToSubCategory(translit(category.title), translit(subCategory.title))"
                 [mat-dialog-close]="true">{{ subCategory.title }}

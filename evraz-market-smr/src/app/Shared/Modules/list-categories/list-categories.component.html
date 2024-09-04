@@ -1,19 +1,21 @@
-<div *ngFor="let category of categories" class="pb-6">
+<div class="shadow-lg  p-4 pl-8 rounded-2xl">
+<div *ngFor="let category of categories" class="pb-6 ">
   <button (click)="toggleCategory(category.id)"
           [class.text-orange]="expandedCategories.has(category.id)"
           class="text-xl font-semibold hover:text-orangHover">
     <div class="flex flex-row items-center">
       <img [src]=category.iconimg class="size-6 m-2" alt="Button Image"/>
-      <span class="text-silver m-2"
+      <span class="text-silver p-2 text-left"
             (click)="navigateToCategory(translit(category.title))">{{ category.title }}</span>
     </div>
   </button>
 
-  <div *ngIf="expandedCategories.has(category.id)  " class="text-sl p-2">
-    <button class="mx-2  hover:text-orange "
+  <div *ngIf="expandedCategories.has(category.id)  " class=" p-2">
+    <button class=" hover:text-orange flex text-left w-full whitespace-nowrap flex-col"
             *ngFor="let subCategory of category.subCategories"
             [ngClass]="checkSubCategory(subCategory.title) ? 'underline underline-offset-4 decoration-orangHover' : ''"
             (click)="navigateToSubCategory(translit(category.title), translit(subCategory.title))">{{ subCategory.title }}
     </button>
   </div>
+</div>
 </div>
