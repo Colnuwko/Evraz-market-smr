@@ -1,42 +1,69 @@
-
 <div class="px-72 md:px-10 lg:px-20 xl:px-20 p-4 my-8  w-full z-40 tel:px-4">
-  <div class="text-5xl text-center text-orange font-sans mb-4 tel:text-3xl" id="call">Контакты</div>
+  <div class="text-5xl text-center text-orange font-sans mb-4 tel:text-3xl"
+       id="call">Контакты
+  </div>
   <div class="flex flex-row justify-between py-4 tel:flex-wrap tel:flex-auto">
     <div class="flex-auto m-2 px-6 py-2 bg-grey rounded-lg shadow-2xl">
-      <p class="text-orange font-sans m-3 text-2xl tel:text-xl">Мы находимся по адресу:</p>
+      <p class="text-orange font-sans m-3 text-2xl tel:text-xl">Мы находимся по
+        адресу:</p>
       <div class="m-3 flex items-center">
-        <img class="size-10" src="assets/place_location_point_pointer_position_marker_pin_icon_224747.svg" />
-        <a href="https://yandex.ru/maps/-/CDc~7A8r" class="underline font-sans text-black text-xl hover:text-orangHover" target="_blank">
-         г. Самара Ново-Вокзальный тупик 21</a>
+        <img class="size-10"
+             src="assets/place_location_point_pointer_position_marker_pin_icon_224747.svg"/>
+        <a href="https://yandex.ru/maps/-/CDc~7A8r"
+           class="underline font-sans text-black text-xl hover:text-orangHover"
+           target="_blank">
+          г. Самара Ново-Вокзальный тупик 21</a>
       </div>
     </div>
     <div class="flex-auto m-2 bg-grey rounded-lg px-6 py-2 shadow-2xl">
       <p class="text-orange font-sans m-3 text-2xl tel:text-xl">Телефон:</p>
       <div class="m-3 flex items-center">
-        <img class="h-5 my-auto mr-3" src="assets/phone.svg" />
-        <p class="underline font-sans text-black text-xl hover:text-orangHover" (click)="CopyNumber()">
-          +7 927-736-99-25</p>
+        <img class="h-5 my-auto mr-3" src="assets/phone.svg"/>
+        <button
+          class="underline font-sans text-black text-xl hover:text-orangHover whitespace-nowrap"
+          (click)="CopyNumber()">
+          +7 927-736-99-25
+        </button>
       </div>
     </div>
     <div class="flex-auto m-2 bg-grey rounded-lg px-6 py-2 shadow-2xl">
-      <p class="text-orange font-sans m-3 text-2xl tel:text-xl">Электронная почта:</p>
+      <p class="text-orange font-sans m-3 text-2xl tel:text-xl">Электронная
+        почта:</p>
       <div class="m-3 flex items-center">
-        <img class="h-5 my-auto mr-3" src="assets/email.svg" />
-        <p class="underline font-sans text-black text-xl hover:text-orangHover" (click)="CopyMail()">
-          mercuriy63&#64;bk.ru</p>
+        <img class="h-5 my-auto mr-3" src="assets/email.svg"/>
+        <button
+          class="underline font-sans text-black text-xl hover:text-orangHover whitespace-nowrap"
+          (click)="CopyMail()">
+          mercuriy63&#64;bk.ru
+        </button>
       </div>
     </div>
     <div class="flex-auto m-2 bg-grey rounded-lg px-6 py-2 shadow-2xl">
-      <p class="text-orange font-sans m-3 text-2xl tel:text-xl">График работы:</p>
+      <p class="text-orange font-sans m-3 text-2xl tel:text-xl">График
+        работы:</p>
       <div class="m-3 flex flex-col text-black font-sans text-lg">
         <ul class="text-black">
-          <li class="font-sans text-black text-xl tel:text-l">Пн 8:00-17:00</li>
-          <li class="font-sans text-black text-xl">Вт 8:00-17:00</li>
-          <li class="font-sans text-black text-xl">Ср 8:00-17:00</li>
-          <li class="font-sans text-black text-xl">Чт 8:00-17:00</li>
-          <li class="font-sans text-black text-xl">Пт 8:00-16:00</li>
-          <li class="font-sans text-black text-xl">Сб 10:00-15:00</li>
-          <li class="font-sans text-black text-xl">Вс 10:00-15:00</li>
+          <li class="font-sans text-black text-xl tel:text-l whitespace-nowrap">
+            Пн 8:00-17:00
+          </li>
+          <li class="font-sans text-black text-xl whitespace-nowrap">Вт
+            8:00-17:00
+          </li>
+          <li class="font-sans text-black text-xl whitespace-nowrap">Ср
+            8:00-17:00
+          </li>
+          <li class="font-sans text-black text-xl whitespace-nowrap">Чт
+            8:00-17:00
+          </li>
+          <li class="font-sans text-black text-xl whitespace-nowrap">Пт
+            8:00-16:00
+          </li>
+          <li class="font-sans text-black text-xl whitespace-nowrap">Сб
+            Выходной
+          </li>
+          <li class="font-sans text-black text-xl whitespace-nowrap">Вс
+            Выходной
+          </li>
         </ul>
       </div>
     </div>

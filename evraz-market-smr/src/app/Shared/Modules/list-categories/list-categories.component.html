@@ -1,14 +1,19 @@
 <div *ngFor="let category of categories" class="pb-6">
-    <div (click)="toggleCategory(category.id)" [class.text-orange]="expandedCategories.has(category.id)"
-        class="text-xl font-semibold hover:text-orangHover">
-      <div class="flex flex-row items-center">
-        <img [src]=category.iconimg class="size-6 m-2" alt="Button Image" />
-        <span class="text-silver m-2" (click)="navigateToCategory(translit(category.title))">{{category.title}}</span>
-      </div>
+  <button (click)="toggleCategory(category.id)"
+          [class.text-orange]="expandedCategories.has(category.id)"
+          class="text-xl font-semibold hover:text-orangHover">
+    <div class="flex flex-row items-center">
+      <img [src]=category.iconimg class="size-6 m-2" alt="Button Image"/>
+      <span class="text-silver m-2"
+            (click)="navigateToCategory(translit(category.title))">{{ category.title }}</span>
     </div>
+  </button>
 
-    <div *ngIf="expandedCategories.has(category.id)  " class="text-sl p-2">
-        <div class="mx-2  hover:text-orange " *ngFor="let subCategory of category.subCategories"
-            (click)="navigateToSubCategory(translit(category.title), translit(subCategory.title))">{{subCategory.title}}</div>
-    </div>
+  <div *ngIf="expandedCategories.has(category.id)  " class="text-sl p-2">
+    <button class="mx-2  hover:text-orange "
+            *ngFor="let subCategory of category.subCategories"
+            [ngClass]="checkSubCategory(subCategory.title) ? 'underline underline-offset-4 decoration-orangHover' : ''"
+            (click)="navigateToSubCategory(translit(category.title), translit(subCategory.title))">{{ subCategory.title }}
+    </button>
+  </div>
 </div>

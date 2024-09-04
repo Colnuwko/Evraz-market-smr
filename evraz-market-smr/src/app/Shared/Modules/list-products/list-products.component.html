@@ -13,9 +13,9 @@
         class="border-t  border-orange">
       <th class="font-medium py-4 text-left px-4 tel:text-sm tel:px-0"
           (click)="navigateToSubCategory(subCategory, product)">
-        <div
+        <button
           class="underline font-sans text-black  hover:text-orangHover">{{ product.name }}
-        </div>
+        </button>
         <ng-container *ngIf="isArmatura(product)">
           <p class="text-sm">Длина (L), мм: {{ product.length }}</p>
           <p class="text-sm whitespace-nowrap">Диаметр (D),
