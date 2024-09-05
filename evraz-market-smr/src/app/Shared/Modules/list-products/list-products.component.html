@@ -1,4 +1,4 @@
-<div *ngIf="category" class="">
+<div *ngIf="category" class="overflow-x-auto">
   <table class="table-auto w-full tel:max-w-screen bg-backgr rounded-2xl">
     <thead>
     <tr class="border-b border-b-orangHover  text-superGrey p-4">
@@ -18,12 +18,12 @@
         </button>
         <ng-container *ngIf="isArmatura(product)">
           <p class="text-sm">Длина (L), мм: {{ product.length }}</p>
-          <p class="text-sm whitespace-nowrap">Диаметр (D),
+          <p class="text-sm ">Диаметр (D),
             мм: {{ product.diameter }}</p>
         </ng-container>
         <ng-container *ngIf="isSquare(product)">
           <p class="text-sm">Длина (L), мм: {{ product.length }}</p>
-          <p class="text-sm whitespace-nowrap">Толщина (T),
+          <p class="text-sm ">Толщина (T),
             мм: {{ product.width }}</p>
         </ng-container>
         <ng-container *ngIf="isProfilePipe(product)">
@@ -35,9 +35,9 @@
             мм: {{ product.thickness }}</p>
         </ng-container>
         <ng-container *ngIf="isDobory(product)">
-          <p class="text-sm whitespace-nowrap">Длина (L),
+          <p class="text-sm ">Длина (L),
             мм: {{ product.length }}</p>
-          <p class="text-sm whitespace-nowrap">Толщина (T),
+          <p class="text-sm ">Толщина (T),
             мм: {{ product.thickness }}</p>
           <div class="flex">
             <p class="text-sm">Цвет RAL: </p>
@@ -54,11 +54,11 @@
           </div>
         </ng-container>
         <ng-container *ngIf="isProflist(product)">
-          <p class="text-sm ">Ширина монтажная (w),
+          <p class="text-sm tel:break-words">Ширина монтажная (w),
             мм: {{ product.widthM }}</p>
-          <p class="text-sm">Ширина габаритная,
+          <p class="text-sm tel:break-words">Ширина габаритная,
             мм: {{ product.widthG }}</p>
-          <p class="text-sm ">Толщина металла (S),
+          <p class="text-sm tel:break-words">Толщина металла (S),
             мм: {{ product.thickness }}</p>
           <div class="flex tel:flex-col">
             <p class="text-sm">Цвет RAL: </p>
@@ -114,11 +114,11 @@
             мм: {{ product.thickness }}</p>
         </ng-container>
         <ng-container *ngIf="isList(product)">
-          <p class="text-sm whitespace-nowrap">Длина (L),
+          <p class="text-sm">Длина (L),
             мм: {{ product.length }}</p>
-          <p class="text-sm whitespace-nowrap">Ширина (W),
+          <p class="text-sm ">Ширина (W),
             мм: {{ product.width }}</p>
-          <p class="text-sm whitespace-nowrap">Толщина (T),
+          <p class="text-sm ">Толщина (T),
             мм: {{ product.thickness }}</p>
         </ng-container>
       </th>
