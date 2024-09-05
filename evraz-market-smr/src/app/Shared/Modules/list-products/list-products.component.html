@@ -1,5 +1,5 @@
 <div *ngIf="category" class="">
-  <table class="table-auto min-w-full bg-backgr rounded-2xl">
+  <table class="table-auto w-full tel:max-w-screen bg-backgr rounded-2xl">
     <thead>
     <tr class="border-b border-b-orangHover  text-superGrey p-4">
       <th class="text-left px-2 py-4 text-orange">Наименование</th>
@@ -31,7 +31,7 @@
 
           <p class="text-sm">Высота (А), мм: {{ product.height }}</p>
           <p class="text-sm">Ширина (B), мм: {{ product.width }}</p>
-          <p class="text-sm whitespace-nowrap">Толщина стенки (S),
+          <p class="text-sm ">Толщина стенки (S),
             мм: {{ product.thickness }}</p>
         </ng-container>
         <ng-container *ngIf="isDobory(product)">
@@ -110,7 +110,7 @@
         <ng-container *ngIf="isUgolok(product)">
           <p class="text-sm">Длина (L), мм: {{ product.length }}</p>
           <p class="text-sm">Ширина (W), мм: {{ product.width }}</p>
-          <p class="text-smwhitespace-nowrap">Толщина (T),
+          <p class="text-sm">Толщина (T),
             мм: {{ product.thickness }}</p>
         </ng-container>
         <ng-container *ngIf="isList(product)">
