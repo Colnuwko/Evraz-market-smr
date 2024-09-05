@@ -2,7 +2,29 @@
   <div class="text-5xl text-center text-orange font-sans mb-4 tel:text-3xl"
        id="call">Контакты
   </div>
+
   <div class="flex flex-row justify-between py-4 tel:flex-wrap tel:flex-auto">
+      <div class="flex-auto m-2 bg-grey rounded-lg px-6 py-2 shadow-2xl basis-1/5">
+        <p class="text-orange font-sans m-3 text-2xl tel:text-xl">Телефон:</p>
+        <div class="m-3 flex items-center">
+          <img class="h-5 my-auto mr-3" src="assets/phone.svg"/>
+          <button
+            class="underline font-sans text-black text-xl hover:text-orangHover whitespace-nowrap"
+            (click)="CopyNumber()">
+            +7 927-736-99-25
+          </button>
+      </div>
+      <p class="text-orange font-sans m-3 text-2xl tel:text-xl whitespace-nowrap">Электронная
+        почта:</p>
+      <div class="m-3 flex items-center">
+        <img class="h-5 my-auto mr-3" src="assets/email.svg"/>
+        <button
+          class="underline font-sans text-black text-xl hover:text-orangHover whitespace-nowrap"
+          (click)="CopyMail()">
+          mercuriy63&#64;bk.ru
+        </button>
+      </div>
+    </div>
     <div class="flex-auto m-2 px-6 py-2 bg-grey rounded-lg shadow-2xl basis-2/5">
       <p class="text-orange font-sans m-3 text-2xl tel:text-xl">Мы находимся по
         адресу:</p>
@@ -16,29 +38,7 @@
       </div>
       <img class="p-2  rounded-2xl m-auto" src="assets/map.png">
     </div>
-    <div class="flex-auto m-2 bg-grey rounded-lg px-6 py-2 shadow-2xl basis-1/5">
-      <p class="text-orange font-sans m-3 text-2xl tel:text-xl">Телефон:</p>
-      <div class="m-3 flex items-center">
-        <img class="h-5 my-auto mr-3" src="assets/phone.svg"/>
-        <button
-          class="underline font-sans text-black text-xl hover:text-orangHover whitespace-nowrap"
-          (click)="CopyNumber()">
-          +7 927-736-99-25
-        </button>
-      </div>
 
-
-      <p class="text-orange font-sans m-3 text-2xl tel:text-xl whitespace-nowrap">Электронная
-        почта:</p>
-      <div class="m-3 flex items-center">
-        <img class="h-5 my-auto mr-3" src="assets/email.svg"/>
-        <button
-          class="underline font-sans text-black text-xl hover:text-orangHover whitespace-nowrap"
-          (click)="CopyMail()">
-          mercuriy63&#64;bk.ru
-        </button>
-      </div>
-    </div>
     <div class="flex-auto m-2 bg-grey rounded-lg px-6 py-2 shadow-2xl basis-1/5">
       <p class="text-orange font-sans m-3 text-2xl tel:text-xl whitespace-nowrap">График
         работы:</p>
