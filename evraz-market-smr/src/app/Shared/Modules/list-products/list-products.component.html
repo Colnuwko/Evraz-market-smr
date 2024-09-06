@@ -40,8 +40,10 @@
           <p class="text-sm ">Толщина (T),
             мм: {{ product.thickness }}</p>
           <div class="flex tel:flex-col">
-            <p class="text-sm">Цвет RAL: </p>
-            <div class="text-sm"
+            <p *ngIf="!isZn(product.colors[0].color)" class="text-sm">Цвет
+              RAL: </p>
+            <p *ngIf="isZn(product.colors[0].color)" class="text-sm">Цвет: </p>
+            <div class="text-sm pl-1"
                  *ngFor="let color of product.colors; let isLast = last">
               <div *ngIf="isLast">
                 {{ color.color }}
@@ -61,8 +63,11 @@
           <p class="text-sm tel:break-words">Толщина металла (S),
             мм: {{ product.thickness }}</p>
           <div class="flex tel:flex-col">
-            <p class="text-sm">Цвет RAL: </p>
-            <div class="text-sm"
+
+            <p *ngIf="!isZn(product.colors[0].color)" class="text-sm">Цвет
+              RAL: </p>
+            <p *ngIf="isZn(product.colors[0].color)" class="text-sm">Цвет: </p>
+            <div class="text-sm pl-1"
                  *ngFor="let color of product.colors; let isLast = last">
               <div *ngIf="isLast">
                 {{ color.color }}
@@ -122,7 +127,10 @@
             мм: {{ product.thickness }}</p>
         </ng-container>
       </th>
-      <th class="font-medium py-4 text-center px-2 tel:hidden whitespace-nowrap">г. Самара</th>
+      <th
+        class="font-medium py-4 text-center px-2 tel:hidden whitespace-nowrap">
+        г. Самара
+      </th>
       <th class="font-medium py-4 text-center px-2">
         <div class="flex gap-2 items-center justify-center">
           <img src="assets/check.svg" class="h-4"/>

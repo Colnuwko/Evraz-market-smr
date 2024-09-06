@@ -89,6 +89,10 @@ export class ListProductsComponent {
     return product.type === TypeProduct.dobory;
   }
 
+  isZn(color: string): boolean {
+    return color === "Оцинк.";
+  }
+
   isSquare(product: Product): product is Square {
     return (product as Square).type === TypeProduct.square;
   }
