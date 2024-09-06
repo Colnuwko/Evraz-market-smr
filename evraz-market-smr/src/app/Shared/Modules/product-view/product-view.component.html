@@ -12,9 +12,9 @@
         <div class="font-semibold tel:text-sm">Диаметр (D), мм</div>
         <div class="flex gap-2 py-4 flex-wrap">
           <button *ngFor="let product of products"
-               class=" border-2 p-1 w-20 text-center rounded-md tel:text-sm tel:w-16"
-               [class.border-orange]="check(product)"
-               (click)="navigateToProduct(product)">
+                  class=" border-2 p-1 w-20 text-center rounded-md tel:text-sm tel:w-16"
+                  [class.border-orange]="check(product)"
+                  (click)="navigateToProduct(product)">
             {{ product.diameter }}
           </button>
         </div>
@@ -27,27 +27,27 @@
         <div class="font-semibold tel:text-sm">Высота (A), мм</div>
         <div class="flex gap-2 py-4 flex-wrap">
           <button *ngFor="let height of heights"
-               class="border-2 p-1 w-20 text-center rounded-md tel:text-sm tel:w-16"
-               [class.border-orange]="checkH(height)"
-               (click)="navigateToHeight(height)">
+                  class="border-2 p-1 w-20 text-center rounded-md tel:text-sm tel:w-16"
+                  [class.border-orange]="checkH(height)"
+                  (click)="navigateToHeight(height)">
             {{ height }}
           </button>
         </div>
         <div class="font-semibold tel:text-sm">Ширина (B), мм</div>
         <div class="flex gap-2 py-4 flex-wrap">
           <button *ngFor="let width of widths"
-               class="border-2 p-1 w-20 text-center rounded-md tel:text-sm tel:w-16"
-               [class.border-orange]="checkW(width)"
-               (click)="navigateToWidth(width)">
+                  class="border-2 p-1 w-20 text-center rounded-md tel:text-sm tel:w-16"
+                  [class.border-orange]="checkW(width)"
+                  (click)="navigateToWidth(width)">
             {{ width }}
           </button>
         </div>
         <div class="font-semibold tel:text-sm">Толщина (S), мм</div>
         <div class="flex gap-2 py-4 flex-wrap">
           <button *ngFor="let thickness of thicknesses"
-               class="border-2 p-1 w-20 text-center rounded-md tel:text-sm tel:w-16"
-               [class.border-orange]="checkT(thickness)"
-               (click)="navigateToThickness(thickness)">
+                  class="border-2 p-1 w-20 text-center rounded-md tel:text-sm tel:w-16"
+                  [class.border-orange]="checkT(thickness)"
+                  (click)="navigateToThickness(thickness)">
             {{ thickness }}
           </button>
         </div>
@@ -60,9 +60,9 @@
         <div class="font-semibold tel:text-sm">Толщина металла (T), мм:</div>
         <div class="flex gap-2 py-4 flex-wrap">
           <button *ngFor="let thickness of thicknesses"
-               class="border-2 p-1 w-20 text-center rounded-md tel:text-sm tel:w-16"
-               [class.border-orange]="checkT(thickness)"
-               (click)="navigateToProflistThickness(thickness, product.typeM)">
+                  class="border-2 p-1 w-20 text-center rounded-md tel:text-sm tel:w-16"
+                  [class.border-orange]="checkT(thickness)"
+                  (click)="navigateToProflistThickness(thickness, product.typeM)">
             {{ thickness }}
           </button>
         </div>
@@ -72,7 +72,11 @@
                class="border rounded-lg h-auto w-28 flex flex-col justify-between ">
             <img [src]="color.imgColor"
                  class="w-full  h-20 object-cover rounded self-center"/>
-            <div class="text-center rounded-lg  p-2">RAL {{ color.color }}
+            <div *ngIf="isZn(color.color)"
+                 class="text-center rounded-lg  p-2">{{ color.color }}
+            </div>
+            <div *ngIf="!isZn(color.color)" class="text-center rounded-lg  p-2">
+              RAL {{ color.color }}
             </div>
           </div>
         </div>
@@ -98,7 +102,11 @@
                class="border rounded-lg  h-full flex flex-col justify-between tel:w-24 tel:h-24 ">
             <img [src]="color.imgColor"
                  class="w-24  h-20 object-cover rounded self-center"/>
-            <div class="text-center rounded-lg  p-2">RAL {{ color.color }}
+            <div *ngIf="isZn(color.color)"
+                 class="text-center rounded-lg  p-2">{{ color.color }}
+            </div>
+            <div *ngIf="!isZn(color.color)" class="text-center rounded-lg  p-2">
+              RAL {{ color.color }}
             </div>
           </div>
         </div>
@@ -110,9 +118,9 @@
         <div class="font-semibold tel:text-sm">Высота (H), cм:</div>
         <div class="flex gap-2 py-4  flex-wrap">
           <button *ngFor="let product of products"
-               [class.border-orange]="check(product)"
-               class="border-2 p-1 w-20 text-center rounded-md"
-               (click)="navigateToProduct(product)">
+                  [class.border-orange]="check(product)"
+                  class="border-2 p-1 w-20 text-center rounded-md"
+                  (click)="navigateToProduct(product)">
             <div class="text-center">{{ product.height }}</div>
           </button>
         </div>
@@ -125,9 +133,9 @@
         <div class="font-semibold tel:text-sm">Высота (H), cм</div>
         <div class="flex gap-2 py-4  flex-wrap">
           <button *ngFor="let product of products"
-               [class.border-orange]="check(product)"
-               class="border-2 p-1 w-20 text-center rounded-md"
-               (click)="navigateToProduct(product)">
+                  [class.border-orange]="check(product)"
+                  class="border-2 p-1 w-20 text-center rounded-md"
+                  (click)="navigateToProduct(product)">
             <div class="text-center">{{ product.number }}</div>
           </button>
         </div>
@@ -140,18 +148,18 @@
         <div class="font-semibold tel:text-sm">Ширина полки (B), мм</div>
         <div class="flex gap-2 py-4  flex-wrap">
           <button *ngFor="let width of widths"
-               [class.border-orange]="checkW(width)"
-               class="border-2 p-1 w-20 text-center rounded-md"
-               (click)="navigateToWidthUgolok(width)">
+                  [class.border-orange]="checkW(width)"
+                  class="border-2 p-1 w-20 text-center rounded-md"
+                  (click)="navigateToWidthUgolok(width)">
             <div class="text-center">{{ width }}</div>
           </button>
         </div>
         <div class="font-semibold tel:text-sm">Толщина полки (t), мм:</div>
         <div class="flex gap-2 py-4  flex-wrap">
           <button *ngFor="let thickness of thicknesses"
-               [class.border-orange]="checkT(thickness)"
-               (click)="navigateToThicknessUgolok(thickness)"
-               class="border-2 p-1 w-20 text-center rounded-md">
+                  [class.border-orange]="checkT(thickness)"
+                  (click)="navigateToThicknessUgolok(thickness)"
+                  class="border-2 p-1 w-20 text-center rounded-md">
             <div class="text-center">{{ thickness }}</div>
           </button>
         </div>
@@ -166,9 +174,9 @@
         <div class="font-semibold tel:text-sm">Толщина сечения (t), мм:</div>
         <div class="flex gap-2 py-4 flex-wrap">
           <button *ngFor="let product of products"
-               class=" border-2 p-1 w-20 text-center rounded-md"
-               [class.border-orange]="check(product)"
-               (click)="navigateToProduct(product)">
+                  class=" border-2 p-1 w-20 text-center rounded-md"
+                  [class.border-orange]="check(product)"
+                  (click)="navigateToProduct(product)">
             {{ product.width }}
           </button>
         </div>
@@ -181,27 +189,27 @@
         <div class="font-semibold tel:text-sm">Толщина сечения (t), мм:</div>
         <div class="flex gap-2 py-4 flex-wrap">
           <button *ngFor="let thickness of thicknesses"
-               class=" border-2 p-1 w-20 text-center rounded-md"
-               [class.border-orange]="checkT(thickness)"
-               (click)="navigateToListThickness(thickness)">
+                  class=" border-2 p-1 w-20 text-center rounded-md"
+                  [class.border-orange]="checkT(thickness)"
+                  (click)="navigateToListThickness(thickness)">
             {{ thickness }}
           </button>
         </div>
         <p class="font-semibold tel:text-sm">Ширина (W), мм:</p>
         <div class="flex gap-2 py-4 flex-wrap">
           <button *ngFor="let width of widths"
-               class=" border-2 p-1 w-20 text-center rounded-md"
-               [class.border-orange]="checkW(width)"
-               (click)="navigateToListWidth(width)">
+                  class=" border-2 p-1 w-20 text-center rounded-md"
+                  [class.border-orange]="checkW(width)"
+                  (click)="navigateToListWidth(width)">
             {{ width }}
           </button>
         </div>
         <p class="font-semibold tel:text-sm">Длина (L), мм:</p>
         <div class="flex gap-2 py-4 flex-wrap">
           <button *ngFor="let length of lengths"
-               class=" border-2 p-1 w-20 text-center rounded-md"
-               [class.border-orange]="checkL(length)"
-               (click)="navigateToListLength(length)">
+                  class=" border-2 p-1 w-20 text-center rounded-md"
+                  [class.border-orange]="checkL(length)"
+                  (click)="navigateToListLength(length)">
             {{ length }}
           </button>
         </div>
@@ -212,9 +220,9 @@
         <div class="font-semibold tel:text-sm">Длина (L), мм:</div>
         <div class="flex gap-2 py-4 flex-wrap">
           <button *ngFor="let product of products"
-               class=" border-2 p-1 w-20 text-center rounded-md"
-               [class.border-orange]="check(product)"
-               (click)="navigateToProduct(product)">
+                  class=" border-2 p-1 w-20 text-center rounded-md"
+                  [class.border-orange]="check(product)"
+                  (click)="navigateToProduct(product)">
             {{ product.length }}
           </button>
         </div>
@@ -229,9 +237,9 @@
         <div class="font-semibold tel:text-sm">Диаметр (D), мм:</div>
         <div class="flex gap-2 py-4 flex-wrap">
           <button *ngFor="let product of products"
-               class=" border-2 p-1 w-20 text-center rounded-md"
-               [class.border-orange]="check(product)"
-               (click)="navigateToProduct(product)">
+                  class=" border-2 p-1 w-20 text-center rounded-md"
+                  [class.border-orange]="check(product)"
+                  (click)="navigateToProduct(product)">
             {{ product.weight }}
           </button>
         </div>
@@ -244,9 +252,9 @@
         <div class="font-semibold tel:text-sm">Ширина (W), мм:</div>
         <div class="flex gap-2 py-4 flex-wrap">
           <button *ngFor="let product of products"
-               class=" border-2 p-1 w-20 text-center rounded-md"
-               [class.border-orange]="check(product)"
-               (click)="navigateToProduct(product)">
+                  class=" border-2 p-1 w-20 text-center rounded-md"
+                  [class.border-orange]="check(product)"
+                  (click)="navigateToProduct(product)">
             {{ product.width }}
           </button>
         </div>
@@ -259,9 +267,9 @@
         <div class="font-semibold tel:text-sm">Ячейка (S), мм:</div>
         <div class="flex gap-2 py-4 flex-wrap">
           <button *ngFor="let product of products"
-               class=" border-2 p-1 w-20 text-center rounded-md"
-               [class.border-orange]="check(product)"
-               (click)="navigateToProduct(product)">
+                  class=" border-2 p-1 w-20 text-center rounded-md"
+                  [class.border-orange]="check(product)"
+                  (click)="navigateToProduct(product)">
             {{ product.size }}
           </button>
         </div>
@@ -277,18 +285,18 @@
         <div class="font-semibold tel:text-sm">Диаметр (D), мм</div>
         <div class="flex gap-2 py-4 flex-wrap">
           <button *ngFor="let diameter of diameters"
-               class="border-2 p-1 w-20 text-center rounded-md tel:text-sm tel:w-16"
-               [class.border-orange]="checkD(diameter)"
-               (click)="navigateToDiameter(diameter)">
+                  class="border-2 p-1 w-20 text-center rounded-md tel:text-sm tel:w-16"
+                  [class.border-orange]="checkD(diameter)"
+                  (click)="navigateToDiameter(diameter)">
             {{ diameter }}
           </button>
         </div>
         <div class="font-semibold tel:text-sm">Толщина (S), мм</div>
         <div class="flex gap-2 py-4 flex-wrap">
           <button *ngFor="let thickness of thicknesses"
-               class="border-2 p-1 w-20 text-center rounded-md tel:text-sm tel:w-16"
-               [class.border-orange]="checkThickness(thickness)"
-               (click)="navigateToTrubaThickness(thickness)">
+                  class="border-2 p-1 w-20 text-center rounded-md tel:text-sm tel:w-16"
+                  [class.border-orange]="checkThickness(thickness)"
+                  (click)="navigateToTrubaThickness(thickness)">
             {{ thickness }}
           </button>
         </div>

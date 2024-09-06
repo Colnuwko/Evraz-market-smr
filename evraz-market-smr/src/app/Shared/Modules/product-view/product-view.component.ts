@@ -147,7 +147,8 @@ export class ProductViewComponent {
 
     return (product as Shveller)!.type === TypeProduct.proflist
   }
-  checkTypeSamorezi(type:string): boolean {
+
+  checkTypeSamorezi(type: string): boolean {
     return (this.product as Samorezi).typeS === type;
   }
 
@@ -371,6 +372,10 @@ export class ProductViewComponent {
       this.basket.setLengthInMeters(this.lengthInMeters + 6);
     }
     this.basket.calculateTotalCost(this.product);
+  }
+
+  isZn(color: string): boolean {
+    return color === "Оцинк.";
   }
 
   decreaseLength(): void {
